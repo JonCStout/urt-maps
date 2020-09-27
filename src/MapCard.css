@@ -1,0 +1,31 @@
+#name {
+    text-align: center;
+}
+
+.card {
+    max-width: 600px;
+    margin: 5px;
+    text-align: center;
+    justify-items: center;
+    /* border: 2px solid black; */
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.75);
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+}
+
+.mainSS {
+    max-width: 590px;
+    display: block;
+    margin: auto;
+    padding: 5px;
+}
+
+.subSS {
+    max-width: 290px;
+    margin: auto;
+    padding: 5px;
+}
