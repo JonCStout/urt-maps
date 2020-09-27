@@ -1,0 +1,8 @@
+This file is a simple copy/paste of the functions hosted on Realm, for open source transparency.
+
+// getAllMapData()
+exports = function(){
+  var coll = context.services.get("mongodb-atlas").db("fsk-maps").collection("maps");
+  var result = coll.find();
+  return {result};
+};

@@ -6,6 +6,7 @@ export default function App() {
     const [isConnected, setIsConnected] = useState('is NOT connected');
     const mongoClient = useRef(); // for saving the mongoClient object across renders of this component
     const mongoUser = useRef();
+    const [maps, setMaps] = useState();
 
     useEffect(() => {
         setIsConnected('is connecting...');
@@ -18,12 +19,17 @@ export default function App() {
             mongoUser.current = user;
             getAllRecords();
         });
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []); // the empty array at the end means this hook only runs once, after the web page is done with the initial render
 
     function getAllRecords() {
         if (mongoClient.current.auth.isLoggedIn) console.log('connected to db...');
-        console.log(mongoClient);
-        console.log(mongoUser);
+        // console.log(mongoClient);
+        // console.log(mongoUser);
+        mongoClient.current.callFunction('getAllMapData').then((response) => {
+            setMaps(response.result);
+            console.log(response.result);
+        });
     }
 
     // return is what renders the html of our component:
@@ -31,6 +37,7 @@ export default function App() {
         <div className="App">
             <header className="App-header">
                 <h2>database {isConnected}</h2>
+                <div>{maps ? maps[0]._id + ' | ' + maps[1]._id : 'loading maps...'}</div>
             </header>
         </div>
     );
