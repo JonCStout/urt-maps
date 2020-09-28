@@ -3,8 +3,25 @@
 } */
 
 #searchBar {
-    text-align: center;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 1em;
+    box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    padding: 8px;
+    max-width: 40%;
+}
+
+#searchBox {
+    border: none;
+    width: 100%;
+    font-size: 1em;
+}
+
+textarea:focus,
+input:focus {
+    outline: none;
 }
 
 .App-header {
