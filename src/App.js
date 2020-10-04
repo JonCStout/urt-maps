@@ -8,9 +8,12 @@ export default function App() {
     const [isConnected, setIsConnected] = useState('is NOT connected');
     const mongoClient = useRef(); // for saving the mongoClient object across renders of this component;  *** may not need to save this if only used in one function
     // const mongoUser = useRef();  // *** not sure we need to save this
-    const [maps, setMaps] = useState();
+    const [maps, setMaps] = useState();  // all the maps from the database, full object details per map
+    const mapsWithTagMap = useRef(new Map());  // mapsWithTagMap is a Map that "maps" to the names of maps with that tag.  Sorry for confusing terms
+    const [mapsWithTagList, setMapsWithTagList] = useState();
     const [searchInput, setSearchInput] = useState();
 
+    // this is where we connect to the database, and save it all into "maps"
     useEffect(() => {
         setIsConnected('is connecting...');
         // initializeDefaultAppClient is really picky, only wants to be run once.  And saving the referenece to it is also picky
@@ -23,11 +26,30 @@ export default function App() {
             // mongoUser.current = user;
             mongoClient.current.callFunction('getAllMapData').then((response) => {
                 setMaps(response.result);
-                console.log(response.result);
             });
         });
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []); // the empty array at the end means this hook only runs once, after the web page is done with the initial render
+
+    // this detects when "maps" has changed and (re)-writes mapsWithTagMap
+    useEffect(() => {
+        if(maps) {
+            maps.forEach(map => {
+                // console.log(map); // ** remove later
+                map.featureTags.forEach(tag => {
+                    let oldMapsList = mapsWithTagMap.current.get(tag);
+                    if(!oldMapsList) {
+                         oldMapsList = [map._id];
+                    } else {
+                        oldMapsList.push(map._id);
+                    }
+
+                    mapsWithTagMap.current.set(tag, oldMapsList);
+                });
+            });
+            setMapsWithTagList([...mapsWithTagMap.current.keys()].toString());
+        }
+    }, [maps]);
 
     function handleSearchChange(event) {
         setSearchInput(event.target.value);
@@ -56,8 +78,8 @@ export default function App() {
                 />
             </Form>
             <div>Realtime test, showing your typed text: {searchInput}</div>
-            <h2>Popular tags</h2>
-            <div>list of tags here...</div>
+            <h2>Map feature tags</h2>
+            <div>{mapsWithTagList || 'compiling tags...'}</div>
             <br />
             <div id="cardList">
                 {maps

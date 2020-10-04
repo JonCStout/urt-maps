@@ -4,7 +4,6 @@ import './MapCard.css';
 
 export default function MapCard(props) {
     const prefix = `ss/${props.name}/`;
-    console.log(prefix + props.ss[0]);
 
     return (
         <>
