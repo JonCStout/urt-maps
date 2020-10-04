@@ -55,7 +55,7 @@ export default function App() {
                     placeholder="start typing map keywords here"
                 />
             </Form>
-            {/* <div>Typed text: {searchInput}</div> */}
+            <div>Realtime test, showing your typed text: {searchInput}</div>
             <h2>Popular tags</h2>
             <div>list of tags here...</div>
             <br />

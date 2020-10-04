@@ -9,18 +9,18 @@ export default function MapCard(props) {
     return (
         <>
             <div className="card">
-                <img className="mainSS" src={prefix + props.ss[0]} alt="main screenshot" />
+                <a href={prefix + props.ss[0]}><img className="mainSS" src={prefix + props.ss[0]} alt="main screenshot" /></a>
                 <span>
-                    <img
+                    <a href={prefix + props.ss[1]}><img
                         className="subSS"
-                        src={`ss/${props.name}/${props.ss[1]}`}
+                        src={prefix + props.ss[1]}
                         alt="screenshot 2"
-                    />
-                    <img
+                    /></a>
+                    <a href={prefix + props.ss[2]}><img
                         className="subSS"
-                        src={`ss/${props.name}/${props.ss[2]}`}
+                        src={prefix + props.ss[2]}
                         alt="screenshot 3"
-                    />
+                    /></a>
                 </span>
                 <h2 id="name">{props.name}</h2>
             </div>
