@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Stitch, AnonymousCredential } from 'mongodb-stitch-browser-sdk'; // package for connecting to our MongoDB-Realm app; Realm is the new name for Stitch but this package still works
-import { Form, Input } from 'reactstrap'; // library for React controls
+import { Grommet, TextInput } from 'grommet'; // library for user interface controls
+import { SearchAdvanced } from 'grommet-icons';
 import MapCard from './MapCard';
 import './App.css'; // style sheet for just this app component
 
@@ -58,36 +59,30 @@ export default function App() {
 
     // return is what renders the html of our component:
     return (
-        <div className="App">
-            <header className="App-header">
+        <Grommet plain>
+            <header className='App-header'>
                 <h1>URT MAPS - (database {isConnected})</h1>
             </header>
-            <Form
-                id="searchBar"
-                onSubmit={(e) => {
-                    e.preventDefault();
-                }}
-            >
-                <Input
-                    type="search"
-                    name="search"
-                    id="searchBox"
+            <div id='searchBar'>
+                <TextInput
+                    placeholder='start typing map keywords here'
+                    id='searchBox'
+                    icon={<SearchAdvanced />}
                     value={searchInput}
                     onChange={handleSearchChange}
-                    placeholder="start typing map keywords here"
                 />
-            </Form>
-            <div>Realtime test, showing your typed text: {searchInput}</div>
+            </div>
+            <div>
+                Realtime test, showing your <em>typed text:</em>&nbsp; {searchInput}
+            </div>
             <h2>Map feature tags</h2>
             <div>{mapsWithTagList || 'compiling tags...'}</div>
             <br />
-            <div id="cardList">
+            <div id='cardList'>
                 {maps
-                    ? maps.map((aMap) => (
-                          <MapCard name={aMap._id} ss={aMap.screenShots} key={aMap._id} />
-                      ))
+                    ? maps.map((aMap) => <MapCard name={aMap._id} ss={aMap.screenShots} key={aMap._id} />)
                     : 'loading maps...'}
             </div>
-        </div>
+        </Grommet>
     );
 }
