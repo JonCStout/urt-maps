@@ -26,6 +26,7 @@
 
 .subSS {
     max-width: 290px;
-    margin: auto;
-    padding: 5px;
+    margin: auto auto -5px auto;
+    padding-left: 5px;
+    padding-right: 5px;
 }

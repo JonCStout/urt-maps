@@ -8,8 +8,8 @@ export default function App() {
     const [isConnected, setIsConnected] = useState('is NOT connected');
     const mongoClient = useRef(); // for saving the mongoClient object across renders of this component;  *** may not need to save this if only used in one function
     // const mongoUser = useRef();  // *** not sure we need to save this
-    const [maps, setMaps] = useState();  // all the maps from the database, full object details per map
-    const mapsWithTagMap = useRef(new Map());  // mapsWithTagMap is a Map that "maps" to the names of maps with that tag.  Sorry for confusing terms
+    const [maps, setMaps] = useState(); // all the maps from the database, full object details per map
+    const mapsWithTagMap = useRef(new Map()); // mapsWithTagMap is a Map that "maps" to the names of maps with that tag.  Sorry for confusing terms
     const [mapsWithTagList, setMapsWithTagList] = useState();
     const [searchInput, setSearchInput] = useState();
 
@@ -33,13 +33,13 @@ export default function App() {
 
     // this detects when "maps" has changed and (re)-writes mapsWithTagMap
     useEffect(() => {
-        if(maps) {
-            maps.forEach(map => {
+        if (maps) {
+            maps.forEach((map) => {
                 // console.log(map); // ** remove later
-                map.featureTags.forEach(tag => {
+                map.featureTags.forEach((tag) => {
                     let oldMapsList = mapsWithTagMap.current.get(tag);
-                    if(!oldMapsList) {
-                         oldMapsList = [map._id];
+                    if (!oldMapsList) {
+                        oldMapsList = [map._id];
                     } else {
                         oldMapsList.push(map._id);
                     }
