@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Stitch, AnonymousCredential } from 'mongodb-stitch-browser-sdk'; // package for connecting to our MongoDB-Realm app; Realm is the new name for Stitch but this package still works
 import MapCard from './MapCard';
+import TagsList from './TagsList';
 import './App.css'; // style sheet for just this app component
 import { CssBaseline, InputAdornment, InputBase } from '@material-ui/core'; // reset CSS properties across browsers to a baseline, and input controls
 import { Search } from '@material-ui/icons';
@@ -11,7 +12,8 @@ export default function App() {
     // const mongoUser = useRef();  // *** not sure we need to save this
     const [maps, setMaps] = useState(); // all the maps from the database, full object details per map
     const mapsWithTagMap = useRef(new Map()); // mapsWithTagMap is a Map that "maps" to the names of maps with that tag.  Sorry for confusing terms
-    const [mapsWithTagList, setMapsWithTagList] = useState();
+    // const [mapsWithTagList, setMapsWithTagList] = useState();
+    const [activeTagsList, setActiveTagsList] = useState();
     const [searchInput, setSearchInput] = useState();
 
     // this is where we connect to the database, and save it all into "maps"
@@ -36,7 +38,6 @@ export default function App() {
     useEffect(() => {
         if (maps) {
             maps.forEach((map) => {
-                // console.log(map); // ** remove later
                 map.featureTags.forEach((tag) => {
                     let oldMapsList = mapsWithTagMap.current.get(tag);
                     if (!oldMapsList) {
@@ -48,9 +49,15 @@ export default function App() {
                     mapsWithTagMap.current.set(tag, oldMapsList);
                 });
             });
-            setMapsWithTagList([...mapsWithTagMap.current.keys()].toString());
+            // setMapsWithTagList([...mapsWithTagMap.current.keys()].toString());
+            setActiveTagsList([...mapsWithTagMap.current.keys()]);
         }
     }, [maps]);
+
+    function handleMapFilterClick(tag) {
+        setSearchInput(tag);
+        // todo:  lots more handling here
+    }
 
     function handleSearchChange(event) {
         setSearchInput(event.target.value);
@@ -61,17 +68,17 @@ export default function App() {
     return (
         <>
             <CssBaseline />
-            <header className='App-header'>
+            <header className="App-header">
                 <h1>URT MAPS - (database {isConnected})</h1>
             </header>
-            <div id='searchBar'>
+            <div id="searchBar">
                 <InputBase
-                    placeholder='start typing map keywords here'
-                    id='searchBox'
-                    type='search'
+                    placeholder="start typing map keywords here"
+                    id="searchBox"
+                    type="search"
                     inputProps={{ 'aria-label': 'naked' }}
                     endAdornment={
-                        <InputAdornment position='end'>
+                        <InputAdornment position="end">
                             <Search />
                         </InputAdornment>
                     }
@@ -81,14 +88,18 @@ export default function App() {
                 />
             </div>
             <div>
-                Realtime test, showing your <em>typed text:</em>&nbsp; {searchInput}
+                Realtime test, showing your <em>typed text or clicked tag:</em>&nbsp; {searchInput}
             </div>
             <h2>Map feature tags</h2>
-            <div>{mapsWithTagList || 'compiling tags...'}</div>
+            <div>
+                <TagsList tagsArray={activeTagsList} callBackFunc={handleMapFilterClick} />
+            </div>
             <br />
-            <div id='cardList'>
+            <div id="cardList">
                 {maps
-                    ? maps.map((aMap) => <MapCard name={aMap._id} ss={aMap.screenShots} key={aMap._id} />)
+                    ? maps.map((aMap) => (
+                          <MapCard name={aMap._id} ss={aMap.screenShots} key={aMap._id} />
+                      ))
                     : 'loading maps...'}
             </div>
         </>
