@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Stitch, AnonymousCredential } from 'mongodb-stitch-browser-sdk'; // package for connecting to our MongoDB-Realm app; Realm is the new name for Stitch but this package still works
-import { Grommet, TextInput } from 'grommet'; // library for user interface controls
-import { SearchAdvanced } from 'grommet-icons';
 import MapCard from './MapCard';
 import './App.css'; // style sheet for just this app component
+import { CssBaseline, InputAdornment, InputBase } from '@material-ui/core'; // reset CSS properties across browsers to a baseline, and input controls
+import { Search } from '@material-ui/icons';
 
 export default function App() {
     const [isConnected, setIsConnected] = useState('is NOT connected');
@@ -59,17 +59,25 @@ export default function App() {
 
     // return is what renders the html of our component:
     return (
-        <Grommet plain>
+        <>
+            <CssBaseline />
             <header className='App-header'>
                 <h1>URT MAPS - (database {isConnected})</h1>
             </header>
             <div id='searchBar'>
-                <TextInput
+                <InputBase
                     placeholder='start typing map keywords here'
                     id='searchBox'
-                    icon={<SearchAdvanced />}
+                    type='search'
+                    inputProps={{ 'aria-label': 'naked' }}
+                    endAdornment={
+                        <InputAdornment position='end'>
+                            <Search />
+                        </InputAdornment>
+                    }
                     value={searchInput}
                     onChange={handleSearchChange}
+                    fullWidth
                 />
             </div>
             <div>
@@ -83,6 +91,6 @@ export default function App() {
                     ? maps.map((aMap) => <MapCard name={aMap._id} ss={aMap.screenShots} key={aMap._id} />)
                     : 'loading maps...'}
             </div>
-        </Grommet>
+        </>
     );
 }
