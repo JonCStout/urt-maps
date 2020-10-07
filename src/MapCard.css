@@ -25,8 +25,16 @@
 }
 
 .subSS {
-    max-width: 290px;
+    max-width: 295px;
     margin: auto auto -5px auto;
+}
+
+.subSS-left {
     padding-left: 5px;
+    padding-right: 3px;
+}
+
+.subSS-right {
+    padding-left: 3px;
     padding-right: 5px;
 }
