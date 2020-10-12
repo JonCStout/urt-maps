@@ -52,7 +52,7 @@ export default function App() {
                 });
             });
 
-            setVisibleTagsList([...mapsWithTag_Map.current.keys()]); // initial creation of visibleTagsList, all tags
+            setVisibleTagsList([...mapsWithTag_Map.current.entries()]); // initial creation of visibleTagsList, all tags
         }
     }, [maps]);
 
