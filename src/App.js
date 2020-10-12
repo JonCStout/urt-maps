@@ -42,7 +42,7 @@ export default function App() {
                 map.featureTags.forEach((tag) => {
                     let oldMapsList = mapsWithTagMap.current.get(tag);
                     if (!oldMapsList) {
-                        oldMapsList = [map._id];
+                        oldMapsList = [map._id]; // array with a string in it, not just a string alone
                     } else {
                         oldMapsList.push(map._id);
                     }
@@ -103,7 +103,11 @@ export default function App() {
             </div>
             <h2>Map feature tags</h2>
             <div>
-                <TagsList tagsArray={visibleTagsList} callBackFunc={handleMapFilterClick} />
+                <TagsList
+                    tagsArray={visibleTagsList}
+                    clickedTagsList={clickedTagsList}
+                    callBackFunc={handleMapFilterClick}
+                />
             </div>
             <br />
             <div id="cardList">
