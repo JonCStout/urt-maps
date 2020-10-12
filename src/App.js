@@ -13,14 +13,15 @@ export default function App() {
     const [maps, setMaps] = useState(); // all the maps from the database, full object details per map
     const mapsWithTagMap = useRef(new Map()); // mapsWithTagMap is a Map that "maps" to the names of maps with that tag.  Sorry for confusing terms
     // const [mapsWithTagList, setMapsWithTagList] = useState();
-    const [activeTagsList, setActiveTagsList] = useState();
-    const [searchInput, setSearchInput] = useState();
+    const [visibleTagsList, setVisibleTagsList] = useState();
+    const [clickedTagsList, setClickedTagsList] = useState(new Set());
+    const [searchInput, setSearchInput] = useState('');
 
     // this is where we connect to the database, and save it all into "maps"
     useEffect(() => {
         setIsConnected('is connecting...');
         // initializeDefaultAppClient is really picky, only wants to be run once.  And saving the referenece to it is also picky
-        mongoClient.current = Stitch.initializeDefaultAppClient('fsk-realmapp-slofx'); // string is app ID (realmApp)
+        mongoClient.current = Stitch.initializeDefaultAppClient('fsk-realmapp-slofx'); // string is app ID (realmApp, not realMapp)
 
         const creds = new AnonymousCredential();
         mongoClient.current.auth.loginWithCredential(creds).then((user) => {
@@ -50,12 +51,29 @@ export default function App() {
                 });
             });
             // setMapsWithTagList([...mapsWithTagMap.current.keys()].toString());
-            setActiveTagsList([...mapsWithTagMap.current.keys()]);
+            setVisibleTagsList([...mapsWithTagMap.current.keys()]);
         }
     }, [maps]);
 
+    // function updateTags() {}
+
     function handleMapFilterClick(tag) {
-        setSearchInput(tag);
+        let newTagsList = new Set(clickedTagsList); // shallow copy
+        // if (!clickedTagsList) newTagsList = new Set(tag);
+        // // ^ make sure it's a string in an array;  plain string crashes with .push/.concat
+        // else {
+        //     newTagsList = clickedTagsList.concat(tag);
+        // }
+        if (newTagsList.has(tag)) {
+            newTagsList.delete(tag);
+        } else {
+            newTagsList.add(tag);
+        }
+        debugger;
+
+        setClickedTagsList(newTagsList);
+        setSearchInput([...newTagsList].toString());
+        // setSearchInput(newTagsList); // *** just for real-time testing
         // todo:  lots more handling here
     }
 
@@ -64,7 +82,7 @@ export default function App() {
         // todo:  parse input in real-time and generate tags?
     }
 
-    // return is what renders the html of our component:
+    // return is what renders the html (and jsx) of our component:
     return (
         <>
             <CssBaseline />
@@ -75,7 +93,6 @@ export default function App() {
                 <InputBase
                     placeholder="start typing map keywords here"
                     id="searchBox"
-                    type="search"
                     inputProps={{ 'aria-label': 'naked' }}
                     endAdornment={
                         <InputAdornment position="end">
@@ -88,11 +105,12 @@ export default function App() {
                 />
             </div>
             <div>
-                Realtime test, showing your <em>typed text or clicked tag:</em>&nbsp; {searchInput}
+                Realtime test, showing your <em>typed text or clicked tag:</em>&nbsp;{' '}
+                {searchInput.toString()}
             </div>
             <h2>Map feature tags</h2>
             <div>
-                <TagsList tagsArray={activeTagsList} callBackFunc={handleMapFilterClick} />
+                <TagsList tagsArray={visibleTagsList} callBackFunc={handleMapFilterClick} />
             </div>
             <br />
             <div id="cardList">

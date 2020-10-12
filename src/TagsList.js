@@ -9,7 +9,12 @@ export default function TagsList({ tagsArray, callBackFunc }) {
         <>
             {tagsArray.map((tag) => {
                 return (
-                    <Button variant="outlined" size="small" onClick={() => callBackFunc(tag)}>
+                    <Button
+                        variant="outlined"
+                        size="small"
+                        key={tag + '_button'}
+                        onClick={() => callBackFunc(tag)}
+                    >
                         {tag}
                     </Button>
                 );
