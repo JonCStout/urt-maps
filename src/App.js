@@ -35,7 +35,7 @@ export default function App() {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []); // the empty array at the end means this hook only runs once, after the web page is done with the initial render
 
-    // this detects when "maps" has changed and (re)-writes mapsWithTagMap
+    // when "maps" changes, this (re)-writes mapsWithTagMap
     useEffect(() => {
         if (maps) {
             maps.forEach((map) => {
@@ -55,31 +55,24 @@ export default function App() {
         }
     }, [maps]);
 
-    // function updateTags() {}
-
     function handleMapFilterClick(tag) {
         let newTagsList = new Set(clickedTagsList); // shallow copy
-        // if (!clickedTagsList) newTagsList = new Set(tag);
-        // // ^ make sure it's a string in an array;  plain string crashes with .push/.concat
-        // else {
-        //     newTagsList = clickedTagsList.concat(tag);
-        // }
         if (newTagsList.has(tag)) {
             newTagsList.delete(tag);
         } else {
             newTagsList.add(tag);
         }
-        debugger;
 
         setClickedTagsList(newTagsList);
-        setSearchInput([...newTagsList].toString());
-        // setSearchInput(newTagsList); // *** just for real-time testing
+        setSearchInput([...newTagsList].toString()); // *** just for real-time testing
+
         // todo:  lots more handling here
     }
 
     function handleSearchChange(event) {
         setSearchInput(event.target.value);
-        // todo:  parse input in real-time and generate tags?
+
+        // todo:  parse input in real-time and generate tags
     }
 
     // return is what renders the html (and jsx) of our component:
