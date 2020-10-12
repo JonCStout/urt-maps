@@ -121,7 +121,8 @@ export default function App() {
                     Map feature tags
                 </Badge>
             </h2>
-            <div>
+            <div style={{ paddingRight: '12px' }}>
+                {/* ^ that padding prevents badges cutting off, or a horizontal scroll bar */}
                 <TagsList
                     tagsArray={visibleTagsList}
                     clickedTagsList={clickedTagsList}
