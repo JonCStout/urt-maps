@@ -52,13 +52,19 @@ export default function App() {
                 });
             });
 
-            setVisibleTagsList([...mapsWithTag_Map.current.entries()]); // initial creation of visibleTagsList, all tags
+            makeVisibleTagsList(); // initial creation of visibleTagsList, all tags
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [maps]);
 
-    // function makeVisibleTagsList() {
-    //     let newList = new Map();
-    // }
+    function makeVisibleTagsList() {
+        if (!clickedTagsList || clickedTagsList.size < 1) {
+            setVisibleTagsList([...mapsWithTag_Map.current.entries()]);
+            return;
+        }
+
+        // let newList = new Map();
+    }
 
     function handleMapFilterClick(tag) {
         let newTagsList = new Set(clickedTagsList); // shallow copy
@@ -84,26 +90,26 @@ export default function App() {
     return (
         <>
             <CssBaseline />
-            <header className="App-header">
+            <header className='App-header'>
                 <h1>
                     {isConnected === CONNECTED ? (
-                        <Badge badgeContent={'database ' + isConnected} color="primary">
+                        <Badge badgeContent={'database ' + isConnected} color='primary'>
                             URT MAPS
                         </Badge>
                     ) : (
-                        <Badge badgeContent={'database ' + isConnected} color="error">
+                        <Badge badgeContent={'database ' + isConnected} color='error'>
                             URT MAPS
                         </Badge>
                     )}
                 </h1>
             </header>
-            <div id="searchBar">
+            <div id='searchBar'>
                 <InputBase
-                    placeholder="start typing map keywords here"
-                    id="searchBox"
+                    placeholder='start typing map keywords here'
+                    id='searchBox'
                     inputProps={{ 'aria-label': 'naked' }}
                     endAdornment={
-                        <InputAdornment position="end">
+                        <InputAdornment position='end'>
                             <Search />
                         </InputAdornment>
                     }
@@ -113,11 +119,10 @@ export default function App() {
                 />
             </div>
             <div>
-                Realtime test, showing your <em>typed text or clicked tag:</em>&nbsp;{' '}
-                {searchInput.toString()}
+                Realtime test, showing your <em>typed text or clicked tag:</em>&nbsp; {searchInput.toString()}
             </div>
             <h2>
-                <Badge badgeContent={visibleTagsList.length + ' visible'} color="primary">
+                <Badge badgeContent={visibleTagsList.length + ' visible'} color='primary'>
                     Map feature tags
                 </Badge>
             </h2>
@@ -130,11 +135,9 @@ export default function App() {
                 />
             </div>
             <br />
-            <div id="cardList">
+            <div id='cardList'>
                 {maps
-                    ? maps.map((aMap) => (
-                          <MapCard name={aMap._id} ss={aMap.screenShots} key={aMap._id} />
-                      ))
+                    ? maps.map((aMap) => <MapCard name={aMap._id} ss={aMap.screenShots} key={aMap._id} />)
                     : 'loading maps...'}
             </div>
         </>
