@@ -13,9 +13,10 @@ export default function App() {
     const mongoClient = useRef(); // for saving the mongoClient object across renders of this component;  *** may not need to save this if only used in one function
     // const mongoUser = useRef();  // *** not sure we need to save this
     const [maps, setMaps] = useState(); // all the maps from the database, full object details per map
-    const mapsWithTag_Map = useRef(new Map()); // mapsWithTag_Map is a Map that "maps" to the names of maps with that tag.  Sorry for confusing terms
-    const [visibleTagsList, setVisibleTagsList] = useState([]);
-    const [clickedTagsList, setClickedTagsList] = useState(new Set());
+    const [visibleMaps, setVisibleMaps] = useState([]); // array of map objects
+    const tagsWithMaps_Map = useRef(new Map()); // tagsWithMaps_Map is a Map that "maps" tags to a string array with the names of maps.  Sorry for confusing terms
+    const [visibleTags_Map, setVisibleTags_Map] = useState(new Map());
+    const [clickedTags_Set, setClickedTags_Set] = useState(new Set());
     const [searchInput, setSearchInput] = useState(''); // complains about switching from uncontrolled to controlled input without an empty string to start
 
     // this is where we connect to the database, and save it all into "maps"
@@ -36,48 +37,72 @@ export default function App() {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []); // the empty array at the end means this hook only runs once, after the web page is done with the initial render
 
-    // when "maps" changes, this (re)-writes mapsWithTag_Map, and visibleTagsList
+    // when "maps" changes, this (re)-writes tagsWithMaps_Map, clickedTagsList, and visibleTagsList
     useEffect(() => {
         if (maps) {
-            maps.forEach((map) => {
-                map.featureTags.forEach((tag) => {
-                    let oldMapsList = mapsWithTag_Map.current.get(tag);
-                    if (!oldMapsList) {
-                        oldMapsList = [map._id]; // array with a string in it, not just a string alone
+            maps.forEach((singleMap) => {
+                singleMap.featureTags.forEach((tag) => {
+                    let mapNamesArray = tagsWithMaps_Map.current.get(tag);
+                    if (!mapNamesArray) {
+                        mapNamesArray = [singleMap._id]; // array with a string in it, not just a string alone
                     } else {
-                        oldMapsList.push(map._id);
+                        mapNamesArray.push(singleMap._id); // add map name to array
                     }
 
-                    mapsWithTag_Map.current.set(tag, oldMapsList);
+                    tagsWithMaps_Map.current.set(tag, mapNamesArray); // add pair to Map, tag: mapNamesArray
                 });
             });
 
-            makeVisibleTagsList(); // initial creation of visibleTagsList, all tags
+            setClickedTags_Set(new Set()); // trigger initial creation of visibleTags and visibleMaps
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [maps]);
 
-    function makeVisibleTagsList() {
-        if (!clickedTagsList || clickedTagsList.size < 1) {
-            setVisibleTagsList([...mapsWithTag_Map.current.entries()]);
+    // this hook updates visibleMaps when clickedTags_Set changes
+    useEffect(() => {
+        if (!clickedTags_Set || clickedTags_Set.size < 1) {
+            setVisibleMaps(maps); // all maps visible
+            setVisibleTags_Map(tagsWithMaps_Map.current); // all tags visible
             return;
         }
 
-        // let newList = new Map();
-    }
+        let newVisibleMaps = maps.filter((singleMap) => {
+            let include = true;
+            clickedTags_Set.forEach((tag) => {
+                include &= singleMap.featureTags.includes(tag); // a map must have every clicked tag to be included
+            });
+            return include ? singleMap : null;
+        });
+        setVisibleMaps(newVisibleMaps);
+
+        let newVisibleTags = new Map();
+        newVisibleMaps.forEach((singleMap) => {
+            singleMap.featureTags.forEach((tag) => {
+                let mapNamesArray = newVisibleTags.get(tag);
+                if (!mapNamesArray) {
+                    mapNamesArray = [singleMap._id]; // array with a string in it, not just a string alone
+                } else {
+                    mapNamesArray.push(singleMap._id); // add map name to array
+                }
+
+                newVisibleTags.set(tag, mapNamesArray); // add pair to Map, tag: mapNamesArray
+            });
+        });
+        setVisibleTags_Map(newVisibleTags);
+
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [clickedTags_Set]);
 
     function handleMapFilterClick(tag) {
-        let newTagsList = new Set(clickedTagsList); // shallow copy
+        let newTagsList = new Set(clickedTags_Set); // shallow copy
         if (newTagsList.has(tag)) {
             newTagsList.delete(tag);
         } else {
             newTagsList.add(tag);
         }
 
-        setClickedTagsList(newTagsList);
+        setClickedTags_Set(newTagsList);
         setSearchInput([...newTagsList].toString()); // *** just for real-time testing
-
-        // todo:  lots more handling here
     }
 
     function handleSearchChange(event) {
@@ -92,20 +117,22 @@ export default function App() {
             <CssBaseline />
             <header className='App-header'>
                 <h1>
-                    {isConnected === CONNECTED ? (
-                        <Badge badgeContent={'database ' + isConnected} color='primary'>
-                            URT MAPS
-                        </Badge>
-                    ) : (
-                        <Badge badgeContent={'database ' + isConnected} color='error'>
-                            URT MAPS
-                        </Badge>
-                    )}
+                    <Badge
+                        badgeContent={
+                            'database ' +
+                            isConnected +
+                            ' | ' +
+                            (visibleMaps ? visibleMaps.length : '0') +
+                            ' maps visible'
+                        }
+                        color={isConnected === CONNECTED ? 'primary' : 'error'}>
+                        URT MAPS
+                    </Badge>
                 </h1>
             </header>
             <div id='searchBar'>
                 <InputBase
-                    placeholder='start typing map keywords here'
+                    placeholder='start typing map keywords here, separated by commas'
                     id='searchBox'
                     inputProps={{ 'aria-label': 'naked' }}
                     endAdornment={
@@ -122,22 +149,22 @@ export default function App() {
                 Realtime test, showing your <em>typed text or clicked tag:</em>&nbsp; {searchInput.toString()}
             </div>
             <h2>
-                <Badge badgeContent={visibleTagsList.length + ' visible'} color='primary'>
+                <Badge badgeContent={visibleTags_Map.size + ' visible'} color='primary'>
                     Map feature tags
                 </Badge>
             </h2>
             <div style={{ paddingRight: '12px' }}>
                 {/* ^ that padding prevents badges cutting off, or a horizontal scroll bar */}
                 <TagsList
-                    tagsArray={visibleTagsList}
-                    clickedTagsList={clickedTagsList}
+                    visibleTagsList={[...visibleTags_Map.entries()]}
+                    clickedTagsList={clickedTags_Set}
                     callBackFunc={handleMapFilterClick}
                 />
             </div>
             <br />
             <div id='cardList'>
-                {maps
-                    ? maps.map((aMap) => <MapCard name={aMap._id} ss={aMap.screenShots} key={aMap._id} />)
+                {visibleMaps
+                    ? visibleMaps.map((aMap) => <MapCard name={aMap._id} ss={aMap.screenShots} key={aMap._id} />)
                     : 'loading maps...'}
             </div>
         </>
