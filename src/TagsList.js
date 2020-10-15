@@ -19,36 +19,20 @@ export default function TagsList({ visibleTagsList, clickedTagsList, callBackFun
     return (
         <>
             {visibleTagsList.map(([tagName, maps]) => {
-                if (clickedTagsList && !clickedTagsList.has(tagName)) {
-                    // unclicked button
-                    return (
-                        <Button
-                            variant='outlined'
-                            size='small'
-                            key={tagName + '_button'}
-                            onClick={() => callBackFunc(tagName)}
-                            style={{ marginRight: '5px', marginBottom: '5px' }}>
-                            <Badge badgeContent={maps.length} color='secondary'>
-                                {tagName} &nbsp;
-                            </Badge>
-                        </Button>
-                    );
-                } else {
-                    // clicked button
-                    return (
-                        <Button
-                            variant='contained'
-                            color='primary'
-                            size='small'
-                            key={tagName + '_button'}
-                            onClick={() => callBackFunc(tagName)}
-                            style={{ marginRight: '5px', marginBottom: '5px' }}>
-                            <Badge badgeContent={maps.length} color='secondary'>
-                                {tagName} &nbsp;
-                            </Badge>
-                        </Button>
-                    );
-                }
+                const isUnClicked = clickedTagsList && !clickedTagsList.has(tagName);
+                return (
+                    <Button
+                        variant={isUnClicked ? 'outlined' : 'contained'}
+                        color={isUnClicked ? 'default' : 'primary'}
+                        size='small'
+                        key={tagName + '_button'}
+                        onClick={() => callBackFunc(tagName)}
+                        style={{ marginRight: '5px', marginBottom: '5px' }}>
+                        <Badge badgeContent={maps.length} color='secondary'>
+                            {tagName} &nbsp;
+                        </Badge>
+                    </Button>
+                );
             })}
         </>
     );

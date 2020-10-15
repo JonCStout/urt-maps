@@ -10,9 +10,9 @@ export default function App() {
     const CONNECTED = 'IS connected';
     const NOTCONNECTED = 'is NOT connected';
     const [isConnected, setIsConnected] = useState(NOTCONNECTED);
-    const mongoClient = useRef(); // for saving the mongoClient object across renders of this component;  *** may not need to save this if only used in one function
+    const mongoClient = useRef([]); // for saving the mongoClient object across renders of this component;  *** may not need to save this if only used in one function
     // const mongoUser = useRef();  // *** not sure we need to save this
-    const [maps, setMaps] = useState(); // all the maps from the database, full object details per map
+    const maps = useRef(); // all the maps from the database, full object details per map
     const [visibleMaps, setVisibleMaps] = useState([]); // array of map objects
     const tagsWithMaps_Map = useRef(new Map()); // tagsWithMaps_Map is a Map that "maps" tags to a string array with the names of maps.  Sorry for confusing terms
     const [visibleTags_Map, setVisibleTags_Map] = useState(new Map());
@@ -31,63 +31,53 @@ export default function App() {
             setIsConnected(CONNECTED);
             // mongoUser.current = user;
             mongoClient.current.callFunction('getAllMapData').then((response) => {
-                setMaps(response.result);
+                maps.current = response.result;
+                setClickedTags_Set(new Set()); // initialize this Set and trigger Visibles updates
             });
         });
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []); // the empty array at the end means this hook only runs once, after the web page is done with the initial render
 
-    // when "maps" changes, this (re)-writes tagsWithMaps_Map, clickedTagsList, and visibleTagsList
+    // this hook updates visibleMaps & visibleTags when clickedTags_Set changes
     useEffect(() => {
-        if (maps) {
-            maps.forEach((singleMap) => {
+        let newVisibleMaps, newVisibleTags;
+
+        function updateVisibleTags() {
+            newVisibleMaps.forEach((singleMap) => {
                 singleMap.featureTags.forEach((tag) => {
-                    let mapNamesArray = tagsWithMaps_Map.current.get(tag);
+                    let mapNamesArray = newVisibleTags.get(tag);
                     if (!mapNamesArray) {
                         mapNamesArray = [singleMap._id]; // array with a string in it, not just a string alone
                     } else {
                         mapNamesArray.push(singleMap._id); // add map name to array
                     }
 
-                    tagsWithMaps_Map.current.set(tag, mapNamesArray); // add pair to Map, tag: mapNamesArray
+                    newVisibleTags.set(tag, mapNamesArray); // add pair to Map; tag: mapNamesArray
                 });
             });
-
-            setClickedTags_Set(new Set()); // trigger initial creation of visibleTags and visibleMaps
         }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [maps]);
 
-    // this hook updates visibleMaps when clickedTags_Set changes
-    useEffect(() => {
         if (!clickedTags_Set || clickedTags_Set.size < 1) {
-            setVisibleMaps(maps); // all maps visible
-            setVisibleTags_Map(tagsWithMaps_Map.current); // all tags visible
-            return;
+            if (maps && maps.current) {
+                tagsWithMaps_Map.current = new Map(); // re-initialize main tags
+                newVisibleMaps = maps.current; // all maps visible
+                newVisibleTags = tagsWithMaps_Map.current;
+                updateVisibleTags();
+            }
+            newVisibleTags = tagsWithMaps_Map.current;
+        } else {
+            newVisibleMaps = maps.current.filter((singleMap) => {
+                let include = true;
+                clickedTags_Set.forEach((tag) => {
+                    include &= singleMap.featureTags.includes(tag); // a map must have every clicked tag to be included
+                });
+                return include ? singleMap : null;
+            });
+
+            newVisibleTags = new Map();
+            updateVisibleTags();
         }
-
-        let newVisibleMaps = maps.filter((singleMap) => {
-            let include = true;
-            clickedTags_Set.forEach((tag) => {
-                include &= singleMap.featureTags.includes(tag); // a map must have every clicked tag to be included
-            });
-            return include ? singleMap : null;
-        });
         setVisibleMaps(newVisibleMaps);
-
-        let newVisibleTags = new Map();
-        newVisibleMaps.forEach((singleMap) => {
-            singleMap.featureTags.forEach((tag) => {
-                let mapNamesArray = newVisibleTags.get(tag);
-                if (!mapNamesArray) {
-                    mapNamesArray = [singleMap._id]; // array with a string in it, not just a string alone
-                } else {
-                    mapNamesArray.push(singleMap._id); // add map name to array
-                }
-
-                newVisibleTags.set(tag, mapNamesArray); // add pair to Map, tag: mapNamesArray
-            });
-        });
         setVisibleTags_Map(newVisibleTags);
 
         // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -123,7 +113,7 @@ export default function App() {
                             isConnected +
                             ' | ' +
                             (visibleMaps ? visibleMaps.length : '0') +
-                            ' maps visible'
+                            (visibleMaps && visibleMaps.length === 1 ? ' map visible' : ' maps visible')
                         }
                         color={isConnected === CONNECTED ? 'primary' : 'error'}>
                         URT MAPS
