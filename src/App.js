@@ -53,6 +53,11 @@ export default function App() {
                 return include ? singleMap : null;
             });
         }
+        newVisibleMaps.sort((a, b) => {
+            if (a._id < b._id) return -1;
+            if (a._id > b._id) return 1;
+            return 0;
+        });
         setVisibleMaps(newVisibleMaps);
 
         // update visibleTags based on visibleMaps (reusing newVisibleMaps above, not waiting for async set)
@@ -66,14 +71,15 @@ export default function App() {
                 newVisibleTags.set(tag, count); // add pair to Map... tag: count
             });
         });
-        let sortedTags = [...newVisibleTags].sort((a, b) => {
-            if (a[1] > b[1]) return -1; // descending by count ([1])
-            if (a[1] < b[1]) return 1;
-            if (a[0] < b[0]) return -1; // when tied, ascending by tag name ([0])
-            if (a[0] > b[0]) return 1;
-            return 0; // this should never be reached due to unique tag names, but just in case
-        });
-        setVisibleTags(sortedTags);
+        setVisibleTags(
+            [...newVisibleTags].sort((a, b) => {
+                if (a[1] > b[1]) return -1; // descending by count ([1])
+                if (a[1] < b[1]) return 1;
+                if (a[0] < b[0]) return -1; // when tied, ascending by tag name ([0])
+                if (a[0] > b[0]) return 1;
+                return 0; // this should never be reached due to unique tag names, but just in case
+            })
+        );
 
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [clickedTags_Set]);
@@ -121,8 +127,8 @@ export default function App() {
                     placeholder='start typing map keywords here, separated by commas'
                     id='searchBox'
                     inputProps={{ 'aria-label': 'naked' }}
-                    endAdornment={
-                        <InputAdornment position='end'>
+                    startAdornment={
+                        <InputAdornment position='start'>
                             <Search />
                         </InputAdornment>
                     }
