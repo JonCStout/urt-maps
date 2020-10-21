@@ -12,9 +12,8 @@ export default function App() {
     const [isConnected, setIsConnected] = useState(NOTCONNECTED);
     const mongoClient = useRef([]); // for saving the mongoClient object across renders of this component;  *** may not need to save this if only used in one function
     // const mongoUser = useRef();  // *** not sure we need to save this
-    const maps = useRef(); // all the maps from the database, full object details per map
+    const maps = useRef([]); // all the maps from the database, full object details per map
     const [visibleMaps, setVisibleMaps] = useState([]); // array of map objects
-    const tagsWithMaps_Map = useRef(new Map()); // tagsWithMaps_Map is a Map that "maps" tags to a string array with the names of maps.  Sorry for confusing terms
     const [visibleTags_Map, setVisibleTags_Map] = useState(new Map());
     const [clickedTags_Set, setClickedTags_Set] = useState(new Set());
     const [searchInput, setSearchInput] = useState(''); // complains about switching from uncontrolled to controlled input without an empty string to start
@@ -40,31 +39,11 @@ export default function App() {
 
     // this hook updates visibleMaps & visibleTags when clickedTags_Set changes
     useEffect(() => {
-        let newVisibleMaps, newVisibleTags;
+        let newVisibleMaps = [];
 
-        function updateVisibleTags() {
-            newVisibleMaps.forEach((singleMap) => {
-                singleMap.featureTags.forEach((tag) => {
-                    let mapNamesArray = newVisibleTags.get(tag);
-                    if (!mapNamesArray) {
-                        mapNamesArray = [singleMap._id]; // array with a string in it, not just a string alone
-                    } else {
-                        mapNamesArray.push(singleMap._id); // add map name to array
-                    }
-
-                    newVisibleTags.set(tag, mapNamesArray); // add pair to Map; tag: mapNamesArray
-                });
-            });
-        }
-
+        // update visibleMaps based on what tags are clicked
         if (!clickedTags_Set || clickedTags_Set.size < 1) {
-            if (maps && maps.current) {
-                tagsWithMaps_Map.current = new Map(); // re-initialize main tags
-                newVisibleMaps = maps.current; // all maps visible
-                newVisibleTags = tagsWithMaps_Map.current;
-                updateVisibleTags();
-            }
-            newVisibleTags = tagsWithMaps_Map.current;
+            if (maps && maps.current) newVisibleMaps = maps.current;
         } else {
             newVisibleMaps = maps.current.filter((singleMap) => {
                 let include = true;
@@ -73,11 +52,25 @@ export default function App() {
                 });
                 return include ? singleMap : null;
             });
-
-            newVisibleTags = new Map();
-            updateVisibleTags();
         }
         setVisibleMaps(newVisibleMaps);
+
+        // update visibleTags based on visibleMaps (reusing newVisibleMaps above, not waiting for async set)
+        let newVisibleTags = new Map();
+        newVisibleMaps.forEach((singleMap) => {
+            singleMap.featureTags.forEach((tag) => {
+                // for each tag in each map
+                let mapNamesArray = newVisibleTags.get(tag); // if a tag exists, get its current array
+                if (!mapNamesArray) {
+                    // if that array didn't exist or is empty
+                    mapNamesArray = [singleMap._id]; // make an array with a string in it, not just a string alone
+                } else {
+                    mapNamesArray.push(singleMap._id); // add map name to array
+                }
+
+                newVisibleTags.set(tag, mapNamesArray); // add pair to Map... tag: mapNamesArray
+            });
+        });
         setVisibleTags_Map(newVisibleTags);
 
         // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -115,7 +108,8 @@ export default function App() {
                             (visibleMaps ? visibleMaps.length : '0') +
                             (visibleMaps && visibleMaps.length === 1 ? ' map visible' : ' maps visible')
                         }
-                        color={isConnected === CONNECTED ? 'primary' : 'error'}>
+                        color={isConnected === CONNECTED ? 'primary' : 'error'}
+                    >
                         URT MAPS
                     </Badge>
                 </h1>
@@ -136,7 +130,8 @@ export default function App() {
                 />
             </div>
             <div>
-                Realtime test, showing your <em>typed text or clicked tag:</em>&nbsp; {searchInput.toString()}
+                Realtime test, showing your <em>typed text or clicked tag:</em>
+                &nbsp; {searchInput.toString()}
             </div>
             <h2>
                 <Badge badgeContent={visibleTags_Map.size + ' visible'} color='primary'>
