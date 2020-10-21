@@ -14,7 +14,7 @@ export default function App() {
     // const mongoUser = useRef();  // *** not sure we need to save this
     const maps = useRef([]); // all the maps from the database, full object details per map
     const [visibleMaps, setVisibleMaps] = useState([]); // array of map objects
-    const [visibleTags_Map, setVisibleTags_Map] = useState(new Map());
+    const [visibleTags, setVisibleTags] = useState([]);
     const [clickedTags_Set, setClickedTags_Set] = useState(new Set());
     const [searchInput, setSearchInput] = useState(''); // complains about switching from uncontrolled to controlled input without an empty string to start
 
@@ -60,18 +60,20 @@ export default function App() {
         newVisibleMaps.forEach((singleMap) => {
             singleMap.featureTags.forEach((tag) => {
                 // for each tag in each map
-                let mapNamesArray = newVisibleTags.get(tag); // if a tag exists, get its current array
-                if (!mapNamesArray) {
-                    // if that array didn't exist or is empty
-                    mapNamesArray = [singleMap._id]; // make an array with a string in it, not just a string alone
-                } else {
-                    mapNamesArray.push(singleMap._id); // add map name to array
-                }
-
-                newVisibleTags.set(tag, mapNamesArray); // add pair to Map... tag: mapNamesArray
+                let count = newVisibleTags.get(tag); // if a tag exists, get its count
+                if (!count) count = 1;
+                else count += 1;
+                newVisibleTags.set(tag, count); // add pair to Map... tag: count
             });
         });
-        setVisibleTags_Map(newVisibleTags);
+        let sortedTags = [...newVisibleTags].sort((a, b) => {
+            if (a[1] > b[1]) return -1; // descending by count ([1])
+            if (a[1] < b[1]) return 1;
+            if (a[0] < b[0]) return -1; // when tied, ascending by tag name ([0])
+            if (a[0] > b[0]) return 1;
+            return 0; // this should never be reached due to unique tag names, but just in case
+        });
+        setVisibleTags(sortedTags);
 
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [clickedTags_Set]);
@@ -134,14 +136,14 @@ export default function App() {
                 &nbsp; {searchInput.toString()}
             </div>
             <h2>
-                <Badge badgeContent={visibleTags_Map.size + ' visible'} color='primary'>
+                <Badge badgeContent={visibleTags.length + ' visible'} color='primary'>
                     Map feature tags
                 </Badge>
             </h2>
             <div style={{ paddingRight: '12px' }}>
                 {/* ^ that padding prevents badges cutting off, or a horizontal scroll bar */}
                 <TagsList
-                    visibleTagsList={[...visibleTags_Map.entries()]}
+                    visibleTagsList={visibleTags}
                     clickedTagsList={clickedTags_Set}
                     callBackFunc={handleMapFilterClick}
                 />
