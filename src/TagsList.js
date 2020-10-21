@@ -8,7 +8,7 @@ TagsList.propTypes = {
     callBackFunc: PropTypes.func,
 };
 
-// this function takes an Array of strings, a Set of clicked tags, and a callback Function, and returns a collection of Buttons
+// this function takes an Array of strings+counts, a Set of clicked tags, and a callback Function, and returns a collection of Buttons
 export default function TagsList({ visibleTagsList: tagsList, clickedTagsList, callBackFunc }) {
     if (!tagsList || tagsList.length < 0 || !callBackFunc) return <div>Making tags...</div>;
     return (
@@ -22,9 +22,9 @@ export default function TagsList({ visibleTagsList: tagsList, clickedTagsList, c
                         size='small'
                         key={tagName + '_button'}
                         onClick={() => callBackFunc(tagName)}
-                        style={{ marginRight: '5px', marginBottom: '5px' }}
+                        style={{ marginRight: '5px', marginBottom: '5px', paddingBottom: '1px' }}
                     >
-                        <Badge badgeContent={count} color='secondary'>
+                        <Badge badgeContent={count} color='primary'>
                             {tagName} &nbsp;
                         </Badge>
                     </Button>

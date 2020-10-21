@@ -43,7 +43,7 @@ export default function App() {
 
         // update visibleMaps based on what tags are clicked
         if (!clickedTags_Set || clickedTags_Set.size < 1) {
-            if (maps && maps.current) newVisibleMaps = maps.current;
+            if (maps && maps.current) newVisibleMaps = maps.current; // all maps visible, if maps have loaded
         } else {
             newVisibleMaps = maps.current.filter((singleMap) => {
                 let include = true;
@@ -73,10 +73,10 @@ export default function App() {
         });
         setVisibleTags(
             [...newVisibleTags].sort((a, b) => {
-                if (a[1] > b[1]) return -1; // descending by count ([1])
-                if (a[1] < b[1]) return 1;
-                if (a[0] < b[0]) return -1; // when tied, ascending by tag name ([0])
-                if (a[0] > b[0]) return 1;
+                // if (a[1] > b[1]) return -1; // descending by count ([1])
+                // if (a[1] < b[1]) return 1;
+                if (a[0] > b[0]) return 1; // when tied, ascending by tag name ([0])
+                if (a[0] < b[0]) return -1;
                 return 0; // this should never be reached due to unique tag names, but just in case
             })
         );
@@ -99,7 +99,7 @@ export default function App() {
     function handleSearchChange(event) {
         setSearchInput(event.target.value);
 
-        // todo:  parse input in real-time and generate tags
+        // todo:  parse input in real-time and update clicked tags, visibles
     }
 
     // return is what renders the html (and jsx) of our component:
@@ -116,7 +116,7 @@ export default function App() {
                             (visibleMaps ? visibleMaps.length : '0') +
                             (visibleMaps && visibleMaps.length === 1 ? ' map visible' : ' maps visible')
                         }
-                        color={isConnected === CONNECTED ? 'primary' : 'error'}
+                        color={isConnected === CONNECTED ? 'secondary' : 'error'}
                     >
                         URT MAPS
                     </Badge>
@@ -142,7 +142,7 @@ export default function App() {
                 &nbsp; {searchInput.toString()}
             </div>
             <h2>
-                <Badge badgeContent={visibleTags.length + ' visible'} color='primary'>
+                <Badge badgeContent={visibleTags.length + ' visible'} color='secondary'>
                     Map feature tags
                 </Badge>
             </h2>
