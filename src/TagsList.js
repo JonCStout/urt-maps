@@ -12,7 +12,7 @@ TagsList.propTypes = {
 export default function TagsList({ visibleTagsList: tagsList, clickedTagsList, callBackFunc }) {
     if (!tagsList || tagsList.length < 0 || !callBackFunc) return <div>Making tags...</div>;
     return (
-        <>
+        <div style={{ paddingLeft: '.2rem' }}>
             {tagsList.map(([tagName, count]) => {
                 const isUnClicked = clickedTagsList && !clickedTagsList.has(tagName);
                 return (
@@ -30,6 +30,6 @@ export default function TagsList({ visibleTagsList: tagsList, clickedTagsList, c
                     </Button>
                 );
             })}
-        </>
+        </div>
     );
 }

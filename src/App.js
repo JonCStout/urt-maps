@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Stitch, AnonymousCredential } from 'mongodb-stitch-browser-sdk'; // package for connecting to our MongoDB-Realm app; Realm is the new name for Stitch but this package still works
 import MapCard from './MapCard';
 import TagsList from './TagsList';
+// import MapDetailPage from './MapDetailPage';
 import './App.css'; // style sheet for just this app component
 import { Badge, CssBaseline, InputAdornment, InputBase } from '@material-ui/core'; // reset CSS properties across browsers to a baseline, and controls
 import { Search } from '@material-ui/icons';
@@ -102,63 +103,68 @@ export default function App() {
         // todo:  parse input in real-time and update clicked tags, visibles
     }
 
+    function handleCardClick(mapName, ssFileName) {
+        window.location.assign('/ss/' + mapName + '/' + ssFileName);
+    }
+
     // return is what renders the html (and jsx) of our component:
     return (
         <>
             <CssBaseline />
-            <header className='App-header'>
-                <h1>
-                    <Badge
-                        badgeContent={
-                            'db ' +
-                            isConnected +
-                            ' | ' +
-                            (visibleMaps ? visibleMaps.length : '0') +
-                            (visibleMaps && visibleMaps.length === 1 ? ' map visible' : ' maps visible')
+            <div id='front-page'>
+                <header className='App-header'>
+                    <h1>
+                        <Badge
+                            badgeContent={
+                                'db ' +
+                                isConnected +
+                                ' | ' +
+                                (visibleMaps ? visibleMaps.length : '0') +
+                                (visibleMaps && visibleMaps.length === 1 ? ' map visible' : ' maps visible')
+                            }
+                            color={isConnected === CONNECTED ? 'secondary' : 'error'}
+                        >
+                            URT MAPS
+                        </Badge>
+                    </h1>
+                </header>
+                <div id='search-bar'>
+                    <InputBase
+                        placeholder='start typing map keywords here, separated by commas'
+                        id='search-box'
+                        inputProps={{ 'aria-label': 'naked' }}
+                        startAdornment={
+                            <InputAdornment position='start'>
+                                <Search />
+                            </InputAdornment>
                         }
-                        color={isConnected === CONNECTED ? 'secondary' : 'error'}
-                    >
-                        URT MAPS
+                        value={searchInput}
+                        onChange={handleSearchChange}
+                        fullWidth
+                    />
+                </div>
+                <div style={{ paddingLeft: '.5em' }}>
+                    Realtime test, showing your <em>typed text or clicked tag:</em>
+                    &nbsp; {searchInput.toString()}
+                </div>
+                <h2 style={{ paddingLeft: '1rem' }}>
+                    <Badge badgeContent={visibleTags.length + ' visible'} color='secondary'>
+                        Map feature tags
                     </Badge>
-                </h1>
-            </header>
-            <div id='searchBar'>
-                <InputBase
-                    placeholder='start typing map keywords here, separated by commas'
-                    id='searchBox'
-                    inputProps={{ 'aria-label': 'naked' }}
-                    startAdornment={
-                        <InputAdornment position='start'>
-                            <Search />
-                        </InputAdornment>
-                    }
-                    value={searchInput}
-                    onChange={handleSearchChange}
-                    fullWidth
-                />
-            </div>
-            <div>
-                Realtime test, showing your <em>typed text or clicked tag:</em>
-                &nbsp; {searchInput.toString()}
-            </div>
-            <h2>
-                <Badge badgeContent={visibleTags.length + ' visible'} color='secondary'>
-                    Map feature tags
-                </Badge>
-            </h2>
-            <div style={{ paddingRight: '12px' }}>
-                {/* ^ that padding prevents badges cutting off, or a horizontal scroll bar */}
+                </h2>
                 <TagsList
                     visibleTagsList={visibleTags}
                     clickedTagsList={clickedTags_Set}
                     callBackFunc={handleMapFilterClick}
                 />
-            </div>
-            <br />
-            <div id='cardList'>
-                {visibleMaps
-                    ? visibleMaps.map((aMap) => <MapCard name={aMap._id} ss={aMap.screenShots} key={aMap._id} />)
-                    : 'loading maps...'}
+                <br />
+                <div id='card-list'>
+                    {visibleMaps.length > 0
+                        ? visibleMaps.map((aMap) => (
+                              <MapCard cardName={aMap._id} ss={aMap.screenShots} cb={handleCardClick} key={aMap._id} />
+                          ))
+                        : 'loading maps...'}
+                </div>
             </div>
         </>
     );

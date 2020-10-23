@@ -1,11 +1,11 @@
-#name {
+#title {
     text-align: center;
+    margin: .5rem;
 }
 
 .card {
-    max-width: 600px;
+    max-width: 620px;
     margin: 5px;
-    text-align: center;
     justify-items: center;
     /* border: 2px solid black; */
     box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.75);
@@ -17,24 +17,54 @@
     order: 0;
 }
 
-.mainSS {
-    max-width: 590px;
+.main-ss {
+    max-width: 610px;
+    margin-top: 5px;
+    margin-bottom: 2px;
+}
+
+.sub-ss {
+    max-width: 302px;
+    margin-bottom: -5px;
+}
+
+.bare-button-main {
     display: block;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
     margin: auto;
-    padding: 5px;
+    padding: 0 0 0 0;
 }
 
-.subSS {
-    max-width: 295px;
-    margin: auto auto -5px auto;
+.bare-button-sub {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
 }
 
-.subSS-left {
-    padding-left: 5px;
-    padding-right: 3px;
+.bare-button-sub-left {
+    margin-left: 5px;
+    margin-right: 3px;
 }
 
-.subSS-right {
-    padding-left: 3px;
-    padding-right: 5px;
+.bare-button-sub-right {
+    margin-left: 3px;
+    margin-right: 5px;
 }
+
+.more-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+    display: inline;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .more-button:hover,
+  .more-button:focus {
+    text-decoration: none;
+  }
