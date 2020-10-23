@@ -110,7 +110,7 @@ export default function App() {
                 <h1>
                     <Badge
                         badgeContent={
-                            'database ' +
+                            'db ' +
                             isConnected +
                             ' | ' +
                             (visibleMaps ? visibleMaps.length : '0') +
