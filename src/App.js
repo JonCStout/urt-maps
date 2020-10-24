@@ -104,7 +104,7 @@ export default function App() {
     }
 
     function handleCardClick(mapName, ssFileName) {
-        window.location.assign('/ss/' + mapName + '/' + ssFileName);
+        window.location.assign('ss/' + mapName + '/' + ssFileName);
     }
 
     // return is what renders the html (and jsx) of our component:
@@ -124,7 +124,7 @@ export default function App() {
                             }
                             color={isConnected === CONNECTED ? 'secondary' : 'error'}
                         >
-                            URT MAPS
+                            URT MAP FINDER
                         </Badge>
                     </h1>
                 </header>

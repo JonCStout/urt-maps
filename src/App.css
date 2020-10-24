@@ -29,6 +29,7 @@ input:focus {
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
+    font-family: 'Grandstander', cursive;
     color: #3d3d3d;
 }
 
