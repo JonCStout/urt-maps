@@ -5,15 +5,16 @@ import { CssBaseline } from '@material-ui/core';
 
 export default function App() {
     const MAINVIEW = 1;
+    const DETAILVIEW = 2;
 
     const [viewState, setViewState] = useState(MAINVIEW);
     const [detailMap, setDetailMap] = useState();
-    const [ssFileName2, setssFileName2] = useState();
+    const [ssClickedIdx, setSSClickedIdx] = useState();
 
-    function updateView(aMapObj, ssFileName) {
+    function updateView(aMapObj, _ssClickedIdx) {
         setDetailMap(aMapObj);
-        setssFileName2(ssFileName);
-        setViewState(2);
+        setSSClickedIdx(_ssClickedIdx);
+        setViewState(DETAILVIEW);
     }
 
     // return is what renders the html (and jsx) of our component:
@@ -23,7 +24,7 @@ export default function App() {
             {viewState === MAINVIEW ? (
                 <MainPage updateViewCB={updateView} />
             ) : (
-                <MapDetailPage map={detailMap} ssClicked={ssFileName2} />
+                <MapDetailPage map={detailMap} ssClicked={ssClickedIdx} />
             )}
         </>
     );

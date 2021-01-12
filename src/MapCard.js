@@ -10,14 +10,14 @@ export default function MapCard({ map, cb }) {
     return (
         <>
             <div className='card'>
-                <button className='bare-button-main' onClick={() => cb(map, ss[0])}>
+                <button className='bare-button-main' onClick={() => cb(map, 0)}>
                     <img className='main-ss' src={prefix + ss[0]} alt='main screenshot' />
                 </button>
                 <span>
-                    <button className='bare-button-sub bare-button-sub-left' onClick={() => cb(map, ss[1])}>
+                    <button className='bare-button-sub bare-button-sub-left' onClick={() => cb(map, 1)}>
                         <img className='sub-ss' src={prefix + ss[1]} alt='screenshot 2' />
                     </button>
-                    <button className='bare-button-sub bare-button-sub-right' onClick={() => cb(map, ss[2])}>
+                    <button className='bare-button-sub bare-button-sub-right' onClick={() => cb(map, 2)}>
                         <img className='sub-ss' src={prefix + ss[2]} alt='screenshot 3' />
                     </button>
                 </span>
@@ -30,7 +30,7 @@ export default function MapCard({ map, cb }) {
                     </Grid>
                     <Grid item xs={2}>
                         {ss.length > 3 ? (
-                            <button className='more-button' onClick={() => cb(map, ss[3])} title='more screenshots'>
+                            <button className='more-button' onClick={() => cb(map, 3)} title='more screenshots'>
                                 {/* ^ *** link to carousel later */}
                                 +more screenshots
                             </button>
