@@ -1,5 +1,5 @@
 {
-    "name": "fsk-maps",
+    "name": "urt-maps",
     "version": "0.2.1",
     "private": true,
     "dependencies": {
@@ -57,5 +57,6 @@
             "last 1 safari version"
         ]
     },
-    "devDependencies": {}
+    "devDependencies": {},
+    "homepage": "/urt-maps"
 }
