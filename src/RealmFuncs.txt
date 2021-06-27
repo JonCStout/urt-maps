@@ -1,8 +1,9 @@
 This file is a simple copy/paste of the functions hosted on Realm, for open source transparency.
 
 // getAllMapData()
+// note that this function has to be set for application authentication and non-private in Realm function settings
 exports = function(){
-  var coll = context.services.get("mongodb-atlas").db("fsk-maps").collection("maps");
+  var coll = context.services.get("mongodb-atlas").db("urt-maps").collection("maps");
   var result = coll.find();
   return {result};
 };

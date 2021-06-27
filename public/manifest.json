@@ -1,6 +1,6 @@
 {
-    "short_name": "FSK Maps",
-    "name": "FSK405 Map Finder Repo",
+    "short_name": "UrT Maps",
+    "name": "UrT Map Finder Repo",
     "start_url": ".",
     "display": "standalone",
     "theme_color": "#000000",

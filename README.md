@@ -2,7 +2,9 @@
 
 A repository for finding and managing hundreds of maps for the game Urban Terror.
 
-For project management board, including the todo list, check out: https://trello.com/b/uPz6Y8vV/fsk405-map-search-website
+Live preview site: https://joncstout.github.io/urt-maps
+
+For project management board, including the todo list, check out: https://trello.com/b/uPz6Y8vV/urt-map-search-website
 
 #
 
