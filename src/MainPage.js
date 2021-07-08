@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { Stitch, AnonymousCredential } from 'mongodb-stitch-browser-sdk'; // package for connecting to our MongoDB-Realm app; Realm is the new name for Stitch but this package still works
+import * as Realm from 'realm-web'; // mongodb realm package
 import MapCard from './MapCard';
 import TagsList from './TagsList';
 import './MainPage.css'; // style sheet for just this app component
@@ -10,8 +10,7 @@ export default function MainPage({ updateViewCB }) {
     const CONNECTED = 'IS connected';
     const NOTCONNECTED = 'is NOT connected';
     const [isConnected, setIsConnected] = useState(NOTCONNECTED);
-    const mongoClient = useRef([]); // for saving the mongoClient object across renders of this component;  *** may not need to save this if only used in one function
-    // const mongoUser = useRef();  // *** not sure we need to save this
+    const mongoApp = useRef([]); // for saving the mongoApp object across renders of this component;  *** may not need to save this if only used in one function one time?
 
     const maps = useRef([]); // all the maps from the database, full object details per map
     const [visibleMaps, setVisibleMaps] = useState([]); // array of map objects
@@ -23,19 +22,23 @@ export default function MainPage({ updateViewCB }) {
     useEffect(() => {
         if (maps.current.length < 1) {
             setIsConnected('is connecting...');
-            // initializeDefaultAppClient is really picky, only wants to be run once.  And saving the referenece to it is also picky
-            mongoClient.current = Stitch.initializeDefaultAppClient('urt-maps-realmapp-xjuqv'); // string is app ID (realmApp, not realMapp)
+            mongoApp.current = new Realm.App({ id: 'urt-maps-realmapp-xjuqv' }); // string is app ID (realmApp, not realMapp)
 
-            const creds = new AnonymousCredential();
-            mongoClient.current.auth.loginWithCredential(creds).then((user) => {
-                // *** user unneeded? ^
-                setIsConnected(CONNECTED);
-                // mongoUser.current = user;
-                mongoClient.current.callFunction('getAllMapData').then((response) => {
-                    maps.current = response.result;
-                    setClickedTags_Set(new Set()); // initialize this Set and trigger Visibles updates
+            // const creds = new AnonymousCredential();
+            try {
+                // Authenticate the user
+                mongoApp.current.logIn(Realm.Credentials.anonymous()).then((returnedUser) => {
+                    // assert(mongoClient.id === mongoApp.currentUser.id);
+                    returnedUser.functions.getAllMapData().then((response) => {
+                        maps.current = response.result;
+                        setClickedTags_Set(new Set()); // initialize this Set and trigger Visibles updates
+                        setIsConnected(CONNECTED);
+                    });
                 });
-            });
+            } catch (err) {
+                console.error('Failed to log in to db', err);
+                setIsConnected('DB ERROR');
+            }
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []); // the empty array at the end means this hook only runs once, after the web page is done with the initial render
