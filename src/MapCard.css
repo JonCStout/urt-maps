@@ -1,6 +1,6 @@
 #title {
     text-align: center;
-    margin: .5rem;
+    margin: 0.5rem;
 }
 
 .card {
@@ -62,9 +62,9 @@
     display: inline;
     margin: 0;
     padding: 0;
-  }
-  
-  .more-button:hover,
-  .more-button:focus {
+}
+
+.more-button:hover,
+.more-button:focus {
     text-decoration: none;
-  }
+}
