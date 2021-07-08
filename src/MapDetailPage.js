@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import Box from '@material-ui/core/Box';
+// import { sizing } from '@material-ui/system';
 
 import './MapDetailPage.css';
 
@@ -33,10 +35,6 @@ export default class MapDetailPage extends Component {
     //     debugger;
     // }, []);
 
-    // render() {
-    //     const { map, ssClicked } = this.props;
-    //     if (!map || ssClicked === undefined) return <p>EMPTY PARAMETERS PASSED</p>; // returns have to be after hooks
-
     //     const settingsTopSlider = {
     //         dots: true,
     //         infinite: false,
@@ -64,9 +62,6 @@ export default class MapDetailPage extends Component {
     //         focusOnSelect: true,
     //         slider: 'img',
     //     };
-
-    //     const prefix = `ss/${map._id}/`;
-    //     const ss = map.screenShots; // shortcut
 
     //     return (
     //         <>
@@ -105,45 +100,57 @@ export default class MapDetailPage extends Component {
         const ss = map.screenShots; // shortcut
 
         return (
-            <div>
-                <h2>Slider Syncing (AsNavFor)</h2>
-                <h4>First Slider</h4>
-                <Slider asNavFor={this.state.nav2} ref={(slider) => (this.slider1 = slider)}>
-                    <div>
-                        <img className='detail-main-ss' src={prefix + ss[0]} alt='screenshot 1' />
+            <>
+                {/* <div className='detail-main-ss-area'> */}
+                <Box height='75%' width='80%'>
+                    <Slider
+                        className={'gentle-flex'}
+                        asNavFor={this.state.nav2}
+                        ref={(slider) => (this.slider1 = slider)}
+                        variableWidth={true}
+                        slidesToShow={1}
+                        initialSlide={ssClicked}
+                        slider={'img'}
+                        infinite={false}
+                        centerMode={true}
+                        adaptiveHeight={true}
+                    >
+                        {ss.map((_el, index) => {
+                            return (
+                                <img className='detail-main-ss' src={prefix + _el} alt={'screenshot ' + (index + 1)} />
+                                // <img style={{ height: '600px' }} src={prefix + _el} alt={'screenshot ' + (index + 1)} />
+                            );
+                        })}
+                    </Slider>
+                </Box>
+                {/* </div> */}
+                <section className='detail-bottom-area'>
+                    <div className='detail-carousel-section'>
+                        <Slider
+                            asNavFor={this.state.nav1}
+                            ref={(slider) => (this.slider2 = slider)}
+                            variableWidth={true}
+                            slidesToShow={1}
+                            swipeToSlide={true}
+                            focusOnSelect={true}
+                            arrows={true}
+                            initialSlide={ssClicked}
+                            infinite={false}
+                        >
+                            {ss.map((_el, index) => {
+                                return (
+                                    <img
+                                        className='detail-sub-ss'
+                                        src={prefix + _el}
+                                        alt={'thumbnail ' + (index + 1)}
+                                    />
+                                );
+                            })}
+                        </Slider>
                     </div>
-                    <div>
-                        <img className='detail-main-ss' src={prefix + ss[1]} alt='screenshot 2' />
-                    </div>
-                    <div>
-                        <img className='detail-main-ss' src={prefix + ss[2]} alt='screenshot 3' />
-                    </div>
-                    <div>
-                        <img className='detail-main-ss' src={prefix + ss[3]} alt='screenshot 4' />
-                    </div>
-                </Slider>
-                <h4>Second Slider</h4>
-                <Slider
-                    asNavFor={this.state.nav1}
-                    ref={(slider) => (this.slider2 = slider)}
-                    slidesToShow={3}
-                    swipeToSlide={true}
-                    focusOnSelect={true}
-                >
-                    <div>
-                        <img className='detail-sub-ss' src={prefix + ss[0]} alt='screenshot 1' />
-                    </div>
-                    <div>
-                        <img className='detail-sub-ss' src={prefix + ss[1]} alt='screenshot 2' />
-                    </div>
-                    <div>
-                        <img className='detail-sub-ss' src={prefix + ss[2]} alt='screenshot 3' />
-                    </div>
-                    <div>
-                        <img className='detail-sub-ss' src={prefix + ss[3]} alt='screenshot 4' />
-                    </div>
-                </Slider>
-            </div>
+                    <section className='detail-info-section'>Map details here...</section>
+                </section>
+            </>
         );
     }
 }

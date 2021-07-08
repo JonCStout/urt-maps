@@ -24,7 +24,7 @@ export default function MainPage({ updateViewCB }) {
         if (maps.current.length < 1) {
             setIsConnected('is connecting...');
             // initializeDefaultAppClient is really picky, only wants to be run once.  And saving the referenece to it is also picky
-            mongoClient.current = Stitch.initializeDefaultAppClient('fsk-realmapp-slofx'); // string is app ID (realmApp, not realMapp)
+            mongoClient.current = Stitch.initializeDefaultAppClient('urt-maps-realmapp-xjuqv'); // string is app ID (realmApp, not realMapp)
 
             const creds = new AnonymousCredential();
             mongoClient.current.auth.loginWithCredential(creds).then((user) => {
