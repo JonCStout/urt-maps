@@ -7,7 +7,7 @@ import { Badge, InputAdornment, InputBase } from '@material-ui/core'; // reset C
 import { Search } from '@material-ui/icons';
 
 export default function MainPage({ updateViewCB }) {
-    const CONNECTED = 'IS connected';
+    const CONNECTED = 'IS connected'; // for db connection tracking
     const NOTCONNECTED = 'is NOT connected';
     const [isConnected, setIsConnected] = useState(NOTCONNECTED);
     const mongoApp = useRef([]); // for saving the mongoApp object across renders of this component;  *** may not need to save this if only used in one function one time?
