@@ -4,8 +4,9 @@ import './MapCard.css';
 import { Grid } from '@material-ui/core';
 
 export default function MapCard({ map, cb }) {
-    const ss = map.screenShots;
-    const prefix = `ss/${map._id}/`;
+    const ss = map.screenShots; // abreviate, simplify code typing
+    const prefix = `ss/${map._id}/`; // start of path
+    const displayName = map._id.replace(/_/g, ' ');
 
     return (
         <>
@@ -26,7 +27,7 @@ export default function MapCard({ map, cb }) {
                         &nbsp;
                     </Grid>
                     <Grid item xs={8}>
-                        <h2 id='title'>{map._id}</h2>
+                        <h2 id='title'>{displayName}</h2>
                     </Grid>
                     <Grid item xs={2}>
                         {ss.length > 3 ? (
