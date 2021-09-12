@@ -1,0 +1,2543 @@
+[
+    {
+        "filename": "area51_beta1_fix.pk3",
+        "longname": "area51_beta1",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf",
+        "fileSize": "13.0 mb"
+    },
+    {
+        "filename": "blackbridge.pk3",
+        "longname": "blackbridge",
+        "modes": "ut_ffa",
+        "fileSize": "6.7 mb"
+    },
+    {
+        "filename": "casa_snow.pk3",
+        "fileSize": "3.5 mb"
+    },
+    {
+        "filename": "castle_b10.pk3",
+        "longname": "CASTLE - beta 10",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "39.1 mb"
+    },
+    {
+        "filename": "cemetery_f43.pk3",
+        "longname": "Cemetery",
+        "modes": "ut_ctf",
+        "fileSize": "8.2 mb"
+    },
+    {
+        "filename": "chronic.pk3",
+        "longname": "CHRONIC",
+        "modes": "ffa",
+        "fileSize": "7.1 mb"
+    },
+    {
+        "filename": "chronic_snow.pk3",
+        "longname": "CHRONIC Snow",
+        "modes": "ffa ctf",
+        "fileSize": "11.3 mb"
+    },
+    {
+        "filename": "crescent.pk3",
+        "longname": "Crescent",
+        "modes": "tourney",
+        "fileSize": "8.4 mb"
+    },
+    {
+        "filename": "dawnoftime.pk3",
+        "longname": "Dawn of Time",
+        "modes": "tourney ffa team ctf",
+        "fileSize": "21.9 mb"
+    },
+    {
+        "filename": "estatica.pk3",
+        "longname": "Estatica",
+        "modes": "tourney ffa",
+        "fileSize": "8.2 mb"
+    },
+    {
+        "filename": "farwest_w1.pk3",
+        "longname": "farwest",
+        "modes": "ut_ffa ut_survivor ut_ctf",
+        "fileSize": "7.2 mb"
+    },
+    {
+        "filename": "ghzone-xmas.pk3",
+        "longname": "ghzone-xmas",
+        "modes": "ut_ffa ut_team ut_survivor ut_ctf ut_bomb",
+        "fileSize": "13.2 mb"
+    },
+    {
+        "filename": "ghzone-xxy.pk3",
+        "longname": "ghzone-xxy",
+        "modes": "ut_ffa ut_team ut_survivor ut_ctf ut_bomb",
+        "fileSize": "15.2 mb"
+    },
+    {
+        "filename": "ghzone-xxy_f43.pk3",
+        "longname": "ghzone-xxy",
+        "modes": "ut_ffa ut_team ut_survivor ut_ctf ut_bomb",
+        "fileSize": "15.2 mb"
+    },
+    {
+        "filename": "lavarena.pk3",
+        "longname": "Lava Arena",
+        "modes": "ut_ffa ut_team ut_survivor ut_ctf",
+        "fileSize": "4.9 mb"
+    },
+    {
+        "filename": "layout_del_1.pk3",
+        "longname": "Layout development map by CMM",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "10.7 mb"
+    },
+    {
+        "filename": "lillypad_w1.pk3",
+        "longname": "lillypad",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf",
+        "fileSize": "7.4 mb"
+    },
+    {
+        "filename": "metro.pk3",
+        "fileSize": "19.5 mb"
+    },
+    {
+        "filename": "metro_4x.pk3",
+        "longname": "metro_4x",
+        "modes": "ut_ffa 1 2 ut_team ut_survivor ut_follow ut_ctf",
+        "fileSize": "21.4 mb"
+    },
+    {
+        "filename": "moma_a1.pk3",
+        "fileSize": "0.9 mb"
+    },
+    {
+        "filename": "nkp.pk3",
+        "longname": "Crossing",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "7.4 mb"
+    },
+    {
+        "filename": "oxeia.pk3",
+        "fileSize": "4.5 mb"
+    },
+    {
+        "filename": "q3ctfvoy1.pk3",
+        "longname": "Beta Station",
+        "modes": "ffa ctf team tourney",
+        "fileSize": "2.1 mb"
+    },
+    {
+        "filename": "q_premiere_f43.pk3",
+        "longname": "Premiere City",
+        "modes": "ut_ffa ut_team ut_survivor ut_cah ut_ctf",
+        "fileSize": "18.4 mb"
+    },
+    {
+        "filename": "rfaknife.pk3",
+        "longname": "RFAKNIFE by Alexandra",
+        "modes": "ut_survivor ut_ctf ut_bomb",
+        "fileSize": "14.3 mb"
+    },
+    {
+        "filename": "skycastle.pk3",
+        "fileSize": "5.8 mb"
+    },
+    {
+        "filename": "tng-town_b1_x.pk3",
+        "fileSize": "35.2 mb"
+    },
+    {
+        "filename": "uptown_snow.pk3",
+        "fileSize": "2.2 mb"
+    },
+    {
+        "filename": "ut41_headtown_a4.pk3",
+        "fileSize": "10.3 mb"
+    },
+    {
+        "filename": "ut43_arena1.pk3",
+        "longname": "Arena 1",
+        "modes": "ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "47.7 mb"
+    },
+    {
+        "filename": "ut43_aztec_ruins_rc1.pk3",
+        "longname": "Aztec Ruins",
+        "modes": "ut_cah ut_team ut_survivor ut_ctf",
+        "fileSize": "10.5 mb"
+    },
+    {
+        "filename": "ut43_duplomania_b1.pk3",
+        "fileSize": "1.1 mb"
+    },
+    {
+        "filename": "ut4_1upfun1.pk3",
+        "fileSize": "1.6 mb"
+    },
+    {
+        "filename": "ut4_1upfun1_v2.pk3",
+        "modes": "ut_team ut_survivor ut_ctf",
+        "fileSize": "1.8 mb"
+    },
+    {
+        "filename": "ut4_aardtimes_fixed.pk3",
+        "longname": "aardtimes",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "15.3 mb"
+    },
+    {
+        "filename": "ut4_aardtimes_www2.pk3",
+        "longname": "aardtimes",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "15.7 mb"
+    },
+    {
+        "filename": "ut4_abaddonctf_rc3.pk3",
+        "longname": "AbaddonCTF rc3",
+        "modes": "ut_team ut_ctf",
+        "fileSize": "54.1 mb"
+    },
+    {
+        "filename": "ut4_abaddonts_rc4.pk3",
+        "longname": "AbaddonTS rc4",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb ut_ft ut_gungame",
+        "fileSize": "50.0 mb"
+    },
+    {
+        "filename": "ut4_abaddon_b11.pk3",
+        "longname": "Abaddon b11",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb ut_ft ut_gungame",
+        "fileSize": "37.3 mb"
+    },
+    {
+        "filename": "ut4_abaddon_b15v1.pk3",
+        "longname": "Abaddon b15v1",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb ut_ft ut_gungame",
+        "fileSize": "45.7 mb"
+    },
+    {
+        "filename": "ut4_abaddon_b15v2.pk3",
+        "longname": "Abaddon b15v2",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb ut_ft ut_gungame",
+        "fileSize": "45.8 mb"
+    },
+    {
+        "filename": "ut4_abaddon_b2.pk3",
+        "longname": "Abaddon beta 2 by Sneaks",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb ut_ft ut_gungame",
+        "fileSize": "92.4 mb"
+    },
+    {
+        "filename": "ut4_abaddon_b4v3.pk3",
+        "longname": "Abaddon b4v3",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb ut_ft ut_gungame",
+        "fileSize": "64.7 mb"
+    },
+    {
+        "filename": "ut4_abaddon_rc4.pk3",
+        "longname": "Abaddon rc4",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb ut_ft ut_gungame",
+        "fileSize": "50.0 mb"
+    },
+    {
+        "filename": "ut4_aegea_a19.pk3",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb ut_lms ut_jump",
+        "fileSize": "5.0 mb"
+    },
+    {
+        "filename": "ut4_aerie_a3.pk3",
+        "fileSize": "5.7 mb"
+    },
+    {
+        "filename": "ut4_airport_b3.pk3",
+        "modes": "ut_ffa ut_team ut_survivor ut_ctf ut_cah ut_bomb",
+        "fileSize": "3.4 mb"
+    },
+    {
+        "filename": "ut4_alcantarilla_b3c.pk3",
+        "longname": "La Alcantarilla huele bien",
+        "modes": "ut_ffa ut_tdm ut_ts ut_ctf ut_bomb",
+        "fileSize": "7.5 mb"
+    },
+    {
+        "filename": "ut4_alley_fixed.pk3",
+        "longname": "Alley",
+        "modes": "ut_ffa ut_team ut_survivor ut_ctf ut_bomb ut_cah",
+        "fileSize": "7.0 mb"
+    },
+    {
+        "filename": "ut4_alps.pk3",
+        "longname": "Alps Terror",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "10.0 mb"
+    },
+    {
+        "filename": "ut4_amazing.pk3",
+        "longname": "Amazing",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_ctf ut_bomb",
+        "fileSize": "9.2 mb"
+    },
+    {
+        "filename": "ut4_ambush_f43.pk3",
+        "longname": "Ambush",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "6.5 mb"
+    },
+    {
+        "filename": "ut4_anikitown_v5.pk3",
+        "longname": "AnikiTown v5",
+        "modes": " ut_ffa ut_team ut_survivor ut_follow ut_ctf ut_bomb ut_ft ut_cah ut_gg",
+        "fileSize": "11.2 mb"
+    },
+    {
+        "filename": "ut4_antic.pk3",
+        "longname": "Antic",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "26.6 mb"
+    },
+    {
+        "filename": "ut4_arctica_beta1.pk3",
+        "longname": "Arctica b1",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "39.5 mb"
+    },
+    {
+        "filename": "ut4_area3beta3.pk3",
+        "longname": "Area3 - Beta3 by Newin",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "34.9 mb"
+    },
+    {
+        "filename": "ut4_arena1.pk3",
+        "longname": "Arena 1",
+        "modes": "ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "0.2 mb"
+    },
+    {
+        "filename": "ut4_arnoville_b4.pk3",
+        "longname": "Arnoville_b4",
+        "modes": "  ut_ffa ut_team ut_survivor ut_ctf ut_bomb",
+        "fileSize": "57.1 mb"
+    },
+    {
+        "filename": "ut4_asylum_b1.pk3",
+        "longname": "Asylum beta 1",
+        "modes": "ut_ffa ut_team ut_survivor ut_ctf ut_bomb",
+        "fileSize": "31.0 mb"
+    },
+    {
+        "filename": "ut4_athena_alpha.pk3",
+        "fileSize": "20.2 mb"
+    },
+    {
+        "filename": "ut4_australia_beta_fix.pk3",
+        "longname": "Australia",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "34.6 mb"
+    },
+    {
+        "filename": "ut4_aztek_b2.pk3",
+        "longname": "Aztek Beta 2",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "22.8 mb"
+    },
+    {
+        "filename": "ut4_aztek_ruins.pk3",
+        "longname": "Aztek Ruins",
+        "modes": "ut_cah ut_team ut_survivor ut_ctf",
+        "fileSize": "10.6 mb"
+    },
+    {
+        "filename": "ut4_badbox.pk3",
+        "longname": "badbox",
+        "modes": "ut_ctf",
+        "fileSize": "1.5 mb"
+    },
+    {
+        "filename": "ut4_baeza.pk3",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "7.2 mb"
+    },
+    {
+        "filename": "ut4_barn.pk3",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "5.3 mb"
+    },
+    {
+        "filename": "ut4_battlefront.pk3",
+        "fileSize": "1.9 mb"
+    },
+    {
+        "filename": "ut4_beijing_b3.pk3",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "24.5 mb"
+    },
+    {
+        "filename": "ut4_beijing_b3_bots.pk3",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "26.6 mb"
+    },
+    {
+        "filename": "ut4_blackhawk.pk3",
+        "longname": "Blackhawk Down",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "18.0 mb"
+    },
+    {
+        "filename": "ut4_blackmarket_beta3.pk3",
+        "fileSize": "16.3 mb"
+    },
+    {
+        "filename": "ut4_bleirrilla_a8.pk3",
+        "longname": "bleirrilla_a8",
+        "modes": "ut_ffa ut_team ut_cah ut_ctf ut_survivor",
+        "fileSize": "3.8 mb"
+    },
+    {
+        "filename": "ut4_blitzkrieg.pk3",
+        "longname": "Blitzkrieg",
+        "modes": " ut_ffa ut_team ut_survivor ut_cah ut_ctf ut_bomb",
+        "fileSize": "9.1 mb"
+    },
+    {
+        "filename": "ut4_blitzkrieg1.pk3",
+        "longname": "Blitzkrieg1",
+        "modes": " ut_ffa ut_team ut_survivor ut_cah ut_ctf ut_bomb",
+        "fileSize": "8.7 mb"
+    },
+    {
+        "filename": "ut4_blitzkrieg2.pk3",
+        "longname": "Blitzkrieg 2",
+        "modes": "ut_ffa ut_team ut_survivor ut_assassins ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "18.3 mb"
+    },
+    {
+        "filename": "ut4_blockfort2.pk3",
+        "fileSize": "0.9 mb"
+    },
+    {
+        "filename": "ut4_blockforts_rc2.pk3",
+        "longname": "Blockforts RC2",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "32.7 mb"
+    },
+    {
+        "filename": "ut4_bluedroid_2.pk3",
+        "longname": "bluedroid",
+        "modes": "ut_ctf",
+        "fileSize": "5.0 mb"
+    },
+    {
+        "filename": "ut4_bogazici_b2t.pk3",
+        "modes": "ut_team ut_survivor ut_cah ut_ctf",
+        "fileSize": "10.5 mb"
+    },
+    {
+        "filename": "ut4_borgo02_b3.pk3",
+        "longname": "borgo02_b3",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_ctf ut_cah ut_bomb",
+        "fileSize": "7.3 mb"
+    },
+    {
+        "filename": "ut4_bouncycastle_a4.pk3",
+        "longname": "xxx xxx",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "6.5 mb"
+    },
+    {
+        "filename": "ut4_bouncycastle_a5.pk3",
+        "fileSize": "6.7 mb"
+    },
+    {
+        "filename": "ut4_boxtrot_x6.pk3",
+        "longname": "boxtrot x6 -by lee",
+        "fileSize": "7.8 mb"
+    },
+    {
+        "filename": "ut4_breathe_b2.pk3",
+        "modes": "ut_ffa ut_team ut_survivor ut_ctf",
+        "fileSize": "2.4 mb"
+    },
+    {
+        "filename": "ut4_breathe_b2_f43.pk3",
+        "modes": "ut_ffa ut_team ut_survivor ut_ctf",
+        "fileSize": "3.1 mb"
+    },
+    {
+        "filename": "ut4_bridge_rc3.pk3",
+        "longname": "Bridge RC3",
+        "modes": "ut_ffa ut_bomb ut_team ut_survivor ut_cah ut_ctf",
+        "fileSize": "22.2 mb"
+    },
+    {
+        "filename": "ut4_cache_b6.pk3",
+        "longname": "Cache",
+        "modes": "ut_ffa ut_team ut_cah ut_survivor ut_ctf ut_bomb",
+        "fileSize": "18.2 mb"
+    },
+    {
+        "filename": "ut4_cambodia_b4.pk3",
+        "fileSize": "14.2 mb"
+    },
+    {
+        "filename": "ut4_cambodia_b6.pk3",
+        "fileSize": "14.3 mb"
+    },
+    {
+        "filename": "ut4_cambridge_b1.pk3",
+        "longname": "Cambridge - Beta1",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "17.0 mb"
+    },
+    {
+        "filename": "ut4_cambridge_fixed.pk3",
+        "longname": "Cambridge",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah",
+        "fileSize": "4.5 mb"
+    },
+    {
+        "filename": "ut4_campamento_b6.pk3",
+        "longname": "Campamento",
+        "modes": "ut_ffa ut_team ut_survivor ut_cah ut_ctf ut_bomb",
+        "fileSize": "20.6 mb"
+    },
+    {
+        "filename": "ut4_cannons.pk3",
+        "fileSize": "6.0 mb"
+    },
+    {
+        "filename": "ut4_carentan_b4.pk3",
+        "longname": "Carentan BETA 4",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf",
+        "fileSize": "32.0 mb"
+    },
+    {
+        "filename": "ut4_carentan_kryta_v1c.pk3",
+        "longname": "Carentan v1c",
+        "modes": "ut_team ut_ctf ut_bomb",
+        "fileSize": "34.2 mb"
+    },
+    {
+        "filename": "ut4_casablanca.pk3",
+        "longname": "Casablanca",
+        "modes": "ut_ffa ut_team ut_ctf",
+        "fileSize": "10.7 mb"
+    },
+    {
+        "filename": "ut4_castleterror.pk3",
+        "longname": "Castle Terror",
+        "modes": "ut_ffa ut_team ut_survivor ut_cah ut_ctf ut_bomb",
+        "fileSize": "10.3 mb"
+    },
+    {
+        "filename": "ut4_cathedral.pk3",
+        "longname": "Cathedral",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "11.4 mb"
+    },
+    {
+        "filename": "ut4_cemetery666.pk3",
+        "longname": "cemetery 666",
+        "modes": "ut_team ut_survivor ut_ctf ut_ffa",
+        "fileSize": "7.2 mb"
+    },
+    {
+        "filename": "ut4_cemetery666_metallica.pk3",
+        "longname": "cemetery 666",
+        "modes": "ut_team ut_survivor ut_ctf ut_ffa",
+        "fileSize": "16.7 mb"
+    },
+    {
+        "filename": "ut4_ceruleanriver_beta1.pk3",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "40.1 mb"
+    },
+    {
+        "filename": "ut4_chambers083.pk3",
+        "longname": "Chambers",
+        "modes": "ut_ffa ut_team ut_survivor ut_ctf",
+        "fileSize": "23.7 mb"
+    },
+    {
+        "filename": "ut4_city.pk3",
+        "longname": "Street fight",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_ctf ut_cah",
+        "fileSize": "4.2 mb"
+    },
+    {
+        "filename": "ut4_city666-rc3.pk3",
+        "longname": "Da Brotherhood",
+        "modes": "ut_ffa ut_team ut_survivor ut_ctf",
+        "fileSize": "37.9 mb"
+    },
+    {
+        "filename": "ut4_citygardens.pk3",
+        "longname": "City Gardens",
+        "modes": "ut_ffa ut_team ut_survivor ut_ctf",
+        "fileSize": "5.4 mb"
+    },
+    {
+        "filename": "ut4_clinic_b3.pk3",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb ut_ft ut_gungame",
+        "fileSize": "40.0 mb"
+    },
+    {
+        "filename": "ut4_company.pk3",
+        "longname": "Company",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb ut_ft",
+        "fileSize": "37.6 mb"
+    },
+    {
+        "filename": "ut4_concrete.pk3",
+        "longname": "C O N C R E T E",
+        "modes": "ut_ffa ut_ctf ",
+        "fileSize": "1.3 mb"
+    },
+    {
+        "filename": "ut4_concrete_arena_fixed.pk3",
+        "longname": "Concrete Arena Fixed",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_ctf",
+        "fileSize": "4.8 mb"
+    },
+    {
+        "filename": "ut4_constructionsite.pk3",
+        "longname": "construction site",
+        "modes": "ut_ctf",
+        "fileSize": "4.3 mb"
+    },
+    {
+        "filename": "ut4_containertown.pk3",
+        "fileSize": "11.2 mb"
+    },
+    {
+        "filename": "ut4_containeryard_b1.pk3",
+        "fileSize": "8.7 mb"
+    },
+    {
+        "filename": "ut4_corinthe_b2.pk3",
+        "fileSize": "10.3 mb"
+    },
+    {
+        "filename": "ut4_cownet2_rc2.pk3",
+        "longname": "cn2_rc2",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "13.1 mb"
+    },
+    {
+        "filename": "ut4_crazychristmas.pk3",
+        "longname": "Crazy Christmas",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "3.7 mb"
+    },
+    {
+        "filename": "ut4_crossing.pk3",
+        "longname": "Crossing",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb ut_ft",
+        "fileSize": "8.4 mb"
+    },
+    {
+        "filename": "ut4_crystal_arena_v2.pk3",
+        "longname": "Crystal Arena",
+        "modes": "ut_ffa ut_team ut_ctf",
+        "fileSize": "14.3 mb"
+    },
+    {
+        "filename": "ut4_crystal_arena_v3b.pk3",
+        "longname": "Crystal Arena",
+        "modes": "ut_ffa ut_team ut_ctf",
+        "fileSize": "27.0 mb"
+    },
+    {
+        "filename": "ut4_crystal_arena_v3b4.pk3",
+        "longname": "Crystal Arena",
+        "modes": "ut_ffa ut_team ut_ctf",
+        "fileSize": "40.9 mb"
+    },
+    {
+        "filename": "ut4_curbstompcity.pk3",
+        "fileSize": "1.7 mb"
+    },
+    {
+        "filename": "ut4_dambridge.pk3",
+        "fileSize": "8.3 mb"
+    },
+    {
+        "filename": "ut4_dambridge_b1.pk3",
+        "fileSize": "7.5 mb"
+    },
+    {
+        "filename": "ut4_dealey_b2.pk3",
+        "longname": "Dealey Plaza Beta 2",
+        "modes": "ut_ffa ut_team ut_survivor ut_ctf",
+        "fileSize": "7.2 mb"
+    },
+    {
+        "filename": "ut4_deception_v2.pk3",
+        "longname": "Deception v2",
+        "modes": "ut_team ut_survivor ut_cah ut_ctf ut_bomb",
+        "fileSize": "11.5 mb"
+    },
+    {
+        "filename": "ut4_denton.pk3",
+        "longname": "Denton",
+        "modes": "ut_ffa ut_team ut_survivor ut_ctf",
+        "fileSize": "16.1 mb"
+    },
+    {
+        "filename": "ut4_derelict_b3.pk3",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb ut_ft ut_gungame",
+        "fileSize": "34.7 mb"
+    },
+    {
+        "filename": "ut4_derelict_b5.pk3",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb ut_ft ut_gungame",
+        "fileSize": "35.4 mb"
+    },
+    {
+        "filename": "ut4_desertia.pk3",
+        "longname": "Desert oasis with a pool",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "28.1 mb"
+    },
+    {
+        "filename": "ut4_desolate_rc1.pk3",
+        "longname": "Desolate rc1",
+        "modes": "ut_ffa ut_team ut_survivor ut_ctf ut_bomb",
+        "fileSize": "12.7 mb"
+    },
+    {
+        "filename": "ut4_detroit.pk3",
+        "fileSize": "21.0 mb"
+    },
+    {
+        "filename": "ut4_detroit_fixed.pk3",
+        "fileSize": "21.2 mb"
+    },
+    {
+        "filename": "ut4_ditch082.pk3",
+        "longname": "Ditch",
+        "modes": "ut_ffa ut_team ut_survivor ut_ctf",
+        "fileSize": "15.4 mb"
+    },
+    {
+        "filename": "ut4_domus2_b2.pk3",
+        "longname": "domus2_b2",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "23.1 mb"
+    },
+    {
+        "filename": "ut4_doom10.pk3",
+        "fileSize": "0.7 mb"
+    },
+    {
+        "filename": "ut4_doom16.pk3",
+        "fileSize": "0.7 mb"
+    },
+    {
+        "filename": "ut4_dreary_b6.pk3",
+        "fileSize": "9.2 mb"
+    },
+    {
+        "filename": "ut4_dressing2_b3.pk3",
+        "longname": "New Dressingroom v2",
+        "modes": "ut_ffa ut_team ut_survivor ut_cah ut_ctf ut_bomb ut_jump ut_freeze",
+        "fileSize": "1.5 mb"
+    },
+    {
+        "filename": "ut4_dressingroom_reloaded.pk3",
+        "longname": "Dressing Room",
+        "modes": " ut_ffa ut_team ut_survivor ut_follow ut_ctf ut_bomb",
+        "fileSize": "3.5 mb"
+    },
+    {
+        "filename": "ut4_druglord.pk3",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "17.8 mb"
+    },
+    {
+        "filename": "ut4_druglord2.pk3",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf",
+        "fileSize": "26.5 mb"
+    },
+    {
+        "filename": "ut4_dtctribute_a3.pk3",
+        "longname": "xxx xxx",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "14.1 mb"
+    },
+    {
+        "filename": "ut4_dtctribute_a5.pk3",
+        "fileSize": "12.4 mb"
+    },
+    {
+        "filename": "ut4_dualcores_b1.pk3",
+        "longname": "Dual Cores",
+        "modes": "ctf",
+        "fileSize": "17.5 mb"
+    },
+    {
+        "filename": "ut4_dust2_v2.pk3",
+        "longname": "Dust2",
+        "modes": "ut_ffa ut_team ut_survivor ut_ctf ut_bomb",
+        "fileSize": "6.2 mb"
+    },
+    {
+        "filename": "ut4_edo_b1.pk3",
+        "longname": "El antiguo poblado de Edo by GuachKamikaze",
+        "modes": "ut_ffa ut_team ut_cah ut_ctf ut_follow",
+        "fileSize": "13.1 mb"
+    },
+    {
+        "filename": "ut4_eezabad.pk3",
+        "longname": "EezaBad Compound",
+        "modes": "ut_ffa ut_team ut_survivor ut_ctf ut_bomb",
+        "fileSize": "28.8 mb"
+    },
+    {
+        "filename": "ut4_efort_b1.pk3",
+        "longname": "The evil fort",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "6.0 mb"
+    },
+    {
+        "filename": "ut4_enterprise_r3.pk3",
+        "longname": "1701-d Preview only map",
+        "modes": "ut_ffa ut_team ut_survivor ut_ctf ut_bomb",
+        "fileSize": "40.3 mb"
+    },
+    {
+        "filename": "ut4_evil_circus_b1.pk3",
+        "longname": "Evil Circus - beta 1 - mtc test",
+        "modes": "ut_ffa ut_team ut_survivor ut_ctf ut_bomb",
+        "fileSize": "49.0 mb"
+    },
+    {
+        "filename": "ut4_ev_arena3_fixed.pk3",
+        "longname": "EVIL NEST ARENA 3",
+        "modes": " ut_ffa ut_team ut_survivor ut_follow ut_ctf ut_bomb",
+        "fileSize": "1.6 mb"
+    },
+    {
+        "filename": "ut4_ev_arena5.pk3",
+        "longname": "EVIL NEST ARENA 5",
+        "modes": " ut_ffa ut_team ut_survivor ut_follow ut_ctf ut_bomb",
+        "fileSize": "1.9 mb"
+    },
+    {
+        "filename": "ut4_ev_arena6_b01.pk3",
+        "longname": "EVIL NEST ARENA 6",
+        "modes": " ut_ffa ut_team ut_survivor ut_follow ut_ctf ut_bomb",
+        "fileSize": "1.6 mb"
+    },
+    {
+        "filename": "ut4_exhibition_a42.pk3",
+        "fileSize": "50.3 mb"
+    },
+    {
+        "filename": "ut4_eyasarcade.pk3",
+        "modes": "ut_ffa ut_team ut_ctf",
+        "fileSize": "11.5 mb"
+    },
+    {
+        "filename": "ut4_facade_b5a.pk3",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "30.6 mb"
+    },
+    {
+        "filename": "ut4_fastfight.pk3",
+        "longname": "Fast Fight by Duf Kni3n",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "2.9 mb"
+    },
+    {
+        "filename": "ut4_ferguson_b12.pk3",
+        "longname": "Ferguson Beta 12",
+        "modes": "ut_ffa ut_team ut_survivor ut_ctf ut_bomb",
+        "fileSize": "29.3 mb"
+    },
+    {
+        "filename": "ut4_ferro.pk3",
+        "longname": "Ferro",
+        "modes": "ut_ffa ut_team ut_ctf",
+        "fileSize": "5.0 mb"
+    },
+    {
+        "filename": "ut4_filtration.pk3",
+        "longname": "Filtration",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "9.9 mb"
+    },
+    {
+        "filename": "ut4_forestgrunt084.pk3",
+        "longname": "Forest Grunt",
+        "modes": "ut_ctf",
+        "fileSize": "3.1 mb"
+    },
+    {
+        "filename": "ut4_frenzee_a9b.pk3",
+        "longname": "Frenzee Alpha 3",
+        "modes": "ut_ffa ut_team ut_survivor ut_cah ut_ctf ut_bomb",
+        "fileSize": "3.8 mb"
+    },
+    {
+        "filename": "ut4_frenzee_rc4.pk3",
+        "longname": "Frenzee Alpha 3",
+        "modes": "ut_ffa ut_team ut_survivor ut_cah ut_ctf ut_bomb",
+        "fileSize": "7.9 mb"
+    },
+    {
+        "filename": "ut4_ftdicks.pk3",
+        "longname": "Fort Dicks",
+        "modes": "ut_ffa ut_team ut_survivor ut_cah ut_ctf ut_follow ut_bomb",
+        "fileSize": "16.8 mb"
+    },
+    {
+        "filename": "ut4_gad_dom.pk3",
+        "fileSize": "7.5 mb"
+    },
+    {
+        "filename": "ut4_gallowarena_xxxx.pk3",
+        "longname": "Gallow Arena XXXX",
+        "modes": "ut_ffa ut_team ut_survivor ut_ctf ut_bomb ut_gungame",
+        "fileSize": "5.7 mb"
+    },
+    {
+        "filename": "ut4_germany.pk3",
+        "longname": "Germany",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_ctf",
+        "fileSize": "12.0 mb"
+    },
+    {
+        "filename": "ut4_gloom_b3.pk3",
+        "longname": "Gloom",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "25.2 mb"
+    },
+    {
+        "filename": "ut4_golgotha_repack.pk3",
+        "longname": "Golgotha",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf",
+        "fileSize": "10.5 mb"
+    },
+    {
+        "filename": "ut4_goods_b3.pk3",
+        "fileSize": "14.7 mb"
+    },
+    {
+        "filename": "ut4_granja.pk3",
+        "longname": "granja",
+        "modes": "ut_team ut_survivor ut_ctf ut_ffa",
+        "fileSize": "8.6 mb"
+    },
+    {
+        "filename": "ut4_greatwall.pk3",
+        "longname": "Greatwall",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "9.2 mb"
+    },
+    {
+        "filename": "ut4_guerrilla.pk3",
+        "longname": "Guerrilla",
+        "modes": " ut_ffa ut_team ut_survivor ut_cah ut_ctf ut_bomb",
+        "fileSize": "7.8 mb"
+    },
+    {
+        "filename": "ut4_hallow.pk3",
+        "longname": "Hallow",
+        "modes": "ut_ffa ut_team ut_survivor ut_ctf",
+        "fileSize": "3.1 mb"
+    },
+    {
+        "filename": "ut4_harbortown.pk3",
+        "longname": "Harbortown",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb ut_ft",
+        "fileSize": "28.7 mb"
+    },
+    {
+        "filename": "ut4_heroic_beta1.pk3",
+        "longname": "heroic beta 1",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_ctf ut_bomb",
+        "fileSize": "17.5 mb"
+    },
+    {
+        "filename": "ut4_hexagon_v1.pk3",
+        "longname": "hexagon v1 -by lee",
+        "fileSize": "2.6 mb"
+    },
+    {
+        "filename": "ut4_hockey_a4.pk3",
+        "longname": "xxx xxx",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "8.5 mb"
+    },
+    {
+        "filename": "ut4_hudson_b3.pk3",
+        "longname": "Fifty Five Hudson Yards",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "4.6 mb"
+    },
+    {
+        "filename": "ut4_iateyourhamburger_b1.pk3",
+        "longname": "I ate your hamburger beta",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "9.7 mb"
+    },
+    {
+        "filename": "ut4_iateyourhamburger_b2.pk3",
+        "longname": "i ate your hamburger b2",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "6.5 mb"
+    },
+    {
+        "filename": "ut4_icecastle.pk3",
+        "longname": "Icecastle Nadeball",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "20.0 mb"
+    },
+    {
+        "filename": "ut4_icehole_a3.pk3",
+        "longname": "xxx xxx",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "5.8 mb"
+    },
+    {
+        "filename": "ut4_imd.pk3",
+        "modes": "ut_ffa ut_ctf ut_team ut_survivor ut_bomb",
+        "fileSize": "7.1 mb"
+    },
+    {
+        "filename": "ut4_imd2_b1.pk3",
+        "modes": "ut_ffa ut_ctf ut_team ut_survivor ut_bomb",
+        "fileSize": "6.1 mb"
+    },
+    {
+        "filename": "ut4_imperial_b11.pk3",
+        "fileSize": "47.3 mb"
+    },
+    {
+        "filename": "ut4_industrial_a4f43.pk3",
+        "longname": "Squirrels Arms Export Industry Alpha 4",
+        "modes": "ut_survivor ut_ctf",
+        "fileSize": "1.5 mb"
+    },
+    {
+        "filename": "ut4_inferno_b3.pk3",
+        "longname": "Inferno",
+        "modes": "ut_bomb",
+        "fileSize": "14.9 mb"
+    },
+    {
+        "filename": "ut4_institute_b10.pk3",
+        "longname": "Institute war",
+        "modes": "ut_ffa ut_team ut_survivor ut_cah ut_ctf ut_bomb",
+        "fileSize": "8.4 mb"
+    },
+    {
+        "filename": "ut4_intercity_release.pk3",
+        "longname": "Intercity Release",
+        "modes": "ut_ffa ut_team ut_ctf ut_bomb ut_survivor ut_follow",
+        "fileSize": "26.4 mb"
+    },
+    {
+        "filename": "ut4_intermodal_beta.pk3",
+        "longname": "Intermodal BETA",
+        "modes": "ut_ffa ut_bomb ut_team ut_survivor ut_cah ut_ctf",
+        "fileSize": "13.4 mb"
+    },
+    {
+        "filename": "ut4_iran3.pk3",
+        "longname": "UT_Iran",
+        "modes": "ut_ffa ut_team ut_survivor ut_assassins ut_cah",
+        "fileSize": "1.4 mb"
+    },
+    {
+        "filename": "ut4_iran3_rc1.pk3",
+        "longname": "Iran Rc1",
+        "modes": "ut_ffa ut_team ut_survivor ut_cah ut_ctf ",
+        "fileSize": "6.0 mb"
+    },
+    {
+        "filename": "ut4_iris.pk3",
+        "longname": "Iris",
+        "modes": " ut_ffa ut_team ut_survivor ut_follow ut_ctf ut_bomb",
+        "fileSize": "11.8 mb"
+    },
+    {
+        "filename": "ut4_italy_a5.pk3",
+        "longname": "Italy",
+        "modes": "ut_ffa ut_team ut_survivor ut_ctf ut_cah ut_bomb",
+        "fileSize": "10.8 mb"
+    },
+    {
+        "filename": "ut4_jerusalem_f43.pk3",
+        "fileSize": "10.1 mb"
+    },
+    {
+        "filename": "ut4_jungle_ruins_b5.pk3",
+        "fileSize": "12.6 mb"
+    },
+    {
+        "filename": "ut4_katooine3_a3.pk3",
+        "fileSize": "9.9 mb"
+    },
+    {
+        "filename": "ut4_katooine_a4.pk3",
+        "fileSize": "19.0 mb"
+    },
+    {
+        "filename": "ut4_katskills_a6.pk3",
+        "fileSize": "6.1 mb"
+    },
+    {
+        "filename": "ut4_kaysersberg_a2_lowres.pk3",
+        "modes": "ut_survivor ut_ffa ut_ctf ut_team ut_cah",
+        "fileSize": "30.5 mb"
+    },
+    {
+        "filename": "ut4_kickoff2_a5.pk3",
+        "fileSize": "7.3 mb"
+    },
+    {
+        "filename": "ut4_kickoff3_a5.pk3",
+        "longname": "ut4_kickoff3",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "5.0 mb"
+    },
+    {
+        "filename": "ut4_killhouse_b8.pk3",
+        "longname": "Killhouse_b8",
+        "modes": " ut_ffa ut_team ut_ctf",
+        "fileSize": "5.9 mb"
+    },
+    {
+        "filename": "ut4_kingdom_rc2.pk3",
+        "longname": "Kingdom",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "6.6 mb"
+    },
+    {
+        "filename": "ut4_kingdom_rc6.pk3",
+        "longname": "Kingdom_rc6",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "12.6 mb"
+    },
+    {
+        "filename": "ut4_kingpin_rc4.pk3",
+        "longname": "Kingpin",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "16.2 mb"
+    },
+    {
+        "filename": "ut4_kingsgambit_b5.pk3",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "16.1 mb"
+    },
+    {
+        "filename": "ut4_kittycity_a3.pk3",
+        "fileSize": "12.4 mb"
+    },
+    {
+        "filename": "ut4_knightfight_christmas_b4.pk3",
+        "longname": "knightfight_christmas_b4",
+        "modes": "ut_ffa ut_team ut_cah ut_ctf ut_survivor",
+        "fileSize": "5.9 mb"
+    },
+    {
+        "filename": "ut4_knightfight_final.pk3",
+        "longname": "knightfight_final",
+        "modes": "ut_ffa ut_team ut_cah ut_ctf ut_survivor",
+        "fileSize": "1.5 mb"
+    },
+    {
+        "filename": "ut4_kotp.pk3",
+        "longname": "King Of The Pit",
+        "modes": "ut_team ut_survivor ut_follow ut_ctf ut_bomb",
+        "fileSize": "0.7 mb"
+    },
+    {
+        "filename": "ut4_laberinto.pk3",
+        "fileSize": "39.6 mb"
+    },
+    {
+        "filename": "ut4_lair_dev2.pk3",
+        "fileSize": "5.2 mb"
+    },
+    {
+        "filename": "ut4_laneway4_beta.pk3",
+        "longname": "Laneway",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf",
+        "fileSize": "14.9 mb"
+    },
+    {
+        "filename": "ut4_leave_beta_f43.pk3",
+        "fileSize": "3.2 mb"
+    },
+    {
+        "filename": "ut4_library_b2.pk3",
+        "fileSize": "2.8 mb"
+    },
+    {
+        "filename": "ut4_lockdown.pk3",
+        "longname": "layout testing",
+        "modes": "ut_ffa ut_survivor ut_team ut_ctf",
+        "fileSize": "18.5 mb"
+    },
+    {
+        "filename": "ut4_loco_b1.pk3",
+        "modes": "ut_ffa ut_team ut_ctf ut_bomb ut_follow ut_survivor ut_cah",
+        "fileSize": "43.1 mb"
+    },
+    {
+        "filename": "ut4_loco_release.pk3",
+        "longname": "Loco Release",
+        "modes": "ut_ffa ut_team ut_ctf ut_bomb ut_follow ut_survivor ut_cah",
+        "fileSize": "37.3 mb"
+    },
+    {
+        "filename": "ut4_lolwtf.pk3",
+        "fileSize": "2.2 mb"
+    },
+    {
+        "filename": "ut4_losttemple_w2.pk3",
+        "longname": "Lost Temple",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "4.5 mb"
+    },
+    {
+        "filename": "ut4_lunarwall.pk3",
+        "fileSize": "28.4 mb"
+    },
+    {
+        "filename": "ut4_mandolin_ctf_b2.pk3",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_ft ut_gungame",
+        "fileSize": "8.6 mb"
+    },
+    {
+        "filename": "ut4_mandoloon.pk3",
+        "longname": "Mandoloon",
+        "modes": "ut_ffa ut_ctf",
+        "fileSize": "24.3 mb"
+    },
+    {
+        "filename": "ut4_marvel_b1.pk3",
+        "longname": "Marvel",
+        "modes": "ut_ffa ut_team ut_survivor ut_ctf ut_bomb",
+        "fileSize": "3.7 mb"
+    },
+    {
+        "filename": "ut4_maximus_v1.pk3",
+        "longname": "Maximus",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_ctf ut_bomb",
+        "fileSize": "14.7 mb"
+    },
+    {
+        "filename": "ut4_maya.pk3",
+        "longname": "Mayan Standoff",
+        "modes": "ut_ffa ut_team ut_survivor ut_cah ut_ctf ut_bomb ut_ft",
+        "fileSize": "20.0 mb"
+    },
+    {
+        "filename": "ut4_mediterranean.pk3",
+        "longname": "Mediterranean",
+        "modes": "ut_ffa ut_ctf",
+        "fileSize": "28.3 mb"
+    },
+    {
+        "filename": "ut4_metro.pk3",
+        "fileSize": "19.6 mb"
+    },
+    {
+        "filename": "ut4_metropolis_b2.pk3",
+        "longname": "Metropolis b2",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_ctf ut_bomb",
+        "fileSize": "19.8 mb"
+    },
+    {
+        "filename": "ut4_metrostation_b2.pk3",
+        "fileSize": "10.7 mb"
+    },
+    {
+        "filename": "ut4_metro_b2.pk3",
+        "longname": "Metro Beta2",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "38.4 mb"
+    },
+    {
+        "filename": "ut4_midnight.pk3",
+        "longname": "Midnight",
+        "modes": " ut_ffa ut_team ut_survivor ut_ctf ut_bomb",
+        "fileSize": "12.9 mb"
+    },
+    {
+        "filename": "ut4_misteria_a3.pk3",
+        "longname": "xxx xxx",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "17.0 mb"
+    },
+    {
+        "filename": "ut4_misteria_a4.pk3",
+        "fileSize": "21.5 mb"
+    },
+    {
+        "filename": "ut4_monopoly_beta2.pk3",
+        "fileSize": "14.9 mb"
+    },
+    {
+        "filename": "ut4_mountainside_a8.pk3",
+        "longname": "xxx xxx",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "9.8 mb"
+    },
+    {
+        "filename": "ut4_mountainside_a9.pk3",
+        "longname": "xxx xxx",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "10.1 mb"
+    },
+    {
+        "filename": "ut4_myhouse.pk3",
+        "fileSize": "14.1 mb"
+    },
+    {
+        "filename": "ut4_nam.pk3",
+        "longname": "NAM",
+        "modes": " ut_ffa ut_team ut_survivor ut_cah ut_ctf ut_bomb",
+        "fileSize": "8.6 mb"
+    },
+    {
+        "filename": "ut4_neighbourhood_beta2_day.pk3",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah",
+        "fileSize": "7.9 mb"
+    },
+    {
+        "filename": "ut4_nightmare_xmas.pk3",
+        "longname": "Nightmare xmas - by CMM",
+        "modes": "ut_ffa ut_team ut_survivor ut_cah ut_ctf ut_bomb",
+        "fileSize": "20.4 mb"
+    },
+    {
+        "filename": "ut4_ninthcircle_a2.pk3",
+        "fileSize": "25.3 mb"
+    },
+    {
+        "filename": "ut4_noon_a2.pk3",
+        "longname": "Noon Alpha 2",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_ctf ut_bomb",
+        "fileSize": "3.5 mb"
+    },
+    {
+        "filename": "ut4_northferguson_rc1.pk3",
+        "longname": "North Fergsuon rc1",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "19.2 mb"
+    },
+    {
+        "filename": "ut4_northpole_alpha15.pk3",
+        "longname": "Northpole Alpha 15",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "40.1 mb"
+    },
+    {
+        "filename": "ut4_nuclear.pk3",
+        "longname": "Nuclear Plant",
+        "modes": "ut_ffa ut_team ut_survivor ut_cah ut_ctf ut_follow ut_bomb",
+        "fileSize": "13.1 mb"
+    },
+    {
+        "filename": "ut4_nuclearwaste_b3.pk3",
+        "fileSize": "3.1 mb"
+    },
+    {
+        "filename": "ut4_nuketown_a11.pk3",
+        "longname": "nuketown a11 by Killspree",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "6.3 mb"
+    },
+    {
+        "filename": "ut4_nuketown_a20.pk3",
+        "longname": "nuketown a20 by Killspree",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "8.3 mb"
+    },
+    {
+        "filename": "ut4_oaks_b2.pk3",
+        "longname": "Whispering Oaks Carnival beta 2",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "22.6 mb"
+    },
+    {
+        "filename": "ut4_offshore.pk3",
+        "longname": "Offshore",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "11.4 mb"
+    },
+    {
+        "filename": "ut4_old_kingdom.pk3",
+        "fileSize": "3.5 mb"
+    },
+    {
+        "filename": "ut4_orbital.pk3",
+        "longname": "Orbital",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "14.8 mb"
+    },
+    {
+        "filename": "ut4_orbital_sl.pk3",
+        "longname": "Orbital Special League",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "14.9 mb"
+    },
+    {
+        "filename": "ut4_orbital_sl_fixed.pk3",
+        "longname": "Orbital Special League Fixed",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "15.2 mb"
+    },
+    {
+        "filename": "ut4_overgrown_b2.pk3",
+        "longname": "Overgrown",
+        "modes": "ut_ffa ut_team ut_survivor ut_ctf ut_bomb",
+        "fileSize": "17.9 mb"
+    },
+    {
+        "filename": "ut4_paradise.pk3",
+        "longname": "Paradise",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf",
+        "fileSize": "10.2 mb"
+    },
+    {
+        "filename": "ut4_paris_v1.pk3",
+        "longname": "Paris v1",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_ctf ut_bomb",
+        "fileSize": "15.0 mb"
+    },
+    {
+        "filename": "ut4_parkinglot_b5.pk3",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb ut_ft ut_gungame",
+        "fileSize": "30.8 mb"
+    },
+    {
+        "filename": "ut4_peakhour_b3.pk3",
+        "fileSize": "21.2 mb"
+    },
+    {
+        "filename": "ut4_peakhour_b8.pk3",
+        "fileSize": "22.0 mb"
+    },
+    {
+        "filename": "ut4_pent_b3.pk3",
+        "fileSize": "5.4 mb"
+    },
+    {
+        "filename": "ut4_pent_b4.pk3",
+        "fileSize": "5.5 mb"
+    },
+    {
+        "filename": "ut4_persia2.pk3",
+        "fileSize": "3.8 mb"
+    },
+    {
+        "filename": "ut4_persianfortress_a8.pk3",
+        "longname": "Persian Fortress a8",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "17.5 mb"
+    },
+    {
+        "filename": "ut4_pg2-27.pk3",
+        "modes": "ut_ffa ut_team ut_ctf ut_cah",
+        "fileSize": "1.7 mb"
+    },
+    {
+        "filename": "ut4_pgrounds2.pk3",
+        "modes": "ut_ffa ut_team ut_survivor ut_ctf",
+        "fileSize": "11.7 mb"
+    },
+    {
+        "filename": "ut4_phantasy_b2.pk3",
+        "longname": "Phantasy",
+        "modes": "ut_ffa ut_team ut_survivor ut_ctf ut_follow ut_cah ut_bomb",
+        "fileSize": "3.1 mb"
+    },
+    {
+        "filename": "ut4_pipeline_b3.pk3",
+        "modes": "ut_ffa ut_team ut_survivor ut_ctf ut_bomb ut_ft ut_gungame",
+        "fileSize": "34.9 mb"
+    },
+    {
+        "filename": "ut4_poison_b7.pk3",
+        "longname": "Poison",
+        "modes": "ut_ffa ut_team ut_survivor ut_ctf ut_bomb",
+        "fileSize": "24.5 mb"
+    },
+    {
+        "filename": "ut4_poland_b11.pk3",
+        "longname": "Poland",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_ctf ut_cah ut_bomb",
+        "fileSize": "25.2 mb"
+    },
+    {
+        "filename": "ut4_poland_b2.pk3",
+        "longname": "Poland",
+        "modes": "ut_team ut_survivor ut_ctf ut_bomb",
+        "fileSize": "19.6 mb"
+    },
+    {
+        "filename": "ut4_poolday_v2.pk3",
+        "longname": "PoolDay",
+        "modes": "ut_ffa ut_team ut_survivor ut_ctf ut_bomb",
+        "fileSize": "2.3 mb"
+    },
+    {
+        "filename": "ut4_prague_v2.pk3",
+        "longname": "Prague v2",
+        "modes": "ut_ffa ut_team ut_survivor ut_cah ut_ctf ut_bomb ut_ft",
+        "fileSize": "79.1 mb"
+    },
+    {
+        "filename": "ut4_precinct.pk3",
+        "longname": "Precinct",
+        "modes": " ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "8.6 mb"
+    },
+    {
+        "filename": "ut4_presidio_v8.pk3",
+        "longname": "The Presidio",
+        "modes": "ut_ffa ut_team ut_ctf",
+        "fileSize": "24.8 mb"
+    },
+    {
+        "filename": "ut4_propulsion_a7.pk3",
+        "longname": "xxx xxx",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "8.1 mb"
+    },
+    {
+        "filename": "ut4_provinggrounds.pk3",
+        "longname": "The Proving Grounds",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_ctf ut_bomb",
+        "fileSize": "63.5 mb"
+    },
+    {
+        "filename": "ut4_provinggrounds_.pk3",
+        "longname": "The Proving Grounds",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_ctf ut_bomb",
+        "fileSize": "10.1 mb"
+    },
+    {
+        "filename": "ut4_purity_b5.pk3",
+        "modes": "ut_ffa ut_team ut_survivor ut_ctf ut_bomb",
+        "fileSize": "13.4 mb"
+    },
+    {
+        "filename": "ut4_purity_b6.pk3",
+        "modes": "ut_ffa ut_team ut_survivor ut_ctf ut_bomb",
+        "fileSize": "17.8 mb"
+    },
+    {
+        "filename": "ut4_puzzlebox_a5.pk3",
+        "fileSize": "31.1 mb"
+    },
+    {
+        "filename": "ut4_raits_a1.pk3",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf",
+        "fileSize": "6.7 mb"
+    },
+    {
+        "filename": "ut4_raw_beta1.pk3",
+        "longname": "RAW beta1 by landouille",
+        "modes": "ut_ctf",
+        "fileSize": "3.8 mb"
+    },
+    {
+        "filename": "ut4_rctf11.pk3",
+        "fileSize": "2.4 mb"
+    },
+    {
+        "filename": "ut4_rctf12.pk3",
+        "fileSize": "2.6 mb"
+    },
+    {
+        "filename": "ut4_rctf5.pk3",
+        "fileSize": "2.2 mb"
+    },
+    {
+        "filename": "ut4_reception.pk3",
+        "fileSize": "22.7 mb"
+    },
+    {
+        "filename": "ut4_retreat_b1.pk3",
+        "fileSize": "28.1 mb"
+    },
+    {
+        "filename": "ut4_reverie_b1.pk3",
+        "fileSize": "9.2 mb"
+    },
+    {
+        "filename": "ut4_reykjavik.pk3",
+        "fileSize": "2.8 mb"
+    },
+    {
+        "filename": "ut4_rianorix.pk3",
+        "longname": "Demo of pseudo-parallax mapping in Urt4",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "25.7 mb"
+    },
+    {
+        "filename": "ut4_riendel_w1.pk3",
+        "longname": "Riendel",
+        "modes": "ut_ffa ut_team ut_survivor ut_cah ut_ctf",
+        "fileSize": "15.2 mb"
+    },
+    {
+        "filename": "ut4_rip_release.pk3",
+        "longname": "RIP",
+        "modes": "ut_ffa ut_team ut_ctf ut_bomb ut_follow ut_survivor",
+        "fileSize": "17.5 mb"
+    },
+    {
+        "filename": "ut4_rivalry_b2_f43.pk3",
+        "longname": "Rivalry",
+        "modes": "ut_ffa ut_team ut_survivor ut_ctf",
+        "fileSize": "14.8 mb"
+    },
+    {
+        "filename": "ut4_rivendel_b4.pk3",
+        "modes": "ut_ffa ut_team ut_survivor ut_cah ut_ctf",
+        "fileSize": "8.4 mb"
+    },
+    {
+        "filename": "ut4_riyadh_mod.pk3",
+        "longname": "Riyadh_mod",
+        "modes": "ut_ffa ut_team ut_survivor ut_ctf ut_bomb",
+        "fileSize": "11.0 mb"
+    },
+    {
+        "filename": "ut4_riyadh_mod_bots.pk3",
+        "longname": "Riyadh_mod",
+        "modes": "ut_ffa ut_team ut_survivor ut_ctf ut_bomb",
+        "fileSize": "9.8 mb"
+    },
+    {
+        "filename": "ut4_rnr_a7.pk3",
+        "longname": "Renner alpha 7",
+        "modes": "ut_ffa ut_team ut_survivor ut_bomb ut_cah ut_ctf",
+        "fileSize": "11.9 mb"
+    },
+    {
+        "filename": "ut4_rnr_a8.pk3",
+        "fileSize": "12.3 mb"
+    },
+    {
+        "filename": "ut4_roma_b23.pk3",
+        "fileSize": "18.0 mb"
+    },
+    {
+        "filename": "ut4_roma_beta2B.pk3",
+        "longname": "Roma",
+        "modes": "ut_ffa ut_team ut_ctf ut_survivor",
+        "fileSize": "12.6 mb"
+    },
+    {
+        "filename": "ut4_rundown_w1.pk3",
+        "longname": "Rundown",
+        "modes": "ut_ffa ut_team ut_survivor ut_cah ut_ctf ut_bomb",
+        "fileSize": "14.3 mb"
+    },
+    {
+        "filename": "ut4_runtfest_argurt2.pk3",
+        "longname": "RuntFesT",
+        "modes": "ffa",
+        "fileSize": "5.5 mb"
+    },
+    {
+        "filename": "ut4_sands.pk3",
+        "longname": "Sands of Conflict",
+        "modes": "ffa team cah assasina ctf",
+        "fileSize": "11.2 mb"
+    },
+    {
+        "filename": "ut4_santorini.pk3",
+        "fileSize": "4.9 mb"
+    },
+    {
+        "filename": "ut4_santorini_fixed.pk3",
+        "fileSize": "6.5 mb"
+    },
+    {
+        "filename": "ut4_santorini_v2.pk3",
+        "fileSize": "16.3 mb"
+    },
+    {
+        "filename": "ut4_santorini_v5.pk3",
+        "fileSize": "17.1 mb"
+    },
+    {
+        "filename": "ut4_sarlat_alpha4.pk3",
+        "longname": "Sarlat La Candeda Alpha4",
+        "modes": "ut_survivor ut_ffa ut_bomb ut_ctf ut_team",
+        "fileSize": "46.6 mb"
+    },
+    {
+        "filename": "ut4_scramble_v4.pk3",
+        "modes": "ut_ffa ut_team ut_survivor ut_ctf",
+        "fileSize": "41.1 mb"
+    },
+    {
+        "filename": "ut4_seasonal.pk3",
+        "fileSize": "10.2 mb"
+    },
+    {
+        "filename": "ut4_secretbase.pk3",
+        "longname": "Secret Base",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "28.8 mb"
+    },
+    {
+        "filename": "ut4_sewerlair.pk3",
+        "longname": "Sewer Lair",
+        "modes": "ut_ffa ut_ctf",
+        "fileSize": "26.9 mb"
+    },
+    {
+        "filename": "ut4_sexnades.pk3",
+        "fileSize": "22.6 mb"
+    },
+    {
+        "filename": "ut4_shipwreck.pk3",
+        "longname": "Shipwreck",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "30.2 mb"
+    },
+    {
+        "filename": "ut4_showdown_b1.pk3",
+        "fileSize": "10.2 mb"
+    },
+    {
+        "filename": "ut4_shuls_r2.pk3",
+        "longname": "Project Shuls",
+        "modes": "ut_ffa ut_team ut_survivor ut_ctf",
+        "fileSize": "13.2 mb"
+    },
+    {
+        "filename": "ut4_sicily.pk3",
+        "longname": "ut4_sicily",
+        "modes": "ut_ffa ut_team ut_survivor ut_ctf",
+        "fileSize": "37.7 mb"
+    },
+    {
+        "filename": "ut4_sicily_1943.pk3",
+        "longname": "ut4_sicily_1943 by alexMagno",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "19.9 mb"
+    },
+    {
+        "filename": "ut4_silentechos_beta05.pk3",
+        "longname": "SilentEchos",
+        "modes": " ut_ffa ut_team ut_survivor",
+        "fileSize": "10.1 mb"
+    },
+    {
+        "filename": "ut4_silentrunning_b1.pk3",
+        "modes": "ut_ffa ut_team ut_ctf ut_bomb",
+        "fileSize": "27.8 mb"
+    },
+    {
+        "filename": "ut4_sirkitbored_release.pk3",
+        "modes": "ut_ffa ut_team ut_ctf ut_bomb ut_follow ut_survivor",
+        "fileSize": "18.1 mb"
+    },
+    {
+        "filename": "ut4_skylift_release.pk3",
+        "longname": "Skylift Release",
+        "modes": "ut_ffa ut_team ut_ctf ut_bomb",
+        "fileSize": "46.0 mb"
+    },
+    {
+        "filename": "ut4_slammer_beta2.pk3",
+        "fileSize": "24.0 mb"
+    },
+    {
+        "filename": "ut4_sled_free.pk3",
+        "longname": "Sled Free",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "6.0 mb"
+    },
+    {
+        "filename": "ut4_sliema.pk3",
+        "modes": "ut_ffa ut_team ut_survivor ut_ctf ut_bomb",
+        "fileSize": "22.8 mb"
+    },
+    {
+        "filename": "ut4_slimefalls_b4.pk3",
+        "longname": "xxx xxx",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "15.5 mb"
+    },
+    {
+        "filename": "ut4_slumwar.pk3",
+        "longname": "Slumwar",
+        "modes": " ut_ffa ut_team ut_survivor ut_cah ut_ctf ut_bomb",
+        "fileSize": "17.1 mb"
+    },
+    {
+        "filename": "ut4_smallwall.pk3",
+        "longname": "Smallwall",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "7.6 mb"
+    },
+    {
+        "filename": "ut4_sniperofficer.pk3",
+        "longname": "SNIPER OFFICER",
+        "modes": "ut_ffa ut_team ut_survivor",
+        "fileSize": "4.0 mb"
+    },
+    {
+        "filename": "ut4_snowcourtyard_b2.pk3",
+        "fileSize": "16.6 mb"
+    },
+    {
+        "filename": "ut4_space-station7.pk3",
+        "longname": "Space Station 7",
+        "modes": "ut_ffa ut_ctf ut_survivor",
+        "fileSize": "5.9 mb"
+    },
+    {
+        "filename": "ut4_sparta_v2_1.pk3",
+        "longname": "Sparta v2_1",
+        "modes": "ut_ffa ut_team ut_survivor ut_ctf",
+        "fileSize": "13.4 mb"
+    },
+    {
+        "filename": "ut4_sr8ster1.pk3",
+        "modes": "ut_ffa ut_team ut_survivor",
+        "fileSize": "2.0 mb"
+    },
+    {
+        "filename": "ut4_st8jungle.pk3",
+        "fileSize": "5.7 mb"
+    },
+    {
+        "filename": "ut4_stepping_cube.pk3",
+        "longname": "Stepping Cube",
+        "modes": "ut_ffa ut_team ut_ctf",
+        "fileSize": "17.3 mb"
+    },
+    {
+        "filename": "ut4_stoneville.pk3",
+        "longname": "ut_stone_ville",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf",
+        "fileSize": "13.5 mb"
+    },
+    {
+        "filename": "ut4_streets.pk3",
+        "longname": "Streets of Terror",
+        "modes": "ut_ffa ut_team ut_survivor ut_cah",
+        "fileSize": "5.3 mb"
+    },
+    {
+        "filename": "ut4_streetz.pk3",
+        "longname": "S T R E E T Z",
+        "modes": "ut_ffa ut_ctf",
+        "fileSize": "6.4 mb"
+    },
+    {
+        "filename": "ut4_suburbia_b9.pk3",
+        "modes": "ut_ffa ut_team ut_survivor ut_bomb ut_ctf",
+        "fileSize": "6.7 mb"
+    },
+    {
+        "filename": "ut4_superman.pk3",
+        "longname": "Urban Superman aka Supersoldier for UrT4",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "42.0 mb"
+    },
+    {
+        "filename": "ut4_superman_b4.pk3",
+        "longname": "Urban Super Soldier beta 4 for UrT4",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "13.0 mb"
+    },
+    {
+        "filename": "ut4_superman_light.pk3",
+        "longname": "Urban Superman aka Supersoldier for UrT4",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "22.6 mb"
+    },
+    {
+        "filename": "ut4_supersquidrena.pk3",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "20.4 mb"
+    },
+    {
+        "filename": "ut4_tactics2_fix.pk3",
+        "fileSize": "2.3 mb"
+    },
+    {
+        "filename": "ut4_tak.pk3",
+        "modes": "ut_ffa ut_team ut_survivor ut_ctf",
+        "fileSize": "59.4 mb"
+    },
+    {
+        "filename": "ut4_tejen_beta3.pk3",
+        "fileSize": "4.2 mb"
+    },
+    {
+        "filename": "ut4_temple2_beta.pk3",
+        "longname": "Lost Temple 2 beta final",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "20.0 mb"
+    },
+    {
+        "filename": "ut4_terrorism2.pk3",
+        "longname": "terrorism 2",
+        "modes": "ut_ctf",
+        "fileSize": "8.3 mb"
+    },
+    {
+        "filename": "ut4_terrorism3.pk3",
+        "longname": "Terrorism 3",
+        "modes": "ut_ffa ut_team ut_survivor ut_ctf ut_bomb",
+        "fileSize": "10.2 mb"
+    },
+    {
+        "filename": "ut4_terrorism4.pk3",
+        "longname": "Terrorism 4",
+        "modes": " ut_ffa ut_team ut_survivor ut_cah ut_ctf ut_bomb",
+        "fileSize": "10.4 mb"
+    },
+    {
+        "filename": "ut4_terrorism5.pk3",
+        "longname": "Terrorism 5",
+        "modes": " ut_ffa ut_team ut_survivor ut_cah ut_ctf ut_bomb",
+        "fileSize": "9.5 mb"
+    },
+    {
+        "filename": "ut4_terrorism6.pk3",
+        "longname": "Terrorism 6",
+        "modes": " ut_ffa ut_team ut_survivor ut_cah ut_ctf ut_bomb",
+        "fileSize": "11.5 mb"
+    },
+    {
+        "filename": "ut4_terrorism7.pk3",
+        "longname": "Terrorism 7",
+        "modes": "ut_ffa ut_team ut_survivor ut_assassins ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "11.0 mb"
+    },
+    {
+        "filename": "ut4_terrorism8.pk3",
+        "longname": "Terrorism 8",
+        "modes": " ut_ffa ut_team ut_survivor ut_cah ut_follow ut_ctf ut_bomb",
+        "fileSize": "10.9 mb"
+    },
+    {
+        "filename": "ut4_thekatacombs_a2.pk3",
+        "fileSize": "11.2 mb"
+    },
+    {
+        "filename": "ut4_thekyln_a5.pk3",
+        "fileSize": "15.5 mb"
+    },
+    {
+        "filename": "ut4_thewall2.pk3",
+        "longname": "T H E  W A L L",
+        "modes": "ut_ffa ut_ctf",
+        "fileSize": "6.4 mb"
+    },
+    {
+        "filename": "ut4_timid_v3.pk3",
+        "longname": "timid v3 -by lee",
+        "fileSize": "9.9 mb"
+    },
+    {
+        "filename": "ut4_tohunga2_b2.pk3",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb ut_ft ut_gungame",
+        "fileSize": "42.4 mb"
+    },
+    {
+        "filename": "ut4_tohunga_b10.pk3",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "18.3 mb"
+    },
+    {
+        "filename": "ut4_tohunga_b8.pk3",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "17.7 mb"
+    },
+    {
+        "filename": "ut4_tombs_orig43.pk3",
+        "longname": "Tombs",
+        "modes": "ut_ffa ut_team ut_survivor ut_ctf ut_bomb",
+        "fileSize": "12.7 mb"
+    },
+    {
+        "filename": "ut4_totem_rc2.pk3",
+        "longname": "Totem Nadeball RC2",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "9.9 mb"
+    },
+    {
+        "filename": "ut4_towers.pk3",
+        "fileSize": "5.8 mb"
+    },
+    {
+        "filename": "ut4_towers_rain.pk3",
+        "longname": "Towers-WET",
+        "modes": "ut_ffa ut_team ut_ctf ut_survivor",
+        "fileSize": "5.9 mb"
+    },
+    {
+        "filename": "ut4_toxic.pk3",
+        "longname": "Toxic",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb ut_ft",
+        "fileSize": "27.5 mb"
+    },
+    {
+        "filename": "ut4_toxic_f43.pk3",
+        "fileSize": "42.7 mb"
+    },
+    {
+        "filename": "ut4_toys_release.pk3",
+        "modes": "ut_ffa ut_team ut_ctf ut_bomb",
+        "fileSize": "34.6 mb"
+    },
+    {
+        "filename": "ut4_tracia_b1.pk3",
+        "fileSize": "24.9 mb"
+    },
+    {
+        "filename": "ut4_train_dl1.pk3",
+        "longname": "Train",
+        "modes": "ut_ffa ut_team ut_cah ut_survivor ut_ctf ut_bomb",
+        "fileSize": "1.9 mb"
+    },
+    {
+        "filename": "ut4_tricky.pk3",
+        "longname": "Tricky",
+        "modes": "ut_ffa ut_team ut_survivor ut_ctf",
+        "fileSize": "1.8 mb"
+    },
+    {
+        "filename": "ut4_trug.pk3",
+        "longname": "Trug",
+        "modes": "ut_ffa ut_team ut_survivor ut_ctf ut_bomb",
+        "fileSize": "13.0 mb"
+    },
+    {
+        "filename": "ut4_tunis.pk3",
+        "longname": "Tunis",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb ut_ft",
+        "fileSize": "14.6 mb"
+    },
+    {
+        "filename": "ut4_tunis_f43.pk3",
+        "longname": "Tunis",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb ut_ft",
+        "fileSize": "13.2 mb"
+    },
+    {
+        "filename": "ut4_turbinehall.pk3",
+        "longname": "Turbine Hall",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "12.9 mb"
+    },
+    {
+        "filename": "ut4_twbb.pk3",
+        "longname": "There Will Be Blood",
+        "modes": "ut_ffa ut_team ut_survivor ut_ctf",
+        "fileSize": "1.9 mb"
+    },
+    {
+        "filename": "ut4_twins.pk3",
+        "longname": "Twins",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "17.5 mb"
+    },
+    {
+        "filename": "ut4_twins_beta3.pk3",
+        "longname": "Twins beta 3",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "17.5 mb"
+    },
+    {
+        "filename": "ut4_ubardoom3.pk3",
+        "longname": "UbarDoom 3 by Fleuv",
+        "modes": " ut_ffa ut_team ut_survivor ut_ctf",
+        "fileSize": "1.3 mb"
+    },
+    {
+        "filename": "ut4_uptowncity_b2.pk3",
+        "longname": "UptownCity",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb ut_ft",
+        "fileSize": "10.6 mb"
+    },
+    {
+        "filename": "ut4_uptowncity_b4.pk3",
+        "longname": "City vers by Foxyfox based on Uptown by BattleCow",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb ut_ft",
+        "fileSize": "8.6 mb"
+    },
+    {
+        "filename": "ut4_uranus_beta1.pk3",
+        "longname": "Uranus beta1",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "1.8 mb"
+    },
+    {
+        "filename": "ut4_urbanduty.pk3",
+        "longname": "Urban Duty",
+        "modes": "ut_ffa ut_team ut_survivor ut_cah ut_ctf",
+        "fileSize": "13.9 mb"
+    },
+    {
+        "filename": "ut4_urbanduty_b1.pk3",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "10.7 mb"
+    },
+    {
+        "filename": "ut4_urban_east.pk3",
+        "longname": "Urban East",
+        "modes": "ut_ffa ut_team ut_ctf",
+        "fileSize": "3.2 mb"
+    },
+    {
+        "filename": "ut4_vegas.pk3",
+        "longname": "Vegas by FromTheInside",
+        "modes": "ut_ffa ut_team ut_survivor",
+        "fileSize": "13.2 mb"
+    },
+    {
+        "filename": "ut4_venezia_b1.pk3",
+        "longname": "venezia",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_ctf ut_bomb",
+        "fileSize": "28.3 mb"
+    },
+    {
+        "filename": "ut4_vertigo.pk3",
+        "fileSize": "31.7 mb"
+    },
+    {
+        "filename": "ut4_village.pk3",
+        "longname": "Algiers",
+        "modes": "ut_team ut_survivor ut_follow ut_ctf ut_bomb",
+        "fileSize": "9.8 mb"
+    },
+    {
+        "filename": "ut4_village_classic_rc4.pk3",
+        "longname": "Village Classic rc4",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_ctf ut_bomb",
+        "fileSize": "7.3 mb"
+    },
+    {
+        "filename": "ut4_violentos_b3f.pk3",
+        "longname": "Los Violentos de Kelly",
+        "modes": "ut_ffa ut_team ut_ctf",
+        "fileSize": "9.8 mb"
+    },
+    {
+        "filename": "ut4_vypla.pk3",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "23.7 mb"
+    },
+    {
+        "filename": "ut4_wardogs3_b1.pk3",
+        "modes": "ut_ffa ut_team ut_survivor ut_bomb ut_cah ut_ctf",
+        "fileSize": "3.7 mb"
+    },
+    {
+        "filename": "ut4_wardogs3_b3.pk3",
+        "modes": "ut_ffa ut_team ut_survivor ut_bomb ut_cah ut_ctf",
+        "fileSize": "3.7 mb"
+    },
+    {
+        "filename": "ut4_wardogs4_b1.pk3",
+        "fileSize": "4.3 mb"
+    },
+    {
+        "filename": "ut4_wardogs_b2.pk3",
+        "modes": "ut_ffa ut_team ut_survivor ut_bomb ut_cah ut_ctf",
+        "fileSize": "4.2 mb"
+    },
+    {
+        "filename": "ut4_warehouse.pk3",
+        "longname": "Warehouse",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "7.4 mb"
+    },
+    {
+        "filename": "ut4_wasit_v2.pk3",
+        "fileSize": "8.2 mb"
+    },
+    {
+        "filename": "ut4_waterworks_a3.pk3",
+        "longname": "xxx xxx",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "13.0 mb"
+    },
+    {
+        "filename": "ut4_whiteclock_a2.pk3",
+        "fileSize": "15.7 mb"
+    },
+    {
+        "filename": "ut4_wid.pk3",
+        "longname": "ut4_WiD",
+        "modes": "ut_ffa ut_team ut_survivor ut_ctf ut_bomb",
+        "fileSize": "16.9 mb"
+    },
+    {
+        "filename": "ut4_winterassault_2.pk3",
+        "longname": "Winter Assault - Village",
+        "modes": "ut_ffa ut_team ut_survivor ut_cah ut_ctf ut_bomb",
+        "fileSize": "16.8 mb"
+    },
+    {
+        "filename": "ut4_winterassault_2_b6.pk3",
+        "longname": "Winter Assault - Village",
+        "modes": "ut_ffa ut_team ut_survivor ut_cah ut_ctf ut_bomb",
+        "fileSize": "16.5 mb"
+    },
+    {
+        "filename": "ut4_worrior9.pk3",
+        "longname": "Worrior IX",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "9.5 mb"
+    },
+    {
+        "filename": "ut4_wxs2.pk3",
+        "fileSize": "1.4 mb"
+    },
+    {
+        "filename": "ut4_wxs3_fix.pk3",
+        "fileSize": "1.4 mb"
+    },
+    {
+        "filename": "ut4_york_v4.pk3",
+        "fileSize": "11.5 mb"
+    },
+    {
+        "filename": "ut4_york_v7.pk3",
+        "fileSize": "13.3 mb"
+    },
+    {
+        "filename": "ut4_york_v9.pk3",
+        "fileSize": "13.1 mb"
+    },
+    {
+        "filename": "ut4_zement_b1.pk3",
+        "longname": "Zement",
+        "modes": "ut_team ut_ctf",
+        "fileSize": "24.2 mb"
+    },
+    {
+        "filename": "ut4_zement_b2.pk3",
+        "longname": "Zement",
+        "modes": "ut_ffa ut_team ut_survivor ut_ctf",
+        "fileSize": "28.3 mb"
+    },
+    {
+        "filename": "ut4_zomker_a2.pk3",
+        "longname": "Zombie Bunker Alpha 2",
+        "modes": "ut_team ut_ctf",
+        "fileSize": "13.3 mb"
+    },
+    {
+        "filename": "ut_arabiandistrict_fix.pk3",
+        "longname": "arabiandistrict",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf",
+        "fileSize": "5.6 mb"
+    },
+    {
+        "filename": "ut_berch_w2.pk3",
+        "longname": "Berchesgaden",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "13.0 mb"
+    },
+    {
+        "filename": "ut_bridge-rc1.pk3",
+        "modes": "ctf ffa single team tourney ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf",
+        "fileSize": "6.1 mb"
+    },
+    {
+        "filename": "ut_canyon2.pk3",
+        "longname": "Canyon",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "15.3 mb"
+    },
+    {
+        "filename": "ut_castle.pk3",
+        "longname": "Little Castle",
+        "modes": "ut_ffa ut_team",
+        "fileSize": "7.4 mb"
+    },
+    {
+        "filename": "ut_centro_fix.pk3",
+        "longname": "ut_centro by Yamagata",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "14.8 mb"
+    },
+    {
+        "filename": "ut_crenshaw.pk3",
+        "fileSize": "29.8 mb"
+    },
+    {
+        "filename": "ut_deep.pk3",
+        "longname": "Deep Ocean",
+        "modes": "ut_ctf ut_ffa ut_team ut_survivor",
+        "fileSize": "1.9 mb"
+    },
+    {
+        "filename": "ut_demolition.pk3",
+        "longname": "Demolition",
+        "modes": "ut_ffa ut_team ut_survivor ut_ctf",
+        "fileSize": "7.4 mb"
+    },
+    {
+        "filename": "ut_demolition_fix.pk3",
+        "longname": "Demolition",
+        "modes": "ut_ffa ut_team ut_survivor ut_ctf",
+        "fileSize": "7.4 mb"
+    },
+    {
+        "filename": "ut_druglord3_fix.pk3",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf",
+        "fileSize": "23.4 mb"
+    },
+    {
+        "filename": "ut_forest_fix.pk3",
+        "longname": "The Forest",
+        "modes": "ut_ffa ut_team ut_survivor ut_ctf",
+        "fileSize": "9.6 mb"
+    },
+    {
+        "filename": "ut_haven.pk3",
+        "longname": "VIllage3test",
+        "modes": "ut_ffa ut_ftl ut_ass ut_survivor ut_ctf ut_tdm ut_bomb ut_bm ut_bombmode",
+        "fileSize": "7.0 mb"
+    },
+    {
+        "filename": "ut_jihad.pk3",
+        "longname": "Jihad - by b33f",
+        "fileSize": "10.7 mb"
+    },
+    {
+        "filename": "ut_laneway2_f43.pk3",
+        "longname": "Laneway2",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf",
+        "fileSize": "8.7 mb"
+    },
+    {
+        "filename": "ut_laneway_snow.pk3",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf",
+        "fileSize": "22.4 mb"
+    },
+    {
+        "filename": "ut_lostbase.pk3",
+        "longname": "The Lost Base",
+        "modes": "ut_team ut_survivor ut_follow ut_ctf",
+        "fileSize": "10.6 mb"
+    },
+    {
+        "filename": "ut_lostbase_fix.pk3",
+        "longname": "The Lost Base",
+        "modes": "ut_team ut_survivor ut_follow ut_ctf",
+        "fileSize": "8.3 mb"
+    },
+    {
+        "filename": "ut_mastermind_fix.pk3",
+        "longname": "Mastermind",
+        "modes": "ut_ffa ut_team ut_survivor ut_ctf ut_bomb",
+        "fileSize": "10.1 mb"
+    },
+    {
+        "filename": "ut_mbase2.pk3",
+        "fileSize": "10.5 mb"
+    },
+    {
+        "filename": "ut_museum_fix.pk3",
+        "longname": "The Royo Museum",
+        "modes": "ut_ffa ut_team ut_survivor ut_assassins ut_follow ut_cah ut_ctf",
+        "fileSize": "10.9 mb"
+    },
+    {
+        "filename": "ut_once.pk3",
+        "longname": "Once I Was Here",
+        "modes": "ut_ffa ut_single ut_team ut_survivor ut_cah",
+        "fileSize": "3.7 mb"
+    },
+    {
+        "filename": "ut_outpost_fix.pk3",
+        "longname": "the last outpost",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_ctf",
+        "fileSize": "6.7 mb"
+    },
+    {
+        "filename": "ut_poseidon_fix.pk3",
+        "modes": "ctf ffa team  ",
+        "fileSize": "15.7 mb"
+    },
+    {
+        "filename": "ut_pussyparadise.pk3",
+        "longname": "PussyParadise",
+        "modes": " ut_ffa ut_team ut_survivor ut_follow ut_ctf ut_bomb",
+        "fileSize": "16.0 mb"
+    },
+    {
+        "filename": "ut_pwnt.pk3",
+        "modes": "ut_ctf",
+        "fileSize": "4.4 mb"
+    },
+    {
+        "filename": "ut_rommelV1_fix.pk3",
+        "fileSize": "4.4 mb"
+    },
+    {
+        "filename": "ut_rumble.pk3",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf",
+        "fileSize": "2.2 mb"
+    },
+    {
+        "filename": "ut_scottbase.pk3",
+        "longname": "Scott Base",
+        "modes": "ut_ffa ut_team ut_survivor ut_ctf",
+        "fileSize": "12.9 mb"
+    },
+    {
+        "filename": "ut_siberia.pk3",
+        "longname": "Siberia",
+        "modes": "ut_ffa ut_team ut_survivor ut_ctf ut_bomb",
+        "fileSize": "9.4 mb"
+    },
+    {
+        "filename": "ut_sled_free_f1.pk3",
+        "longname": "Sled Free",
+        "modes": "ut_ffa ut_team ut_ctf ut_ts",
+        "fileSize": "3.7 mb"
+    },
+    {
+        "filename": "ut_sniperduell_fix.pk3",
+        "longname": "Sniperduell",
+        "modes": "ut_survivor",
+        "fileSize": "1.0 mb"
+    },
+    {
+        "filename": "ut_stone_ville.pk3",
+        "longname": "ut_stone_ville",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf",
+        "fileSize": "13.4 mb"
+    },
+    {
+        "filename": "ut_streets2_f43.pk3",
+        "fileSize": "13.8 mb"
+    },
+    {
+        "filename": "ut_streets2_fix.pk3",
+        "fileSize": "13.4 mb"
+    },
+    {
+        "filename": "ut_streets3-daybeta3.pk3",
+        "fileSize": "13.0 mb"
+    },
+    {
+        "filename": "ut_the_day_after2-fixed.pk3",
+        "longname": "UT_The_Day_After2",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf",
+        "fileSize": "13.8 mb"
+    },
+    {
+        "filename": "ut_the_day_after2_w1.pk3",
+        "longname": "ut_The_Day_After2",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf",
+        "fileSize": "14.1 mb"
+    },
+    {
+        "filename": "ut_twinlakesv2_fix.pk3",
+        "longname": "ut_twinlakesv2",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf",
+        "fileSize": "7.7 mb"
+    },
+    {
+        "filename": "ut_txantrea.pk3",
+        "longname": "Txantrea_barrio_conflictivo",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "19.6 mb"
+    },
+    {
+        "filename": "ut_txantrea_beta2.pk3",
+        "longname": "Txantrea_barrio_conflictivo",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf ut_bomb",
+        "fileSize": "19.6 mb"
+    },
+    {
+        "filename": "ut_uctc.pk3",
+        "longname": "Urban Combat Training Camp",
+        "modes": "ffa team cah assasina ctf",
+        "fileSize": "1.1 mb"
+    },
+    {
+        "filename": "ut_workb2_fixed.pk3",
+        "longname": "Work",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_cah ut_ctf",
+        "fileSize": "12.6 mb"
+    },
+    {
+        "filename": "ut_zero_fix.pk3",
+        "modes": "ut_ffa ut_team ut_survivor ut_follow ut_ctf ut_bomb",
+        "fileSize": "26.4 mb"
+    },
+    {
+        "filename": "wop_backyard_b4.pk3",
+        "longname": "wop_backyard_b3",
+        "modes": "ut_team ut_follow ut_ffa",
+        "fileSize": "20.2 mb"
+    },
+    {
+        "filename": "wop_bath_b4.pk3",
+        "longname": "wop_bath_b3",
+        "modes": "ut_team ut_follow ut_ffa",
+        "fileSize": "22.8 mb"
+    },
+    {
+        "filename": "wop_cabin_b4.pk3",
+        "longname": "wop_cabin_b3",
+        "modes": "ut_team ut_follow ut_ffa",
+        "fileSize": "21.1 mb"
+    },
+    {
+        "filename": "wop_diner_b4.pk3",
+        "longname": "wop_diner_b3",
+        "modes": "ut_team ut_follow ut_ffa",
+        "fileSize": "24.7 mb"
+    },
+    {
+        "filename": "wop_holidays_b4.pk3",
+        "longname": "wop_holidays_b3",
+        "modes": "ut_team ut_follow ut_ctf ut_ffa",
+        "fileSize": "13.1 mb"
+    },
+    {
+        "filename": "wop_huette_b4.pk3",
+        "longname": "wop_huette_b3",
+        "modes": "ut_team ut_follow ut_ffa",
+        "fileSize": "33.2 mb"
+    },
+    {
+        "filename": "wop_padattic_b4.pk3",
+        "longname": "wop_padattic_b3",
+        "modes": "ut_team ut_follow ut_ffa",
+        "fileSize": "32.4 mb"
+    },
+    {
+        "filename": "wop_padgarden_b4.pk3",
+        "longname": "wop_padgarden_b3",
+        "modes": "ut_team ut_follow ut_ffa",
+        "fileSize": "36.0 mb"
+    },
+    {
+        "filename": "wop_padshop_b4.pk3",
+        "longname": "wop_padshop_b3",
+        "modes": "ut_team ut_follow ut_ffa",
+        "fileSize": "41.9 mb"
+    }
+]
