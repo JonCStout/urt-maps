@@ -96,8 +96,8 @@ export default class MapDetailPage extends Component {
         const { map, ssClicked } = this.props;
         if (!map || ssClicked === undefined) return <p>EMPTY PARAMETERS PASSED</p>; // returns have to be after hooks
 
-        const prefix = `ss/${map._id}/`;
-        const ss = map.screenShots; // shortcut
+        const prefix = `ss/${map._id}/`; // path prefix
+        const ss = map.screenShots; // coding shortcut
 
         return (
             <>
