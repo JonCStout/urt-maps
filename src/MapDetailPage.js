@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation } from 'swiper';
-import 'swiper/swiper.min.css';
-import 'swiper/components/navigation/navigation.min.css';
+import 'swiper/swiper.min.css'; // can't use swiper/css as in examples; need a specific .css file for now, (maybe React 18, webpack 5, or a fixed swiper@7 will change that)
+import 'swiper/components/navigation/navigation.min.css'; // ditto for swiper/css/navigation
 import './MapDetailPage.css';
 
 SwiperCore.use([Navigation]);
