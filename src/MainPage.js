@@ -8,7 +8,7 @@ import { Search } from '@material-ui/icons';
 import * as MapsJSON from './maps-db-2021-12-20.json'; // gets imported as a Module
 
 export default function MainPage({ updateViewCB }) {
-    const CONNECTED = 'IS connected';
+    const CONNECTED = 'IS connected'; // for db connection tracking
     const NOTCONNECTED = 'is NOT connected';
     const [isConnected, setIsConnected] = useState(NOTCONNECTED);
     // const mongoApp = useRef([]); // for saving the mongoApp object across renders of this component;  *** may not need to save this if only used in one function one time?

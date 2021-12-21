@@ -1,23 +1,34 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Navigation } from 'swiper';
+import 'swiper/swiper.min.css'; // can't use swiper/css as in examples; need a specific .css file for now, (maybe React 18, webpack 5, or a fixed swiper@7 will change that)
+import 'swiper/components/navigation/navigation.min.css'; // ditto for swiper/css/navigation
+import './MapDetailPage.css';
 
-function MapDetailPage({ map, ssClicked }) {
-    if (!map || !ssClicked) return <p>EMPTY PARAMETERS PASSED</p>;
-
-    const prefix = `ss/${map._id}/`;
+SwiperCore.use([Navigation]);
+function MapDetailPage({ map, ssIdx }) {
+    const prefix = `ss/${map._id}/`; // path prefix
+    const ss = map.screenShots; // coding shortcut
 
     return (
-        <div style={{ height: 'fitContent(100)' }}>
-            <div style={{ minWidth: '100%', maxHeight: '80%' }}>
-                <img src={prefix + ssClicked} alt={'screenshot ' + ssClicked} />
-            </div>
-        </div>
+        <>
+            <Swiper navigation={true} spaceBetween={20} centeredSlides={true} className='mySwiper'>
+                {ss.map((_el, index) => {
+                    return (
+                        <SwiperSlide>
+                            <img src={prefix + _el} alt={'screenshot ' + (index + 1)} />
+                        </SwiperSlide>
+                    );
+                })}
+            </Swiper>
+        </>
     );
 }
 
 MapDetailPage.propTypes = {
     map: PropTypes.object,
-    ssClicked: PropTypes.string,
+    ssIdx: PropTypes.number,
 };
 
 export default MapDetailPage;
