@@ -1,16 +1,17 @@
 import React, { useEffect, useState, useRef } from 'react';
-import * as Realm from 'realm-web'; // mongodb realm package
+// import * as Realm from 'realm-web'; // mongodb realm package
 import MapCard from './MapCard';
 import TagsList from './TagsList';
 import './MainPage.css'; // style sheet for just this app component
 import { Badge, InputAdornment, InputBase } from '@material-ui/core'; // reset CSS properties across browsers to a baseline, and controls
 import { Search } from '@material-ui/icons';
+import * as MapsJSON from './maps-db-2021-12-20.json'; // gets imported as a Module
 
 export default function MainPage({ updateViewCB }) {
     const CONNECTED = 'IS connected'; // for db connection tracking
     const NOTCONNECTED = 'is NOT connected';
     const [isConnected, setIsConnected] = useState(NOTCONNECTED);
-    const mongoApp = useRef([]); // for saving the mongoApp object across renders of this component;  *** may not need to save this if only used in one function one time?
+    // const mongoApp = useRef([]); // for saving the mongoApp object across renders of this component;  *** may not need to save this if only used in one function one time?
 
     const maps = useRef([]); // all the maps from the database, full object details per map
     const [visibleMaps, setVisibleMaps] = useState([]); // array of map objects
@@ -18,23 +19,25 @@ export default function MainPage({ updateViewCB }) {
     const [clickedTags_Set, setClickedTags_Set] = useState(new Set());
     const [searchInput, setSearchInput] = useState(''); // complains about switching from uncontrolled to controlled input without an empty string to start
 
+    // console.log(MapsJSON);
     // this is where we connect to the database, and save it all into "maps"
     useEffect(() => {
         if (maps.current.length < 1) {
             setIsConnected('is connecting...');
-            mongoApp.current = new Realm.App({ id: 'urt-maps-realmapp-xjuqv' }); // string is app ID (realmApp, not realMapp)
+            // mongoApp.current = new Realm.App({ id: 'urt-maps-realmapp-xjuqv' }); // string is app ID (realmApp, not realMapp)
 
             // const creds = new AnonymousCredential();
             try {
                 // Authenticate the user
-                mongoApp.current.logIn(Realm.Credentials.anonymous()).then((returnedUser) => {
-                    // assert(mongoClient.id === mongoApp.currentUser.id);
-                    returnedUser.functions.getAllMapData().then((response) => {
-                        maps.current = response.result;
-                        setClickedTags_Set(new Set()); // initialize this Set and trigger Visibles updates
-                        setIsConnected(CONNECTED);
-                    });
-                });
+                // mongoApp.current.logIn(Realm.Credentials.anonymous()).then((returnedUser) => { ***
+                // assert(mongoClient.id === mongoApp.currentUser.id);
+                // returnedUser.functions.getAllMapData().then((response) => {
+                // maps.current = response.result;
+                maps.current = MapsJSON.default; // take the array from the Module and put it into the maps reference variable
+                setClickedTags_Set(new Set()); // initialize this Set and trigger Visibles updates
+                setIsConnected(CONNECTED);
+                // });
+                // });
             } catch (err) {
                 console.error('Failed to log in to db', err);
                 setIsConnected('DB ERROR');
