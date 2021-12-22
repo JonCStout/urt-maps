@@ -6,6 +6,8 @@ Live preview site: https://joncstout.github.io/urt-maps
 
 For project management board, including the todo list, check out: https://trello.com/b/uPz6Y8vV/urt-map-search-website
 
+Developer tip: To make the maps show up locally while running the development server, edit package.json and change the homepage property near the end from "." to "./urt-maps". Remember to change it back before making a public git commit, or before running "npm run build" for production output.
+
 #
 
 ##### Pre-generated build details follow
