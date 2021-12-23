@@ -14,7 +14,7 @@ export default function MainPage({ updateViewCB }) {
     const mongoApp = useRef([]); // for saving the mongoApp object across renders of this component;  *** may not need to save this if only used in one function one time?
 
     const maps = useRef([]); // all the maps from the database, full object details per map
-    const [visibleMaps, setVisibleMaps] = useState([]); // array of map objects
+    const [visibleMaps, setVisibleMaps] = useState([]); // array of map objects, which should be memory efficient references
     const [visibleTags, setVisibleTags] = useState([]);
     const [clickedTags_Set, setClickedTags_Set] = useState(new Set());
     const [searchInput, setSearchInput] = useState(''); // complains about switching from uncontrolled to controlled input without an empty string to start
