@@ -6,6 +6,7 @@ import './MainPage.css'; // style sheet for just this app component
 import { Badge, InputAdornment, InputBase } from '@material-ui/core'; // reset CSS properties across browsers to a baseline, and controls
 import { Search } from '@material-ui/icons';
 import * as MapsJSON from './maps-db-2021-12-20.json'; // gets imported as a Module
+import { BrowserRouter as Router } from 'react-router-dom';
 
 export default function MainPage({ updateViewCB }) {
     const CONNECTED = 'IS connected'; // for db connection tracking

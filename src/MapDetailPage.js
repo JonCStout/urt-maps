@@ -7,12 +7,18 @@ import 'swiper/components/navigation/navigation.min.css'; // ditto for swiper/cs
 import './MapDetailPage.css';
 
 SwiperCore.use([Navigation]);
-function MapDetailPage({ map, ssIdx }) {
+
+function MapDetailPage() {
+    let params = useParams();
+    let mapId = params.id
+
+    let map = 'a'; // todo
     const prefix = `ss/${map._id}/`; // path prefix
     const ss = map.screenShots; // coding shortcut
 
     return (
         <>
+            <h1></h1>
             <Swiper navigation={true} spaceBetween={20} centeredSlides={true} className='mySwiper'>
                 {ss.map((_el, index) => {
                     return (
