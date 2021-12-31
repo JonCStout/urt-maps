@@ -1,51 +1,19 @@
 import React, { useEffect, useState, useRef } from 'react';
-// import * as Realm from 'realm-web'; // mongodb realm package
+import mapdb from './MapData2';
 import MapCard from './MapCard';
 import TagsList from './TagsList';
 import './MainPage.css'; // style sheet for just this app component
 import { Badge, InputAdornment, InputBase } from '@material-ui/core'; // reset CSS properties across browsers to a baseline, and controls
 import { Search } from '@material-ui/icons';
-import * as MapsJSON from './maps-db-2021-12-20.json'; // gets imported as a Module
 import { BrowserRouter as Router } from 'react-router-dom';
 
-export default function MainPage({ updateViewCB }) {
-    const CONNECTED = 'IS connected'; // for db connection tracking
-    const NOTCONNECTED = 'is NOT connected';
-    const [isConnected, setIsConnected] = useState(NOTCONNECTED);
-    // const mongoApp = useRef([]); // for saving the mongoApp object across renders of this component;  *** may not need to save this if only used in one function one time?
-
-    const maps = useRef([]); // all the maps from the database, full object details per map
+export default function MainPage() {
     const [visibleMaps, setVisibleMaps] = useState([]); // array of map objects
     const [visibleTags, setVisibleTags] = useState([]);
     const [clickedTags_Set, setClickedTags_Set] = useState(new Set());
     const [searchInput, setSearchInput] = useState(''); // complains about switching from uncontrolled to controlled input without an empty string to start
 
-    // console.log(MapsJSON);
-    // this is where we connect to the database, and save it all into "maps"
-    useEffect(() => {
-        if (maps.current.length < 1) {
-            setIsConnected('is connecting...');
-            // mongoApp.current = new Realm.App({ id: 'urt-maps-realmapp-xjuqv' }); // string is app ID (realmApp, not realMapp)
-
-            // const creds = new AnonymousCredential();
-            try {
-                // Authenticate the user
-                // mongoApp.current.logIn(Realm.Credentials.anonymous()).then((returnedUser) => { ***
-                // assert(mongoClient.id === mongoApp.currentUser.id);
-                // returnedUser.functions.getAllMapData().then((response) => {
-                // maps.current = response.result;
-                maps.current = MapsJSON.default; // take the array from the Module and put it into the maps reference variable
-                setClickedTags_Set(new Set()); // initialize this Set and trigger Visibles updates
-                setIsConnected(CONNECTED);
-                // });
-                // });
-            } catch (err) {
-                console.error('Failed to log in to db', err);
-                setIsConnected('DB ERROR');
-            }
-        }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []); // the empty array at the end means this hook only runs once, after the web page is done with the initial render
+    const maps = mapdb.getAll();
 
     // this hook updates visibleMaps & visibleTags when clickedTags_Set changes
     useEffect(() => {
@@ -53,9 +21,9 @@ export default function MainPage({ updateViewCB }) {
 
         // update visibleMaps based on what tags are clicked
         if (!clickedTags_Set || clickedTags_Set.size < 1) {
-            if (maps && maps.current) newVisibleMaps = maps.current; // all maps visible, if maps have loaded
+            if (maps) newVisibleMaps = maps; // all maps visible, if maps have loaded
         } else {
-            newVisibleMaps = maps.current.filter((singleMap) => {
+            newVisibleMaps = maps.filter((singleMap) => {
                 let include = true;
                 clickedTags_Set.forEach((tag) => {
                     include &= singleMap.featureTags.includes(tag); // a map must have every clicked tag to be included
@@ -114,7 +82,7 @@ export default function MainPage({ updateViewCB }) {
 
     function handleCardClick(aMap, ssFileName) {
         // window.location.assign('ss/' + mapName + '/' + ssFileName);
-        updateViewCB(aMap, ssFileName);
+        //updateViewCB(aMap, ssFileName);
     }
 
     return (
@@ -124,12 +92,12 @@ export default function MainPage({ updateViewCB }) {
                     <Badge
                         badgeContent={
                             'db ' +
-                            isConnected +
+                            (mapdb.connected ? 'connected' : 'not connected') +
                             ' | ' +
                             (visibleMaps ? visibleMaps.length : '0') +
                             (visibleMaps && visibleMaps.length === 1 ? ' map visible' : ' maps visible')
                         }
-                        color={isConnected === CONNECTED ? 'secondary' : 'error'}
+                        color={mapdb.connected ? 'secondary' : 'error'}
                     >
                         URT MAP FINDER
                     </Badge>
@@ -167,7 +135,7 @@ export default function MainPage({ updateViewCB }) {
             <br />
             <div id='card-list'>
                 {visibleMaps.length > 0
-                    ? visibleMaps.map((aMap) => <MapCard map={aMap} cb={handleCardClick} key={aMap._id} />)
+                    ? visibleMaps.map((aMap) => <MapCard map={aMap} key={aMap._id} />)
                     : 'loading maps...'}
             </div>
         </>
