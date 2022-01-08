@@ -12,7 +12,7 @@ export default function MapCard({ map, cb }) {
     return (
         <>
             <div className='card'>
-                <Link to={'/map/' + map._id}>
+                <Link to={'/map/' + displayName}>
                     <button className='bare-button-main'>
                         <img className='main-ss' src={prefix + ss[0]} alt='main screenshot' />
                     </button>

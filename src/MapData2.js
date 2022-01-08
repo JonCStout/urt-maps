@@ -7,15 +7,15 @@ class mapDB {
     //const [isConnected, setIsConnected] = useState(NOTCONNECTED);
     // const mongoApp = useRef([]); // for saving the mongoApp object across renders of this component;  *** may not need to save this if only used in one function one time?
 
-    connected = false;
+    static connected = false;
 
     //maps = useRef([]); // all the maps from the database, full object details per map
-    maps = {
+    static maps = {
         current: [],
     };
 
     // this is where we connect to the database, and save it all into "maps"
-    connect() {
+    static connect() {
         if (this.maps.current.length < 1) {
             console.log('connecting...');
             // mongoApp.current = new Realm.App({ id: 'urt-maps-realmapp-xjuqv' }); // string is app ID (realmApp, not realMapp)
@@ -41,9 +41,23 @@ class mapDB {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }
 
-    getAll() {
-        return this.maps.current;
+    static getAll() {
+        if (this.maps.current.length > 0) {
+            return this.maps.current;
+        } else {
+            console.error('No maps to return');
+            return false;
+        }
+    }
+
+    static get(id) {
+        if (this.maps.current.length > 0) {
+            return this.maps.current.filter((map) => id == map._id.replace(/_/g, ' ')).pop();
+        } else {
+            console.error('No maps to return');
+            return false;
+        }
     }
 }
 
-export default new mapDB();
+export default mapDB;

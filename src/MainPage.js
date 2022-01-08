@@ -13,7 +13,11 @@ export default function MainPage() {
     const [clickedTags_Set, setClickedTags_Set] = useState(new Set());
     const [searchInput, setSearchInput] = useState(''); // complains about switching from uncontrolled to controlled input without an empty string to start
 
-    const maps = mapdb.getAll();
+    const maps = useRef([]);
+
+    useEffect(() => {
+        maps.current = mapdb.getAll();
+    }, []);
 
     // this hook updates visibleMaps & visibleTags when clickedTags_Set changes
     useEffect(() => {
@@ -21,9 +25,9 @@ export default function MainPage() {
 
         // update visibleMaps based on what tags are clicked
         if (!clickedTags_Set || clickedTags_Set.size < 1) {
-            if (maps) newVisibleMaps = maps; // all maps visible, if maps have loaded
+            if (maps.current) newVisibleMaps = maps.current; // all maps visible, if maps have loaded
         } else {
-            newVisibleMaps = maps.filter((singleMap) => {
+            newVisibleMaps = maps.current.filter((singleMap) => {
                 let include = true;
                 clickedTags_Set.forEach((tag) => {
                     include &= singleMap.featureTags.includes(tag); // a map must have every clicked tag to be included

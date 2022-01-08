@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { useParams } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -14,23 +14,33 @@ function MapDetailPage() {
     let params = useParams();
     let mapId = params.id;
 
-    let map = mapdb.getAll(mapId); // todo
-    const prefix = `ss/${map._id}/`; // path prefix
-    const ss = map.screenShots; // coding shortcut
+    const [status, updateStatus] = useState(null);
+    const [map, updateMap] = useState(null);
+    //const map = useRef([]);
+    //let prefix = '';
+    //let ss = [];
+
+    useEffect(() => {
+        //prefix = `ss/${map.current._id}/`; // path prefix
+        //ss = map.current.screenShots; // coding shortcut
+        updateMap(mapdb.get(mapId));
+    }, []);
 
     return (
-        <>
-            <h1></h1>
-            <Swiper navigation={true} spaceBetween={20} centeredSlides={true} className='mySwiper'>
-                {ss.map((_el, index) => {
-                    return (
-                        <SwiperSlide>
-                            <img src={prefix + _el} alt={'screenshot ' + (index + 1)} />
-                        </SwiperSlide>
-                    );
-                })}
-            </Swiper>
-        </>
+        map && (
+            <div>
+                <h1>Map: {map.pk3}</h1>
+                <Swiper navigation={true} spaceBetween={20} centeredSlides={true} className='mySwiper'>
+                    {map.screenShots.map((_el, index) => {
+                        return (
+                            <SwiperSlide key={index}>
+                                <img src={'/ss/' + map._id + '/' + _el} alt={'screenshot ' + (index + 1)} />
+                            </SwiperSlide>
+                        );
+                    })}
+                </Swiper>
+            </div>
+        )
     );
 }
 

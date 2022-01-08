@@ -5,6 +5,8 @@ import MapDetailPage from './MapDetailPage';
 import { CssBaseline } from '@material-ui/core';
 import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom';
 
+mapdb.connect();
+
 export default function App() {
     //const MAINVIEW = 1;
     //const DETAILVIEW = 2;
@@ -27,7 +29,6 @@ export default function App() {
     //const [mapdata, updateMapdata] = useState(null);
 
     useEffect(() => {
-        mapdb.connect();
         updateStatus(true);
         //maps = mapdb.getAll();
     }, []); // the empty array at the end means this hook only runs once, after the web page is done with the initial render
