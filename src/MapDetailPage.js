@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation } from 'swiper';
 import mapdb from './MapData2';
@@ -14,15 +14,9 @@ function MapDetailPage() {
     let params = useParams();
     let mapId = params.id;
 
-    const [status, updateStatus] = useState(null);
     const [map, updateMap] = useState(null);
-    //const map = useRef([]);
-    //let prefix = '';
-    //let ss = [];
 
     useEffect(() => {
-        //prefix = `ss/${map.current._id}/`; // path prefix
-        //ss = map.current.screenShots; // coding shortcut
         updateMap(mapdb.get(mapId));
     }, []);
 
@@ -30,6 +24,7 @@ function MapDetailPage() {
         map && (
             <div>
                 <h1>Map: {map.pk3}</h1>
+                <Link to='/'>Back to home</Link>
                 <Swiper navigation={true} spaceBetween={20} centeredSlides={true} className='mySwiper'>
                     {map.screenShots.map((_el, index) => {
                         return (
