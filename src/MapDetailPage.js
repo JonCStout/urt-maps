@@ -17,7 +17,12 @@ function MapDetailPage() {
     const [map, updateMap] = useState(null);
 
     useEffect(() => {
-        updateMap(mapdb.get(mapId));
+        mapdb.connect().then(() => {
+            mapdb.get(mapId).then((dbresult) => {
+                updateMap(dbresult);
+                console.log('updating map with ' + dbresult);
+            });
+        });
     }, []);
 
     return (

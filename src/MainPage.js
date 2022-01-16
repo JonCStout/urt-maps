@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
 import mapdb from './MapData2';
-import * as Realm from 'realm-web'; // mongodb realm package
 import MapCard from './MapCard';
 import TagsList from './TagsList';
 import './MainPage.css'; // style sheet for just this app component
@@ -9,44 +8,28 @@ import { Search } from '@material-ui/icons';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 export default function MainPage() {
+    const CONNECTED = 'IS connected'; // for db connection tracking
+    const NOTCONNECTED = 'is NOT connected';
+    const [isConnected, setIsConnected] = useState(NOTCONNECTED);
+    //const mongoApp = useRef([]); // for saving the mongoApp object across renders of this component;  *** may not need to save this if only used in one function one time?
+
     const [visibleMaps, setVisibleMaps] = useState([]); // array of map objects
     const [visibleTags, setVisibleTags] = useState([]);
+    const [mapdataLoaded, setMapdataLoaded] = useState(false);
     const [clickedTags_Set, setClickedTags_Set] = useState(new Set());
     const [searchInput, setSearchInput] = useState(''); // complains about switching from uncontrolled to controlled input without an empty string to start
 
-    const maps = useRef([]);
+    const maps = useRef(mapdb.preloaded); // take the array from the imported Module and put it into the maps reference variable, to start
 
     useEffect(() => {
-        maps.current = mapdb.getAll();
-    }, []);
-    maps.current = MapsJSON.default; // take the array from the imported Module and put it into the maps reference variable, to start
-
-    /**
-    // this is where we (unconditionally try to) connect to the database, and save it all into "maps"
-    useEffect(() => {
-        // if (maps.current.length < 1) {
-        setIsConnected('is connecting...');
-        mongoApp.current = new Realm.App({ id: 'urt-maps-realmapp-xjuqv' }); // string is app ID (realmApp, not realMapp)
-
-        try {
-            mongoApp.current.logIn(Realm.Credentials.anonymous()).then((returnedUser) => {
-                // ^ login to db with anonymous credentials
-                returnedUser.functions.getAllMapData().then((response) => {
-                    // ^ getAllMapData is a function on the mongodb/Realm provider, see RealmFuncs.txt
-                    maps.current = response.result; // grab the entire db result and directly pipe it into our maps ref variable
-                    setClickedTags_Set(new Set()); // initialize this Set and trigger Visibles updates
-                    setIsConnected(CONNECTED);
-                });
+        mapdb.connect().then(() => {
+            setIsConnected(CONNECTED);
+            mapdb.getAll().then((dbresult) => {
+                maps.current = dbresult;
+                setClickedTags_Set(new Set()); // initialize this Set and trigger Visibles updates
             });
-        } catch (err) {
-            console.error('Failed to log in to db', err);
-            setIsConnected('ERROR');
-        }
-        // }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []); // the empty array at the end means this hook only runs once, after the web page is done with the initial render
-
-     */
+        });
+    }, []);
 
     // this hook updates visibleMaps & visibleTags when clickedTags_Set changes
     useEffect(() => {
@@ -94,7 +77,6 @@ export default function MainPage() {
 
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [clickedTags_Set]);
-
 
     function handleMapFilterClick(tag) {
         let newTagsList = new Set(clickedTags_Set); // shallow copy

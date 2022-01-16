@@ -5,7 +5,7 @@ import MapDetailPage from './MapDetailPage';
 import { CssBaseline } from '@material-ui/core';
 import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom';
 
-mapdb.connect();
+//mapdb.connect();
 
 export default function App() {
     //const MAINVIEW = 1;
