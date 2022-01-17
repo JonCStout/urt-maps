@@ -5,17 +5,16 @@ import TagsList from './TagsList';
 import './MainPage.css'; // style sheet for just this app component
 import { Badge, InputAdornment, InputBase } from '@material-ui/core'; // reset CSS properties across browsers to a baseline, and controls
 import { Search } from '@material-ui/icons';
-import { BrowserRouter as Router } from 'react-router-dom';
 
 export default function MainPage() {
-    const CONNECTED = 'IS connected'; // for db connection tracking
-    const NOTCONNECTED = 'is NOT connected';
-    const [isConnected, setIsConnected] = useState(NOTCONNECTED);
+    //const CONNECTED = 'IS connected'; // for db connection tracking
+    //const NOTCONNECTED = 'is NOT connected';
+    //const [isConnected, setIsConnected] = useState(NOTCONNECTED);
     //const mongoApp = useRef([]); // for saving the mongoApp object across renders of this component;  *** may not need to save this if only used in one function one time?
 
     const [visibleMaps, setVisibleMaps] = useState([]); // array of map objects
     const [visibleTags, setVisibleTags] = useState([]);
-    const [mapdataLoaded, setMapdataLoaded] = useState(false);
+    //const [mapdataLoaded, setMapdataLoaded] = useState(false);
     const [clickedTags_Set, setClickedTags_Set] = useState(new Set());
     const [searchInput, setSearchInput] = useState(''); // complains about switching from uncontrolled to controlled input without an empty string to start
 
@@ -23,13 +22,13 @@ export default function MainPage() {
 
     useEffect(() => {
         mapdb.connect().then(() => {
-            setIsConnected(CONNECTED);
+            //setIsConnected(CONNECTED);
             mapdb.getAll().then((dbresult) => {
                 maps.current = dbresult;
                 setClickedTags_Set(new Set()); // initialize this Set and trigger Visibles updates
             });
-        });
-    }, []);
+        }); // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []); // the empty array at the end means this hook only runs once, after the web page is done with the initial render
 
     // this hook updates visibleMaps & visibleTags when clickedTags_Set changes
     useEffect(() => {
@@ -92,14 +91,15 @@ export default function MainPage() {
 
     function handleSearchChange(event) {
         setSearchInput(event.target.value);
-
         // todo:  parse input in real-time and update clicked tags, visibles
     }
 
+    /*
     function handleCardClick(aMap, ssFileName) {
         // window.location.assign('ss/' + mapName + '/' + ssFileName);
         //updateViewCB(aMap, ssFileName);
     }
+    */
 
     return (
         <>

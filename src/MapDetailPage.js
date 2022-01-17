@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link, useParams } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -23,7 +23,7 @@ function MapDetailPage() {
                 console.log('updating map with ' + dbresult);
             });
         });
-    }, []);
+    }, [mapId]);
 
     return (
         map && (

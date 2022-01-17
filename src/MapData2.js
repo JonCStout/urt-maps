@@ -9,13 +9,13 @@ class mapDB {
     static preloaded = MapsJSON.default; // use local json file as preloaded data
 
     static maps = {
-        current: [], // mirror the react 'useref' structure for convenience
+        current: [], // the 'current' property here is intended to mirror the react 'useref' structure for convenience
     };
 
     // connect to the database
     static connect() {
-        let me = this;
-        return new Promise(function (onSuccess, onError) {
+        let me = this; // save a reference to this, since it becomes undefined within the Promise context (todo: there's a better way to do this, maybe by pre-binding this to the promise?)
+        return new Promise((onSuccess, onError) => {
             if (me.dbapp == null) {
                 console.log('connecting...');
                 me.dbapp = new Realm.App({ id: 'urt-maps-realmapp-xjuqv' }); // string is app ID (realmApp, not realMapp)
@@ -44,7 +44,7 @@ class mapDB {
 
     static getAll() {
         const me = this;
-        return new Promise(function (onSuccess, onError) {
+        return new Promise((onSuccess, onError) => {
             if (me.maps.current.length > 0) {
                 onSuccess(me.maps.current);
             } else {
@@ -65,10 +65,10 @@ class mapDB {
         const me = this;
 
         function findMap(id) {
-            return me.maps.current.filter((map) => id == map._id.replace(/_/g, ' ')).pop();
+            return me.maps.current.filter((map) => id === map._id.replace(/_/g, ' ')).pop();
         }
 
-        return new Promise(function (onSuccess, onError) {
+        return new Promise((onSuccess, onError) => {
             if (me.maps.current.length > 0) {
                 onSuccess(findMap(id));
             } else {
