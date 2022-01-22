@@ -65,20 +65,23 @@ class mapDB {
         const me = this;
 
         function findMap(id) {
-            return me.maps.current.filter((map) => id === map._id.replace(/_/g, ' ')).pop();
+            let map = me.maps.current.filter((map) => id === map._id.replace(/_/g, ' '));
+            return map.length ? map.pop() : false;
         }
 
         return new Promise((onSuccess, onError) => {
             if (me.maps.current.length > 0) {
-                onSuccess(findMap(id));
+                let map = findMap(id);
+                map ? onSuccess(map) : onError('Unable to find requested map');
             } else {
                 me.dbuser.functions.getAllMapData().then(
                     (response) => {
                         me.maps.current = response.result;
-                        onSuccess(findMap(id));
+                        let map = findMap(id);
+                        map ? onSuccess(map) : onError('Unable to find requested map');
                     },
                     () => {
-                        onError();
+                        onError('Error querying database');
                     }
                 );
             }

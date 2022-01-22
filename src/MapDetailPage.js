@@ -13,34 +13,50 @@ SwiperCore.use([Navigation]);
 function MapDetailPage() {
     let params = useParams();
     let mapId = params.id;
+    const queryStates = { NOTSTARTED: 1, SUCCESS: 1, FAILED: 2 };
 
     const [map, updateMap] = useState(null);
+    const [queryState, updateQueryState] = useState(queryStates.NOTSTARTED);
 
     useEffect(() => {
         mapdb.connect().then(() => {
-            mapdb.get(mapId).then((dbresult) => {
-                updateMap(dbresult);
-                console.log('updating map with ' + dbresult);
-            });
+            mapdb.get(mapId).then(
+                (dbresult) => {
+                    updateMap(dbresult);
+                    updateQueryState(queryStates.SUCCESS);
+                    console.log('updating map with ' + dbresult);
+                },
+                (err) => {
+                    updateQueryState(queryStates.FAILED);
+                }
+            );
         });
-    }, [mapId]);
+    }, [mapId, queryStates]);
 
     return (
-        map && (
-            <div>
-                <h1>Map: {map.pk3}</h1>
-                <Link to='/'>Back to home</Link>
-                <Swiper navigation={true} spaceBetween={20} centeredSlides={true} className='mySwiper'>
-                    {map.screenShots.map((_el, index) => {
-                        return (
-                            <SwiperSlide key={index}>
-                                <img src={'/ss/' + map._id + '/' + _el} alt={'screenshot ' + (index + 1)} />
-                            </SwiperSlide>
-                        );
-                    })}
-                </Swiper>
-            </div>
-        )
+        <div>
+            {queryState === queryStates.FAILED && (
+                <div>
+                    <h1>Map Not Found</h1>
+                    <p>Unable to find map {mapId}</p>
+                </div>
+            )}
+            {map && (
+                <div>
+                    <h1>Map: {map.pk3}</h1>
+                    <Link to='/'>Back to home</Link>
+                    <Swiper navigation={true} spaceBetween={20} centeredSlides={true} className='mySwiper'>
+                        {map.screenShots.map((_el, index) => {
+                            return (
+                                <SwiperSlide key={index}>
+                                    <img src={'/ss/' + map._id + '/' + _el} alt={'screenshot ' + (index + 1)} />
+                                </SwiperSlide>
+                            );
+                        })}
+                    </Swiper>
+                </div>
+            )}
+        </div>
     );
 }
 
