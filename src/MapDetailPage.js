@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import { Link, useParams, useSearchParams } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation } from 'swiper';
@@ -69,10 +69,5 @@ function MapDetailPage() {
         </div>
     );
 }
-
-MapDetailPage.propTypes = {
-    map: PropTypes.object,
-    ssIdx: PropTypes.number,
-};
 
 export default MapDetailPage;

@@ -23,7 +23,7 @@ export default function MapCard({ map, cb }) {
                         <img className='sub-ss' src={prefix + ss[2]} alt='screenshot 3' />
                     </Link>
                 </span>
-                <Grid container direction='row' justify='center' alignItems='center'>
+                <Grid container direction='row' justifyContent='center' alignItems='center'>
                     <Grid item xs={2}>
                         &nbsp;
                     </Grid>
