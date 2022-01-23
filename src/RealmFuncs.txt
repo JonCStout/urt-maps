@@ -7,3 +7,17 @@ exports = function(){
   var result = coll.find();
   return {result};
 };
+
+// getMap(map_id)
+var result = coll.find({'_id': map_id });
+
+// searchMaps(keywords)
+var result = coll.find({$or: [
+  {_id: /keywords/ },
+  {pk3: /keywords/ }
+]});
+
+// ===== REFERENCES =====
+// Mongodb actions: https://docs.mongodb.com/realm/mongodb/actions/#std-label-mongodb-actions
+// SQL to MongoDB: https://docs.mongodb.com/manual/reference/sql-comparison/
+
