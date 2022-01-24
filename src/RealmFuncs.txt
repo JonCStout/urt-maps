@@ -8,14 +8,26 @@ exports = function(){
   return {result};
 };
 
+
 // getMap(map_id)
-var result = coll.find({'_id': map_id });
+exports = function({map_id}){
+  var coll = context.services.get("mongodb-atlas").db("urt-maps").collection("maps");
+  var result = coll.findOne({'_id': map_id });
+  return {result};
+};
+// to use: dbuser.functions.getAllMapData({map_id: 'NAME OF MAP HERE'}).then...
+
 
 // searchMaps(keywords)
-var result = coll.find({$or: [
-  {_id: /keywords/ },
-  {pk3: /keywords/ }
-]});
+exports = function({keywords}){
+  var coll = context.services.get("mongodb-atlas").db("urt-maps").collection("maps");
+  var result = coll.find({$or: [
+    {_id: /keywords/ },
+    {pk3: /keywords/ }
+  ]});
+  return {result};
+};
+
 
 // ===== REFERENCES =====
 // Mongodb actions: https://docs.mongodb.com/realm/mongodb/actions/#std-label-mongodb-actions
