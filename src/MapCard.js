@@ -4,7 +4,7 @@ import './MapCard.css';
 import { Grid } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 
-export default function MapCard({ map, cb }) {
+export default function MapCard({ map }) {
     const ss = map.screenShots; // abreviate, simplify code typing
     const prefix = `ss/${map._id}/`; // start of path
     const displayName = map._id.replace(/_/g, ' ');
@@ -45,5 +45,4 @@ export default function MapCard({ map, cb }) {
 
 MapCard.propTypes = {
     map: PropTypes.object,
-    cb: PropTypes.func,
 };
