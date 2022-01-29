@@ -19,6 +19,7 @@ exports = function({map_id}){
 // to use: dbuser.functions.getMap({map_id: 'NAME OF MAP HERE'}).then...
 
 
+/* un-deployed for now;  expensive and not sure about regex security
 // searchMaps(keywords)
 exports = function({keywords}){
   var coll = context.services.get("mongodb-atlas").db("urt-maps").collection("maps");
@@ -32,7 +33,7 @@ exports = function({keywords}){
   return {result};
 };
 // to use: dbuser.functions.searchMaps({keywords: 'STRING HERE'}).then...
-
+*/
 
 // ===== REFERENCES =====
 // Mongodb actions: https://docs.mongodb.com/realm/mongodb/actions/#std-label-mongodb-actions
