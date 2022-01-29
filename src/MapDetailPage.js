@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
-import { Link, useParams } from 'react-router-dom';
+// import PropTypes from 'prop-types';
+import { Link, useParams, useSearchParams } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation } from 'swiper';
 import mapdb from './MapData2';
@@ -13,8 +13,9 @@ SwiperCore.use([Navigation]);
 function MapDetailPage() {
     let params = useParams();
     let mapId = params.id;
-    const queryStates = { NOTSTARTED: 1, SUCCESS: 1, FAILED: 2 };
+    const queryStates = { NOTSTARTED: 0, SUCCESS: 1, FAILED: 2 };
 
+    const [searchParams] = useSearchParams(); // don't need set function, so don't destructure it
     const [map, updateMap] = useState(null);
     const [queryState, updateQueryState] = useState(queryStates.NOTSTARTED);
 
@@ -25,13 +26,16 @@ function MapDetailPage() {
                     updateMap(dbresult);
                     updateQueryState(queryStates.SUCCESS);
                     console.log('updating map with ' + dbresult);
+                    document.title = 'UrT Map Finder Repo | ' + dbresult._id;
                 },
                 (err) => {
                     updateQueryState(queryStates.FAILED);
+                    document.title = 'UrT Map Finder Repo | Unable to find map';
                 }
             );
         });
-    }, [mapId, queryStates]);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [mapId]);
 
     return (
         <div>
@@ -45,7 +49,13 @@ function MapDetailPage() {
                 <div>
                     <h1>Map: {map.pk3}</h1>
                     <Link to='/'>Back to home</Link>
-                    <Swiper navigation={true} spaceBetween={20} centeredSlides={true} className='mySwiper'>
+                    <Swiper
+                        navigation={true}
+                        spaceBetween={20}
+                        centeredSlides={true}
+                        className='mySwiper'
+                        initialSlide={searchParams.get('ss') || 0}
+                    >
                         {map.screenShots.map((_el, index) => {
                             return (
                                 <SwiperSlide key={index}>
@@ -59,10 +69,5 @@ function MapDetailPage() {
         </div>
     );
 }
-
-MapDetailPage.propTypes = {
-    map: PropTypes.object,
-    ssIdx: PropTypes.number,
-};
 
 export default MapDetailPage;

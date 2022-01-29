@@ -21,6 +21,7 @@ export default function MainPage() {
     const maps = useRef(mapdb.preloaded); // take the array from the imported Module and put it into the maps reference variable, to start
 
     useEffect(() => {
+        document.title = 'UrT Map Finder Repo';
         mapdb.connect().then(() => {
             //setIsConnected(CONNECTED);
             mapdb.getAll().then((dbresult) => {
