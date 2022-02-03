@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, useParams, useSearchParams } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Thumbs } from 'swiper';
+import { Grid } from '@material-ui/core';
 import mapdb from './MapData2';
 import 'swiper/swiper.min.css'; // can't use swiper/css as in examples; need a specific .css file for now, (maybe React 18, webpack 5, or a fixed swiper@7 will change that)
 import 'swiper/components/navigation/navigation.min.css'; // ditto for swiper/css/navigation
@@ -48,15 +49,16 @@ function MapDetailPage() {
             )}
             {map && (
                 <div>
-                    <header className='header'>
-                        <h1>Map: {map.pk3}</h1>
-                        <Link to='/'>Back to home</Link>
+                    <header className='App-header mini'>
+                        <h1>
+                            <Link to='/'>URT MAP FINDER</Link>
+                        </h1>
                     </header>
                     <Swiper
                         navigation={true}
                         spaceBetween={20}
                         centeredSlides={true}
-                        className='mySwiper'
+                        className='mainSwiper'
                         thumbs={{ swiper: thumbsSwiper }}
                         initialSlide={searchParams.get('ss') || 0}
                     >
@@ -78,7 +80,7 @@ function MapDetailPage() {
                                 freeMode={true}
                                 watchSlidesProgress={true}
                                 modules={[Navigation, Thumbs]}
-                                className='mySwiper'
+                                className='miniSwiper'
                             >
                                 {map.screenShots.map((_el, index) => {
                                     return (
@@ -90,8 +92,34 @@ function MapDetailPage() {
                             </Swiper>
                         </div>
                         <div className='mapDetails'>
-                            {map.pk3}
-                            etc.
+                            <Grid container>
+                                <Grid item md={2}>
+                                    <span className='label'>Map:</span>
+                                </Grid>
+                                <Grid item md={10}>
+                                    <span className='detail'>{map._id}</span>
+                                </Grid>
+                                <Grid item md={2}>
+                                    <span className='label'>File:</span>
+                                </Grid>
+                                <Grid item md={10}>
+                                    <span className='detail'>{map.pk3}</span>
+                                </Grid>
+                                <Grid item md={2}>
+                                    <span className='label'>Author:</span>
+                                </Grid>
+                                <Grid item md={10}>
+                                    <span className='detail'>{map.creator}</span>
+                                </Grid>
+                                <Grid item md={2}>
+                                    <span className='label'>Download:</span>
+                                </Grid>
+                                <Grid item md={10}>
+                                    <span className='detail'>
+                                        <a href='#'>mirror #1</a>
+                                    </span>
+                                </Grid>
+                            </Grid>
                         </div>
                     </main>
                 </div>
