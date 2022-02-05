@@ -3,8 +3,12 @@ import mapdb from './MapData2';
 import MapCard from './MapCard';
 import TagsList from './TagsList';
 import './MainPage.css'; // style sheet for just this app component
-import { Badge, InputAdornment, InputBase } from '@material-ui/core'; // reset CSS properties across browsers to a baseline, and controls
-import { Search } from '@material-ui/icons';
+// import { InputAdornment, InputBase } from '@mui/material';
+import InputAdornment from '@mui/material/InputAdornment';
+import InputBase from '@mui/material/InputBase';
+import Badge from '@mui/material/Badge';
+// import { Search } from '@mui/icons-material';
+import { Search } from '@mui/icons-material';
 
 export default function MainPage() {
     //const CONNECTED = 'IS connected'; // for db connection tracking

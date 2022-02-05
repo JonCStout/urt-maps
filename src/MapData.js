@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 // import * as Realm from 'realm-web'; // mongodb realm package
 import * as MapsJSON from './maps-db-2021-12-20.json'; // gets imported as a Module
-import { Badge, InputAdornment, InputBase } from '@material-ui/core'; // reset CSS properties across browsers to a baseline, and controls
+import { Badge, InputAdornment, InputBase } from '@mui/material'; // reset CSS properties across browsers to a baseline, and controls
 
 export default function MapData() {
     CONNECTED = 'IS connected'; // for db connection tracking

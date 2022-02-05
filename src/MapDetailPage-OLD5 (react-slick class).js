@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import Box from '@material-ui/core/Box';
-// import { sizing } from '@material-ui/system';
+import Box from '@mui/material/Box';
+// import { sizing } from '@mui/system';
 
 import './MapDetailPage.css';
 

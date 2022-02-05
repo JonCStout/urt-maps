@@ -1,8 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import './MapCard.css';
-import { Grid } from '@material-ui/core';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+// import { Grid } from '@mui/material';
+import Grid from '@mui/material/Grid';
+import './MapCard.css';
 
 export default function MapCard({ map }) {
     const ss = map.screenShots; // abreviate, simplify code typing

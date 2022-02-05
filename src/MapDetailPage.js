@@ -3,10 +3,13 @@ import React, { useEffect, useState } from 'react';
 import { Link, useParams, useSearchParams } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Thumbs } from 'swiper';
-import { Grid } from '@material-ui/core';
+// import { Grid } from '@mui/material';
+import Grid from '@mui/material/Grid';
 import mapdb from './MapData2';
-import 'swiper/swiper.min.css'; // can't use swiper/css as in examples; need a specific .css file for now, (maybe React 18, webpack 5, or a fixed swiper@7 will change that)
-import 'swiper/components/navigation/navigation.min.css'; // ditto for swiper/css/navigation
+// import 'swiper/swiper.min.css'; // can't use swiper/css as in examples; need a specific .css file for now, (maybe React 18, webpack 5, or a fixed swiper@7 will change that)
+// import 'swiper/components/navigation/navigation.min.css'; // ditto for swiper/css/navigation
+import 'swiper/css';
+import 'swiper/css/navigation';
 import './MapDetailPage.css';
 
 SwiperCore.use([Navigation, Thumbs]);

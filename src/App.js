@@ -1,7 +1,8 @@
 import React from 'react';
 import MainPage from './MainPage';
 import MapDetailPage from './MapDetailPage';
-import { CssBaseline } from '@material-ui/core';
+// import { CssBaseline } from '@mui/material';
+import CssBaseline from '@mui/material/CssBaseline';
 import { Routes, Route, Outlet } from 'react-router-dom';
 
 //mapdb.connect();
