@@ -1,15 +1,15 @@
 
 ### Integrate upstream Git commits
 
-git fetch upstream
-# make sure all is committed (or stashed) as necessary on this branch
-git rebase -i upstream/master routing
-
 * https://medium.com/sweetmeat/how-to-keep-a-downstream-git-repository-current-with-upstream-repository-changes-10b76fad6d97
 
 git pull https://github.com/JonCStout/urt-maps.git master
 
-### Integrate upstream Git commits
+
+### REFERENCES
+
+https://medium.com/swlh/how-to-load-data-easily-with-react-hooks-ed294a764bc9
+
 
 
 ### URLS
