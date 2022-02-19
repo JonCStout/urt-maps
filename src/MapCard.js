@@ -13,15 +13,15 @@ export default function MapCard({ map }) {
     return (
         <>
             <div className='card'>
-                <Link to={'/map/' + displayName + '?ss=0'} className='bare-button-main'>
-                    <img className='main-ss' src={prefix + ss[0]} alt='main screenshot' />
+                <Link className='ss-links main-ss-link' to={'/map/' + displayName + '?ss=0'}>
+                    <img className='main-ss-img' src={prefix + ss[0]} alt='main screenshot' />
                 </Link>
                 <span>
-                    <Link to={'/map/' + displayName + '?ss=1'} className='bare-button-sub bare-button-sub-left'>
-                        <img className='sub-ss' src={prefix + ss[1]} alt='screenshot 2' />
+                    <Link className='ss-links sub-ss-link-left' to={'/map/' + displayName + '?ss=1'}>
+                        <img className='sub-ss-img' src={prefix + ss[1]} alt='screenshot 2' />
                     </Link>
-                    <Link to={'/map/' + displayName + '?ss=2'} className='bare-button-sub bare-button-sub-right'>
-                        <img className='sub-ss' src={prefix + ss[2]} alt='screenshot 3' />
+                    <Link className='ss-links sub-ss-link-right' to={'/map/' + displayName + '?ss=2'}>
+                        <img className='sub-ss-img' src={prefix + ss[2]} alt='screenshot 3' />
                     </Link>
                 </span>
                 <Grid container direction='row' justifyContent='center' alignItems='center'>
@@ -33,7 +33,7 @@ export default function MapCard({ map }) {
                     </Grid>
                     <Grid item xs={2}>
                         {ss.length > 3 ? (
-                            <Link to={'/map/' + displayName + '?ss=3'} className='more-button'>
+                            <Link className='more-button' to={'/map/' + displayName + '?ss=3'}>
                                 +more screenshots
                             </Link>
                         ) : null}
