@@ -8,6 +8,8 @@ For project management board, including the todo list, check out: https://trello
 
 Developer tip: To make the maps show up locally while running the development server, edit package.json and change the homepage property near the end from "." to "./urt-maps". Remember to change it back before making a public git commit, or before running "npm run build" for production output.
 
+Developer tip2: To get rid of the crypto not found warning, edit node_modules/react-scripts/config/webpack.config.js as described here: https://www.mongodb.com/community/forums/t/cant-resolve-crypto-in-node-modules-bson-dist-react/143227
+
 #
 
 ##### Pre-generated build details follow
