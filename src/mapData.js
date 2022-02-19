@@ -1,4 +1,3 @@
-// import * as Realm from 'realm-web'; // mongodb realm package
 import * as Realm from 'realm-web'; // mongodb realm package
 import * as MapsJSON from './maps-db-2021-12-20.json'; // gets imported as a Module
 
@@ -17,7 +16,7 @@ class mapDB {
         let me = this; // save a reference to this, since it becomes undefined within the Promise context (todo: there's a better way to do this, maybe by pre-binding this to the promise?)
         return new Promise((onSuccess, onError) => {
             if (me.dbapp == null) {
-                console.log('connecting...');
+                // console.log('connecting...');
                 me.dbapp = new Realm.App({ id: 'urt-maps-realmapp-xjuqv' }); // string is app ID (realmApp, not realMapp)
 
                 try {

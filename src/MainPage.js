@@ -1,24 +1,16 @@
 import React, { useEffect, useState, useRef } from 'react';
-import mapdb from './MapData2';
+import mapdb from './mapData';
 import MapCard from './MapCard';
 import TagsList from './TagsList';
 import './MainPage.css'; // style sheet for just this app component
-// import { InputAdornment, InputBase } from '@mui/material';
 import InputAdornment from '@mui/material/InputAdornment';
 import InputBase from '@mui/material/InputBase';
 import Badge from '@mui/material/Badge';
-// import { Search } from '@mui/icons-material';
 import { Search } from '@mui/icons-material';
 
 export default function MainPage() {
-    //const CONNECTED = 'IS connected'; // for db connection tracking
-    //const NOTCONNECTED = 'is NOT connected';
-    //const [isConnected, setIsConnected] = useState(NOTCONNECTED);
-    //const mongoApp = useRef([]); // for saving the mongoApp object across renders of this component;  *** may not need to save this if only used in one function one time?
-
     const [visibleMaps, setVisibleMaps] = useState([]); // array of map objects
     const [visibleTags, setVisibleTags] = useState([]);
-    //const [mapdataLoaded, setMapdataLoaded] = useState(false);
     const [clickedTags_Set, setClickedTags_Set] = useState(new Set());
     const [searchInput, setSearchInput] = useState(''); // complains about switching from uncontrolled to controlled input without an empty string to start
 
@@ -27,7 +19,6 @@ export default function MainPage() {
     useEffect(() => {
         document.title = 'UrT Map Finder Repo';
         mapdb.connect().then(() => {
-            //setIsConnected(CONNECTED);
             mapdb.getAll().then((dbresult) => {
                 maps.current = dbresult;
                 setClickedTags_Set(new Set()); // initialize this Set and trigger Visibles updates
@@ -98,13 +89,6 @@ export default function MainPage() {
         setSearchInput(event.target.value);
         // todo:  parse input in real-time and update clicked tags, visibles
     }
-
-    /*
-    function handleCardClick(aMap, ssFileName) {
-        // window.location.assign('ss/' + mapName + '/' + ssFileName);
-        //updateViewCB(aMap, ssFileName);
-    }
-    */
 
     return (
         <>
