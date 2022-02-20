@@ -26,7 +26,7 @@ function MapDetailPage() {
                 (dbresult) => {
                     updateMap(dbresult);
                     updateQueryState(queryStates.SUCCESS);
-                    console.log('updating map with ' + dbresult);
+                    // console.log('updating map with ' + dbresult);
                     document.title = 'UrT Map Finder Repo | ' + dbresult._id;
                 },
                 (err) => {
@@ -95,14 +95,16 @@ function MapDetailPage() {
                                 <Grid item md={2}>
                                     <span className='label'>Map:</span>
                                 </Grid>
-                                <Grid item md={10}>
-                                    <span className='detail'>{map._id}</span>
+                                <Grid item md={4}>
+                                    <span className='detail'>
+                                        <strong>{map._id}</strong>
+                                    </span>
                                 </Grid>
                                 <Grid item md={2}>
-                                    <span className='label'>File:</span>
+                                    <span className='label'>Play Size:</span>
                                 </Grid>
-                                <Grid item md={10}>
-                                    <span className='detail'>{map.pk3}</span>
+                                <Grid item md={4}>
+                                    <span className='detail'>{map.playSize}</span>
                                 </Grid>
                                 <Grid item md={2}>
                                     <span className='label'>Author:</span>
@@ -111,11 +113,20 @@ function MapDetailPage() {
                                     <span className='detail'>{map.creator}</span>
                                 </Grid>
                                 <Grid item md={2}>
+                                    <span className='label'>File:</span>
+                                </Grid>
+                                <Grid item md={10}>
+                                    <span className='detail'>{map.pk3}.pk3</span>
+                                </Grid>
+                                <Grid item md={2}>
                                     <span className='label'>Download:</span>
                                 </Grid>
                                 <Grid item md={10}>
                                     <span className='detail'>
-                                        <a href='#'>mirror #1</a>
+                                        {map.pk3 !== 'built-in' && map.pk3 !== undefined ? (
+                                            <a href={`http://pub.fsk405.com/maps/q3ut4/${map.pk3}.pk3`}>FSK mirror</a>
+                                        ) : null}{' '}
+                                        [ {map.fileSize} ]
                                     </span>
                                 </Grid>
                             </Grid>
