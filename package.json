@@ -70,7 +70,7 @@
             "last 1 safari version"
         ]
     },
-    "homepage": ".",
+    "homepage": "/urt-maps",
     "devDependencies": {
         "eslint-config-prettier": "^8.3.0",
         "eslint-plugin-prettier": "^3.4.1"
