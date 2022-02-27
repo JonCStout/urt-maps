@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/urt-maps/static/css/main.bdd10ec3.css",
+    "main.js": "/urt-maps/static/js/main.f8f65a7d.js",
+    "index.html": "/urt-maps/index.html",
+    "main.bdd10ec3.css.map": "/urt-maps/static/css/main.bdd10ec3.css.map",
+    "main.f8f65a7d.js.map": "/urt-maps/static/js/main.f8f65a7d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bdd10ec3.css",
+    "static/js/main.f8f65a7d.js"
+  ]
+}
