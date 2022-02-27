@@ -1,8 +1,0 @@
-{
-    "short_name": "UrT Maps",
-    "name": "UrT Map Finder Repo",
-    "start_url": ".",
-    "display": "standalone",
-    "theme_color": "#000000",
-    "background_color": "#ffffff"
-}
