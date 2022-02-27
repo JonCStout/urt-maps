@@ -26,7 +26,6 @@ function MapDetailPage() {
                 (dbresult) => {
                     updateMap(dbresult);
                     updateQueryState(queryStates.SUCCESS);
-                    // console.log('updating map with ' + dbresult);
                     document.title = 'UrT Map Finder Repo | ' + dbresult._id;
                 },
                 (err) => {
@@ -50,7 +49,7 @@ function MapDetailPage() {
                 <div>
                     <header className='App-header mini'>
                         <h1>
-                            <Link to='/'>URT MAP FINDER</Link>
+                            <Link to='/urt-maps'>URT MAP FINDER</Link>
                         </h1>
                     </header>
                     <Swiper
@@ -64,7 +63,10 @@ function MapDetailPage() {
                         {map.screenShots.map((_el, index) => {
                             return (
                                 <SwiperSlide key={index}>
-                                    <img src={'/ss/' + map._id + '/' + _el} alt={'screenshot ' + (index + 1)} />
+                                    <img
+                                        src={'/urt-maps/ss/' + map._id + '/' + _el}
+                                        alt={'screenshot ' + (index + 1)}
+                                    />
                                 </SwiperSlide>
                             );
                         })}
@@ -84,7 +86,10 @@ function MapDetailPage() {
                                 {map.screenShots.map((_el, index) => {
                                     return (
                                         <SwiperSlide key={index}>
-                                            <img src={'/ss/' + map._id + '/' + _el} alt={'screenshot ' + (index + 1)} />
+                                            <img
+                                                src={'/urt-maps/ss/' + map._id + '/' + _el}
+                                                alt={'screenshot ' + (index + 1)}
+                                            />
                                         </SwiperSlide>
                                     );
                                 })}
