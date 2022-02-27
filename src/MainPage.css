@@ -37,6 +37,20 @@ input:focus {
     color: #61dafb;
 }
 
+.App-header.mini {
+  background-color: transparent;
+  font-size: .9rem;
+  position: absolute;
+  z-index: 100;
+  text-align: center;
+  width: 100%;
+}
+.App-header.mini a {
+  color: #fff;
+  text-decoration: none;
+  text-shadow: 0 0 11px rgb(0 0 0 / 40%);
+}
+
 #card-list {
     display: flex;
     flex-direction: row;

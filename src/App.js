@@ -1,30 +1,35 @@
-import React, { useState } from 'react';
+import React from 'react';
 import MainPage from './MainPage';
 import MapDetailPage from './MapDetailPage';
-import { CssBaseline } from '@material-ui/core';
+import CssBaseline from '@mui/material/CssBaseline';
+import { Routes, Route, Outlet } from 'react-router-dom';
 
 export default function App() {
-    const MAINVIEW = 1;
-
-    const [viewState, setViewState] = useState(MAINVIEW);
-    const [detailMap, setDetailMap] = useState();
-    const [ssFileName2, setssFileName2] = useState();
-
-    function updateView(aMapObj, ssFileName) {
-        setDetailMap(aMapObj);
-        setssFileName2(ssFileName);
-        setViewState(2);
-    }
-
     // return is what renders the html (and jsx) of our component:
     return (
-        <>
+        <Routes>
+            <Route path='/' element={<Layout />}>
+                <Route index element={<MainPage />} />
+                <Route path='/map/:id' element={<MapDetailPage />} />
+                <Route path='*' element={<NoMatch />} />
+            </Route>
+        </Routes>
+    );
+}
+
+function Layout() {
+    return (
+        <div>
             <CssBaseline />
-            {viewState === MAINVIEW ? (
-                <MainPage updateViewCB={updateView} />
-            ) : (
-                <MapDetailPage map={detailMap} ssClicked={ssFileName2} />
-            )}
-        </>
+            <Outlet />
+        </div>
+    );
+}
+
+function NoMatch() {
+    return (
+        <div>
+            <h3>Page Not found</h3>
+        </div>
     );
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Badge, Button } from '@material-ui/core';
+import Badge from '@mui/material/Badge';
+import Button from '@mui/material/Button';
 
 TagsList.propTypes = {
     tagsArray: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string, PropTypes.number)),
@@ -17,8 +18,8 @@ export default function TagsList({ visibleTagsList: tagsList, clickedTagsList, c
                 const isUnClicked = clickedTagsList && !clickedTagsList.has(tagName);
                 return (
                     <Button
-                        variant={isUnClicked && count > 1 ? 'outlined' : 'contained'}
-                        color={isUnClicked ? 'default' : 'primary'}
+                        variant={isUnClicked && count < 2 ? 'outlined' : 'contained'}
+                        color={isUnClicked ? 'secondary' : 'success'}
                         size='small'
                         key={tagName + '_button'}
                         onClick={() => callBackFunc(tagName)}
