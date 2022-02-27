@@ -121,7 +121,10 @@ function MapDetailPage() {
                                     <span className='label'>File:</span>
                                 </Grid>
                                 <Grid item md={10}>
-                                    <span className='detail'>{map.pk3}.pk3</span>
+                                    <span className='detail'>
+                                        {map.pk3}
+                                        {map.pk3 !== 'built-in' ? '.pk3' : null}
+                                    </span>
                                 </Grid>
                                 <Grid item md={2}>
                                     <span className='label'>Download:</span>
