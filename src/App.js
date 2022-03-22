@@ -19,17 +19,13 @@ export default function App() {
 
 function Layout() {
     return (
-        <div>
+        <>
             <CssBaseline />
             <Outlet />
-        </div>
+        </>
     );
 }
 
 function NoMatch() {
-    return (
-        <div>
-            <h3>Page Not found (React Router error)</h3>
-        </div>
-    );
+    return <h3>Page Not found (React Router error)</h3>;
 }

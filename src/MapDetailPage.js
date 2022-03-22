@@ -16,20 +16,20 @@ function MapDetailPage() {
     const queryStates = { NOTSTARTED: 0, SUCCESS: 1, FAILED: 2 };
 
     const [searchParams] = useSearchParams(); // don't need set function, so don't destructure it
-    const [map, updateMap] = useState(null);
-    const [queryState, updateQueryState] = useState(queryStates.NOTSTARTED);
+    const [map, setMap] = useState(null);
+    const [queryState, setQueryState] = useState(queryStates.NOTSTARTED);
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
     useEffect(() => {
         mapdb.connect().then(() => {
             mapdb.get(mapId).then(
                 (dbresult) => {
-                    updateMap(dbresult);
-                    updateQueryState(queryStates.SUCCESS);
+                    setMap(dbresult);
+                    setQueryState(queryStates.SUCCESS);
                     document.title = 'UrT Map Finder Repo | ' + dbresult._id;
                 },
                 (err) => {
-                    updateQueryState(queryStates.FAILED);
+                    setQueryState(queryStates.FAILED);
                     document.title = 'UrT Map Finder Repo | Unable to find map';
                 }
             );
