@@ -9,9 +9,9 @@ import Badge from '@mui/material/Badge';
 import { Search } from '@mui/icons-material';
 
 export default function MainPage() {
-    const [visibleMaps, setVisibleMaps] = useState([]); // array of map objects
-    const [visibleTags, setVisibleTags] = useState([]);
-    const [clickedTags_Set, setClickedTags_Set] = useState(new Set());
+    const [visibleMaps, setVisibleMaps] = useState([]); // array of game map objects
+    const [visibleTags, setVisibleTags] = useState([]); // (sorted) array of tag strings
+    const [clickedTags_Set, setClickedTags_Set] = useState(new Set()); // a Set of clicked tag strings
     const [searchInput, setSearchInput] = useState(''); // complains about switching from uncontrolled to controlled input without an empty string to start
 
     const maps = useRef(mapdb.preloaded); // take the array from the imported Module and put it into the maps reference variable, to start
@@ -35,7 +35,7 @@ export default function MainPage() {
             if (maps.current) newVisibleMaps = maps.current; // all maps visible, if maps have loaded
         } else {
             newVisibleMaps = maps.current.filter((singleMap) => {
-                let include = true;
+                let include = true; // this variable resets with each iteration
                 clickedTags_Set.forEach((tag) => {
                     include &= singleMap.featureTags.includes(tag); // a map must have every clicked tag to be included
                 });
@@ -47,24 +47,26 @@ export default function MainPage() {
             if (a._id > b._id) return 1;
             return 0;
         });
-        setVisibleMaps(newVisibleMaps);
+        setVisibleMaps(newVisibleMaps); // any set() from useState like this one is async, not immediate
 
-        // update visibleTags based on visibleMaps (reusing newVisibleMaps above, not waiting for async set)
+        // update visibleTags based on newVisibleMaps, not waiting for setVisibleMaps()
         let newVisibleTags = new Map();
         newVisibleMaps.forEach((singleMap) => {
             singleMap.featureTags.forEach((tag) => {
-                // for each tag in each map
+                // for each tag in each game map
                 let count = newVisibleTags.get(tag); // if a tag exists, get its count
                 if (!count) count = 1;
                 else count += 1;
-                newVisibleTags.set(tag, count); // add pair to Map... tag: count
+                newVisibleTags.set(tag, count); // add key/val pair to this Map... tag: count
             });
         });
         setVisibleTags(
             [...newVisibleTags].sort((a, b) => {
-                // if (a[1] > b[1]) return -1; // descending by count ([1])
+                // destructured the Map to use Array.sort()
+                // if (a[1] > b[1]) return -1; // descending by "count" aka [1]
                 // if (a[1] < b[1]) return 1;
-                if (a[0] > b[0]) return 1; // when tied, ascending by tag name ([0])
+                // if the above 2 haven't returned yet, then there was a tie, so next sort criteria:
+                if (a[0] > b[0]) return 1; // ascending by "tag" aka [0]
                 if (a[0] < b[0]) return -1;
                 return 0; // this should never be reached due to unique tag names, but just in case
             })
