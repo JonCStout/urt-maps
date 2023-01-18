@@ -1,0 +1,1091 @@
+[{
+  "_id": "Turnpike",
+  "creator": "Frozen Sands",
+  "pk3": "built-in",
+  "screenShots": [
+    "turnpike_bluecourtyard.jpg",
+    "turnpike_van.jpg",
+    "turnpike_redflag.jpg",
+    "turnpike_garage.jpg",
+    "turnpike_upstairssnipe.jpg"
+  ],
+  "featureTags": [
+    "pillars",
+    "van",
+    "train station",
+    "indoors and outdoors",
+    "storage crate",
+    "trees",
+    "nonsymmetrical"
+  ],
+  "fileSize": "built-in",
+  "playSize": "medium",
+  "relatedMaps": [
+    "Piketurn"
+  ]
+},{
+  "_id": "Abbey",
+  "creator": "Frozen Sands",
+  "pk3": "built-in",
+  "screenShots": [
+    "abbey_redflag.jpg",
+    "abbey_blueflag.jpg",
+    "abbey_largecourtyard.jpg",
+    "abbey_smallcourtyard.jpg",
+    "abbey_upstairsmiddle.jpg"
+  ],
+  "featureTags": [
+    "trees",
+    "statue",
+    "fountain",
+    "outdoors",
+    "tunnel",
+    "nonsymmetrical"
+  ],
+  "fileSize": "built-in",
+  "playSize": "medium",
+  "relatedMaps": [
+    "Abbey CTF"
+  ]
+},{
+  "_id": "Sr2",
+  "creator": "",
+  "pk3": "ut4_Sr2",
+  "screenShots": [
+    "Sr2_main.jpg",
+    "Sr2_blue.jpg",
+    "Sr2_red.jpg"
+  ],
+  "featureTags": [
+    "arena",
+    "outdoors",
+    "trees",
+    "symmetrical"
+  ],
+  "fileSize": "1.3 mb",
+  "playSize": "small",
+  "relatedMaps": [
+    "Sr1",
+    "Sr3",
+    "Sr4"
+  ]
+},{
+  "_id": "Sr1",
+  "creator": "",
+  "pk3": "ut4_Sr1",
+  "screenShots": [
+    "Sr1_main.jpg",
+    "Sr1_blue.jpg",
+    "Sr1_red.jpg"
+  ],
+  "featureTags": [
+    "arena",
+    "outdoors",
+    "symmetrical"
+  ],
+  "fileSize": "1.1 mb",
+  "playSize": "small",
+  "relatedMaps": [
+    "Sr2",
+    "Sr3",
+    "Sr4"
+  ]
+},{
+  "_id": "Sr3",
+  "creator": "",
+  "pk3": "ut4_Sr3",
+  "screenShots": [
+    "Sr3_main.jpg",
+    "Sr3_blue.jpg",
+    "Sr3_red.jpg"
+  ],
+  "featureTags": [
+    "arena",
+    "outdoors",
+    "symmetrical",
+    "boosters/jumpers"
+  ],
+  "fileSize": "1.5 mb",
+  "playSize": "small",
+  "relatedMaps": [
+    "Sr1",
+    "Sr2",
+    "Sr4"
+  ]
+},{
+  "_id": "Sr4",
+  "creator": "",
+  "pk3": "ut4_Sr4",
+  "screenShots": [
+    "Sr4_main.jpg",
+    "Sr4_blue.jpg",
+    "Sr4_red.jpg"
+  ],
+  "featureTags": [
+    "arena",
+    "outdoors",
+    "symmetrical",
+    "trees"
+  ],
+  "fileSize": "1.7 mb",
+  "playSize": "small",
+  "relatedMaps": [
+    "Sr1",
+    "Sr2",
+    "Sr3"
+  ]
+},{
+  "_id": "BingeArena",
+  "creator": "KittyWumpus",
+  "pk3": "ut4_bingearena_a6",
+  "screenShots": [
+    "BingeArena_main.jpg",
+    "BingeArena_blue.jpg",
+    "BingeArena_red.jpg"
+  ],
+  "featureTags": [
+    "arena",
+    "indoors",
+    "symmetrical",
+    "icy",
+    "ramps",
+    "plats",
+    "lava"
+  ],
+  "fileSize": "15 mb",
+  "playSize": "small",
+  "relatedMaps": []
+},{
+  "_id": "Superman",
+  "creator": "FSK405|WilyDuck",
+  "pk3": "ut4_superman",
+  "screenShots": [
+    "Superman_main.jpg",
+    "Superman_blue.jpg",
+    "Superman_red.jpg"
+  ],
+  "featureTags": [
+    "outdoors",
+    "indoors",
+    "nonsymmetrical",
+    "buildings",
+    "boosters/jumpers",
+    "garage",
+    "cars",
+    "trees",
+    "billboard",
+    "construction site",
+    "waterfall",
+    "elevator",
+    "security room"
+  ],
+  "fileSize": "41 mb",
+  "playSize": "large",
+  "relatedMaps": []
+},{
+  "_id": "Uptown",
+  "creator": "Frozen Sands",
+  "pk3": "built-in",
+  "screenShots": [
+    "uptown_blueflag.jpg",
+    "uptown_redflag.jpg",
+    "uptown_laundromat.jpg",
+    "uptown_alley.jpg",
+    "uptown_walkway.jpg"
+  ],
+  "featureTags": [
+    "indoors",
+    "outdoors",
+    "nonsymmetrical",
+    "trees",
+    "garage",
+    "elevator",
+    "windows",
+    "buildings",
+    "dumpster",
+    "terrace",
+    "fence",
+    "vending machine"
+  ],
+  "fileSize": "built-in",
+  "playSize": "medium",
+  "relatedMaps": []
+},{
+  "_id": "SkyCastle",
+  "creator": "",
+  "pk3": "skycastle.pk3",
+  "screenShots": [
+    "Skycastle_blueflag.jpg",
+    "Skycastle_red_backarea.jpg",
+    "SkyCastle_mainOLD.jpg",
+    "Skycastle_center.jpg",
+    "SkyCastle_blueOLD.jpg",
+    "Skycastle_blue-backarea.jpg",
+    "SkyCastle_redOLD.jpg",
+    "Skycastle_redflag.jpg"
+  ],
+  "featureTags": [
+    "backwards flags",
+    "outdoors",
+    "boosters/jumpers",
+    "stairs",
+    "statue",
+    "yellow",
+    "space",
+    "symmetrical",
+    "pentagram",
+    "bricks",
+    "arch",
+    "lanterns"
+  ],
+  "fileSize": "5.8 mb",
+  "playSize": "small",
+  "relatedMaps": []
+},{
+  "_id": "Rumble",
+  "creator": "",
+  "pk3": "ut_rumble",
+  "screenShots": [
+    "Rumble_main.jpg",
+    "Rumble_blue.jpg",
+    "Rumble_red.jpg"
+  ],
+  "featureTags": [
+    "arena",
+    "outdoors",
+    "symmetrical",
+    "boxing ring",
+    "tower",
+    "bell",
+    "glass",
+    "blimp",
+    "billboard",
+    "trap doors"
+  ],
+  "fileSize": "2.2 mb",
+  "playSize": "small",
+  "relatedMaps": []
+},{
+  "_id": "RNR_A6",
+  "creator": "Blake",
+  "pk3": "ut4_rnr_a6",
+  "screenShots": [
+    "RNR_A6_main.jpg",
+    "RNR_A6_blue.jpg",
+    "RNR_A6_red.jpg"
+  ],
+  "featureTags": [
+    "indoors",
+    "outdoors",
+    "nonsymmetrical",
+    "glass",
+    "horses",
+    "rocks",
+    "waterfall",
+    "elevator",
+    "bowl",
+    "bamboo",
+    "lounge area",
+    "trees",
+    "plants",
+    "copper",
+    "windows"
+  ],
+  "fileSize": "15 mb",
+  "playSize": "medium",
+  "relatedMaps": []
+},{
+  "_id": "Druglord",
+  "creator": "",
+  "pk3": "ut4_druglord",
+  "screenShots": [
+    "Druglord_airfield.jpg",
+    "Druglord_greenhouse.jpg",
+    "Druglord_hangar.jpg",
+    "Druglord_helicopter.jpg",
+    "Druglord_redflag.jpg",
+    "Druglord_redOLD.jpg",
+    "Druglord_blueOLD.jpg",
+    "Druglord_blueflag.jpg",
+    "Druglord_mainOLD.jpg"
+  ],
+  "featureTags": [
+    "indoors",
+    "outdoors",
+    "nonsymmetrical",
+    "trees",
+    "hangar",
+    "greenhouse",
+    "garage",
+    "hills",
+    "airplane",
+    "mountains",
+    "boxes",
+    "sandbags",
+    "helicopter",
+    "tents",
+    "stairs"
+  ],
+  "fileSize": "18 mb",
+  "playSize": "medium",
+  "relatedMaps": [
+    "ut4_druglord2.pk3",
+    "ut4_druglord3.pk3"
+  ]
+},{
+  "_id": "Austria",
+  "creator": "Frozen Sands",
+  "pk3": "built-in",
+  "screenShots": [
+    "Austria_main.jpg",
+    "austria_blueflag.jpg",
+    "austria_redflag.jpg",
+    "austria_bluecourtyard.jpg",
+    "austria_middlecourtyard.jpg",
+    "austria_redcourtyard.jpg"
+  ],
+  "featureTags": [
+    "indoors",
+    "outdoors",
+    "nonsymmetrical",
+    "trees",
+    "tunnel",
+    "statue",
+    "piano",
+    "lamps",
+    "decorative flags",
+    "cobblestone",
+    "grass"
+  ],
+  "fileSize": "built-in",
+  "playSize": "medium",
+  "relatedMaps": []
+},{
+  "_id": "Ramelle",
+  "creator": "Frozen Sands",
+  "pk3": "ut42_ramelle",
+  "screenShots": [
+    "ramelle_canal.jpg",
+    "ramelle_snipertower.jpg",
+    "Ramelle_red2.jpg",
+    "Ramelle_blue2.jpg",
+    "ramelle_blueflag.jpg",
+    "Ramelle_main.jpg",
+    "ramelle_tunnels.jpg"
+  ],
+  "featureTags": [
+    "indoors",
+    "outdoors",
+    "nonsymmetrical",
+    "trees",
+    "tank",
+    "tower",
+    "tunnel",
+    "water",
+    "fountain",
+    "ladders",
+    "war"
+  ],
+  "fileSize": "5.9 mb",
+  "playSize": "large",
+  "relatedMaps": []
+},{
+  "_id": "Orbital",
+  "creator": "Frozen Sands",
+  "pk3": "ut4_orbital_sl",
+  "screenShots": [
+    "Orbital_main.jpg",
+    "Orbital_blue.jpg",
+    "Orbital_red.jpg"
+  ],
+  "featureTags": [
+    "indoors",
+    "space",
+    "nonsymmetrical",
+    "trees",
+    "garden",
+    "globe",
+    "servers",
+    "storage container",
+    "infirmary",
+    "monitors"
+  ],
+  "fileSize": "15 mb",
+  "playSize": "medium",
+  "relatedMaps": []
+},{
+  "_id": "Algiers",
+  "creator": "Frozen Sands",
+  "pk3": "built-in",
+  "screenShots": [
+    "algiers_redflag.jpg",
+    "algiers_blueflag.jpg",
+    "algiers_bluecourtyard.jpg",
+    "algiers_middlecourtyard.jpg",
+    "algiers_redcourtyard.jpg"
+  ],
+  "featureTags": [
+    "indoors",
+    "outdoors",
+    "nonsymmetrical",
+    "trees",
+    "wagon",
+    "boxes",
+    "pillars",
+    "balcony",
+    "camel corner"
+  ],
+  "fileSize": "built-in",
+  "playSize": "small",
+  "relatedMaps": [
+    "Algiers2"
+  ]
+},{
+  "_id": "Casa",
+  "creator": "Frozen Sands",
+  "pk3": "built-in",
+  "screenShots": [
+    "casa_middle.jpg",
+    "casa_blueflag.jpg",
+    "casa_redflag.jpg",
+    "casa_marketplace.jpg",
+    "casa_sidecourtyard.jpg"
+  ],
+  "featureTags": [
+    "indoors",
+    "outdoors",
+    "nonsymmetrical",
+    "trees",
+    "fountain",
+    "plants",
+    "balcony",
+    "market",
+    "posters",
+    "benches",
+    "barrels",
+    "weapons crate",
+    "laundry"
+  ],
+  "fileSize": "built-in",
+  "playSize": "medium",
+  "relatedMaps": [
+    "CasaSnow"
+  ]
+},{
+  "_id": "Kingdom",
+  "creator": "Frozen Sands",
+  "pk3": "ut4_kingdom",
+  "screenShots": [
+    "kingdom_middle.jpg",
+    "kingdom_bluefountain.jpg",
+    "kingdom_redflag.jpg",
+    "kingdom_blueflag.jpg",
+    "kingdom_tavern.jpg",
+    "Kingdom_main.jpg"
+  ],
+  "featureTags": [
+    "indoors",
+    "outdoors",
+    "symmetrical",
+    "trees",
+    "plants",
+    "fountain",
+    "library",
+    "garden",
+    "bridge",
+    "chapel",
+    "tavern",
+    "well",
+    "wagon"
+  ],
+  "fileSize": "14 mb",
+  "playSize": "large",
+  "relatedMaps": [
+    "ut4_kingdom_rc6.pk3",
+    "ut4_kingdom_rnr.pk3"
+  ]
+},{
+  "_id": "Eagle",
+  "creator": "",
+  "pk3": "ut4_eagle",
+  "screenShots": [
+    "Eagle_statue.jpg",
+    "eagle_gondola.jpg",
+    "eagle_railwaybridge.jpg",
+    "eagle_bridge.jpg",
+    "eagle_blueflag.jpg",
+    "eagle_redflag.jpg"
+  ],
+  "featureTags": [
+    "arena",
+    "outdoors",
+    "nonsymmetrical",
+    "trees",
+    "cable car",
+    "water",
+    "train",
+    "statue",
+    "castle",
+    "boxes",
+    "bridge",
+    "airplane",
+    "dock",
+    "storage container",
+    "power lines",
+    "ladders",
+    "paintings",
+    "books",
+    "boathouse",
+    "trucks",
+    "cargo trucks",
+    "tunnel"
+  ],
+  "fileSize": "10 mb",
+  "playSize": "large",
+  "relatedMaps": [
+    "EagleExtended"
+  ]
+},{
+  "_id": "Sanctuary",
+  "creator": "Frozen Sands",
+  "pk3": "built-in",
+  "screenShots": [
+    "sanctuary_outsidered.jpg",
+    "Sanctuary_red.jpg",
+    "sanctuary_blueflag.jpg",
+    "sanctuary_bluepark.jpg",
+    "sanctuary_lowerarea.jpg",
+    "Sanctuary_silo.jpg",
+    "Sanctuary_blue.jpg",
+    "sanctuary_redflag.jpg",
+    "Sanctuary_statue.jpg"
+  ],
+  "featureTags": [
+    "temple",
+    "outdoors",
+    "nonsymmetrical",
+    "trees",
+    "statue",
+    "bird bath",
+    "rocks",
+    "plants",
+    "fountain",
+    "gates",
+    "missile silo",
+    "silo",
+    "tunnel",
+    "gazeebo",
+    "arch"
+  ],
+  "fileSize": "built-in",
+  "playSize": "large",
+  "relatedMaps": []
+},{
+  "_id": "Ambush",
+  "creator": "Frozen Sands",
+  "pk3": "ut4_ambush_f43",
+  "screenShots": [
+    "ambush_middle.jpg",
+    "ambush_blueflag.jpg",
+    "ambush_bluemiddle.jpg",
+    "ambush_redflag.jpg",
+    "ambush_redmiddle.jpg"
+  ],
+  "featureTags": [
+    "outdoors",
+    "indoors",
+    "nonsymmetrical",
+    "trees",
+    "plants",
+    "propaganda",
+    "urban",
+    "trucks",
+    "generator"
+  ],
+  "fileSize": "6.5 mb, and built-in",
+  "playSize": "medium",
+  "relatedMaps": []
+},{
+  "_id": "Bohemia",
+  "creator": "Frozen Sands",
+  "pk3": "ut42_bohemia",
+  "screenShots": [
+    "bohemia_bluecourtyard.jpg",
+    "bohemia_blueflag.jpg",
+    "bohemia_middle.jpg",
+    "bohemia_redcourtyard.jpg",
+    "bohemia_redflag.jpg"
+  ],
+  "featureTags": [
+    "indoors",
+    "outdoors",
+    "nonsymmetrical",
+    "trees",
+    "windows",
+    "buildings",
+    "terrace",
+    "statue"
+  ],
+  "fileSize": "47 mb, and built-in",
+  "playSize": "large",
+  "relatedMaps": []
+},{
+  "_id": "Crossing",
+  "creator": "Frozen Sands",
+  "pk3": "ut43_crossing_f43",
+  "screenShots": [
+    "crossing_bluebuilding.jpg",
+    "crossing_blueflag.jpg",
+    "crossing_middle.jpg",
+    "crossing_redbuilding.jpg",
+    "crossing_redflag.jpg"
+  ],
+  "featureTags": [
+    "indoors",
+    "outdoors",
+    "nonsymmetrical",
+    "trees",
+    "garage",
+    "windows",
+    "buildings",
+    "terrace",
+    "fence",
+    "russian"
+  ],
+  "fileSize": "8.3 mb, and built-in",
+  "playSize": "large",
+  "relatedMaps": []
+},{
+  "_id": "Docks",
+  "creator": "Frozen Sands",
+  "pk3": "ut4_docks",
+  "screenShots": [
+    "docks_blueflag.jpg",
+    "docks_bluestreet.jpg",
+    "docks_fish.jpg",
+    "docks_redflag.jpg",
+    "docks_redsnipertower.jpg",
+    "docks_upstairsmiddle.jpg"
+  ],
+  "featureTags": [
+    "indoors",
+    "outdoors",
+    "nonsymmetrical",
+    "windows",
+    "buildings",
+    "terrace",
+    "fish"
+  ],
+  "fileSize": "5 mb, and built-in",
+  "playSize": "large",
+  "relatedMaps": []
+},{
+  "_id": "Herring",
+  "creator": "Frozen Sands",
+  "pk3": "ut4_herring",
+  "screenShots": [
+    "herring_blueflag.jpg",
+    "herring_bluetunnelentrance.jpg",
+    "herring_middle.jpg",
+    "herring_redflag.jpg",
+    "herring_redlowerwalkway.jpg"
+  ],
+  "featureTags": [
+    "indoors",
+    "outdoors",
+    "nonsymmetrical",
+    "windows",
+    "buildings",
+    "terrace",
+    "fish"
+  ],
+  "fileSize": "11 mb, and built-in",
+  "playSize": "medium",
+  "relatedMaps": []
+},{
+  "_id": "Elgin",
+  "creator": "Frozen Sands",
+  "pk3": "built-in",
+  "screenShots": [
+    "elgin_blueflag.jpg",
+    "elgin_blueside.jpg",
+    "elgin_middle.jpg",
+    "elgin_redflag.jpg",
+    "elgin_redside.jpg"
+  ],
+  "featureTags": [
+    "indoors",
+    "outdoors",
+    "nonsymmetrical",
+    "buildings"
+  ],
+  "fileSize": "built-in",
+  "playSize": "medium",
+  "relatedMaps": []
+},{
+  "_id": "Kingpin",
+  "creator": "Frozen Sands",
+  "pk3": "ut4_kingpin",
+  "screenShots": [
+    "kingpin_blueflag.jpg",
+    "kingpin_bluerightside.jpg",
+    "kingpin_redflag.jpg",
+    "kingpin_center.jpg",
+    "kingpin_redrightside.jpg"
+  ],
+  "featureTags": [
+    "indoors",
+    "outdoors",
+    "nonsymmetrical",
+    "buildings",
+    "watertower"
+  ],
+  "fileSize": "16 mb",
+  "playSize": "medium",
+  "relatedMaps": []
+},{
+  "_id": "Ghost_Town",
+  "creator": "Frozen Sands",
+  "pk3": "built-in",
+  "screenShots": [
+    "ghosttown_redoverpass.jpg",
+    "ghosttown_middle.jpg",
+    "ghosttown_bluecourtyard.jpg",
+    "ghosttown_redflag.jpg",
+    "ghosttown_blueflag.jpg"
+  ],
+  "featureTags": [
+    "indoors",
+    "outdoors",
+    "nonsymmetrical",
+    "buildings",
+    "graffiti"
+  ],
+  "fileSize": "built-in",
+  "playSize": "medium",
+  "relatedMaps": []
+},{
+  "_id": "Harbor_Town",
+  "creator": "",
+  "pk3": "ut4_harbortown",
+  "screenShots": [
+    "harbortown_middle.jpg",
+    "harbortown_redflag.jpg",
+    "harbortown_blueflag.jpg",
+    "harbortown_redright.jpg",
+    "harbortown_blueright.jpg"
+  ],
+  "featureTags": [
+    "statue",
+    "indoors and outdoors",
+    "boxes",
+    "trees",
+    "nonsymmetrical",
+    "lanterns"
+  ],
+  "fileSize": "28.6 mb, and built-in",
+  "playSize": "medium",
+  "relatedMaps": []
+},{
+  "_id": "Mandolin",
+  "creator": "Frozen Sands",
+  "pk3": "built-in",
+  "screenShots": [
+    "mandolin_middle.jpg",
+    "mandolin_redright.jpg",
+    "mandolin_blueflag.jpg",
+    "mandolin_redflag.jpg"
+  ],
+  "featureTags": [
+    "sand",
+    "balcony",
+    "indoors",
+    "outdoors",
+    "nonsymmetrical",
+    "trees",
+    "stairs",
+    "generator",
+    "music"
+  ],
+  "fileSize": "built-in",
+  "playSize": "medium",
+  "relatedMaps": []
+},{
+  "_id": "Maya",
+  "creator": "?",
+  "pk3": "built-in",
+  "screenShots": [
+    "maya_redtemple.jpg",
+    "maya_blueflag.jpg",
+    "maya_lower.jpg",
+    "maya_upper.jpg",
+    "maya_redflag.jpg"
+  ],
+  "featureTags": [
+    "outdoors",
+    "nonsymmetrical",
+    "trees",
+    "plants",
+    "stairs",
+    "boosters/jumpers",
+    "teleporters",
+    "fire"
+  ],
+  "fileSize": "built-in",
+  "playSize": "medium",
+  "relatedMaps": []
+},{
+  "_id": "Firing_Range",
+  "creator": "Frozen Sand",
+  "pk3": "built-in",
+  "screenShots": [
+    "firingrage_spawn.jpg",
+    "firingrage_range1.jpg",
+    "firingrage_range2.jpg"
+  ],
+  "featureTags": [
+    "indoors",
+    "outdoors",
+    "nonsymmetrical",
+    "glass",
+    "horses",
+    "rocks",
+    "waterfall",
+    "elevator",
+    "bowl",
+    "bamboo",
+    "lounge area",
+    "trees",
+    "plants",
+    "copper",
+    "windows"
+  ],
+  "fileSize": "15 mb",
+  "playSize": "medium",
+  "relatedMaps": []
+},{
+  "_id": "Mykonos",
+  "creator": "MajkiFajki",
+  "pk3": "ut4_mykonos_a11",
+  "screenShots": [
+    "mykonos_blueflag.jpg",
+    "mykonos_hotel.jpg",
+    "mykonos_middle.jpg",
+    "mykonos_redflag.jpg",
+    "mykonos_windmill.jpg"
+  ],
+  "featureTags": [
+    "indoors",
+    "outdoors",
+    "nonsymmetrical",
+    "arch",
+    "balcony",
+    "benches",
+    "cobblestone",
+    "fountain",
+    "gates",
+    "windmill"
+  ],
+  "fileSize": "11 mb",
+  "playSize": "small",
+  "relatedMaps": []
+},{
+  "_id": "Oil_Depot",
+  "creator": "Frozen Sands",
+  "pk3": "built-in",
+  "screenShots": [
+    "oildepot_middle.jpg",
+    "oildepot_kitchen.jpg",
+    "oildepot_office.jpg",
+    "oildepot_redflag.jpg",
+    "oildepot_blueflag.jpg"
+  ],
+  "featureTags": [
+    "fence",
+    "ladders",
+    "outdoors",
+    "nonsymmetrical",
+    "propaganda",
+    "kitchen",
+    "silo",
+    "stairs",
+    "storage container",
+    "tank",
+    "bus",
+    "pipes"
+  ],
+  "fileSize": "built-in",
+  "playSize": "large",
+  "relatedMaps": []
+},{
+  "_id": "Paris",
+  "creator": "Clatoo",
+  "pk3": "su_paris_b3",
+  "screenShots": [
+    "paris_middle.jpg",
+    "paris_blueflag.jpg",
+    "paris_redflag.jpg",
+    "paris_courtyard(non ctf).jpg",
+    "paris_catacombs(non ctf).jpg"
+  ],
+  "featureTags": [
+    "arch",
+    "bridge",
+    "buildings",
+    "cobblestone",
+    "dock",
+    "grass",
+    "indoors",
+    "outdoors",
+    "lanterns",
+    "music",
+    "nonsymmetrical",
+    "plants",
+    "stairs",
+    "urban",
+    "water",
+    "boat",
+    "trash",
+    "french",
+    "marseillaise",
+    "paris"
+  ],
+  "fileSize": "13 mb",
+  "playSize": "small",
+  "relatedMaps": []
+},{
+  "_id": "Prague",
+  "creator": "Rabid Cow & BladeKiller",
+  "pk3": "ut4_prague_v2",
+  "screenShots": [
+    "prague_market.jpg",
+    "prague_middle.jpg",
+    "prague_redflag.jpg",
+    "prague_hotel.jpg",
+    "prague_blueflag.jpg"
+  ],
+  "featureTags": [
+    "arch",
+    "boxes",
+    "bricks",
+    "buildings",
+    "cobblestone",
+    "fountain",
+    "gates",
+    "grass",
+    "indoors",
+    "outdoors",
+    "lanterns",
+    "market",
+    "nonsymmetrical",
+    "stairs",
+    "urban"
+  ],
+  "fileSize": "83 mb",
+  "playSize": "small",
+  "relatedMaps": []
+},{
+  "_id": "Raiders",
+  "creator": "PapyRuny (papyruny@yahoo.fr)",
+  "pk3": "ut4_raiders_rc1",
+  "screenShots": [
+    "raiders_waterfall.jpg",
+    "raiders_junglepath.jpg",
+    "raiders_idol.jpg",
+    "raiders_blueflag.jpg",
+    "raiders_redflag.jpg"
+  ],
+  "featureTags": [
+    "arch",
+    "grass",
+    "nonsymmetrical",
+    "outdoors",
+    "pillars",
+    "plants",
+    "rocks",
+    "stairs",
+    "temple",
+    "trees",
+    "water",
+    "waterfall"
+  ],
+  "fileSize": "22.4 mb",
+  "playSize": "medium",
+  "relatedMaps": []
+},{
+  "_id": "Ricochet",
+  "creator": "Frozen Sands",
+  "pk3": "built-in",
+  "screenShots": [
+    "ricochet_middle.jpg",
+    "ricochet_garage.jpg",
+    "ricochet_roof.jpg",
+    "ricochet_redflag.jpg",
+    "ricochet_blueflag.jpg"
+  ],
+  "featureTags": [
+    "balcony",
+    "benches",
+    "books",
+    "bricks",
+    "buildings",
+    "garage",
+    "glass",
+    "indoors",
+    "outdoors",
+    "lanterns",
+    "library",
+    "nonsymmetrical",
+    "pillars",
+    "ramps",
+    "stairs",
+    "storage container",
+    "storage crate",
+    "trees",
+    "trucks",
+    "urban",
+    "rooftop",
+    "fences",
+    "plants",
+    "vending machine"
+  ],
+  "fileSize": "built-in",
+  "playSize": "medium",
+  "relatedMaps": []
+},{
+  "_id": "Riyadh",
+  "creator": "Frozen Sands",
+  "pk3": "built-in",
+  "screenShots": [
+    "ryadh_center.jpg",
+    "riyadh_redbase.jpg",
+    "riyadh_blueflag.jpg",
+    "riyadh_bluebase.jpg",
+    "riyadh_redflag.jpg"
+  ],
+  "featureTags": [
+    "arch",
+    "balcony",
+    "barrels",
+    "boxes",
+    "buildings",
+    "gates",
+    "hills",
+    "indoors",
+    "ladders",
+    "outdoors",
+    "sand",
+    "symmetrical",
+    "terrace",
+    "tower",
+    "trees",
+    "arabic",
+    "carpets",
+    "curtains",
+    "dome",
+    "rooftop"
+  ],
+  "fileSize": "built-in",
+  "playSize": "medium",
+  "relatedMaps": []
+}]

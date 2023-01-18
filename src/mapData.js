@@ -1,5 +1,5 @@
 import * as Realm from 'realm-web'; // mongodb realm package
-import * as MapsJSON from './maps-db-2022-02-19b.json'; // gets imported as a Module
+import * as MapsJSON from './maps-db-2023-01-18.json'; // gets imported as a Module
 
 class mapDB {
     static connected = false;
