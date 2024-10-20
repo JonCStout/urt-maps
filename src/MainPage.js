@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
-import mapdb from './mapData';
+// import mapdb from './mapData';
+import MapsJSON from './maps-db-2023-01-18.json'; // gets imported as a Module
 import MapCard from './MapCard';
 import TagsList from './TagsList';
 import './MainPage.css'; // style sheet for just this app component
@@ -14,16 +15,17 @@ export default function MainPage() {
     const [clickedTags_Set, setClickedTags_Set] = useState(new Set()); // a Set of clicked tag strings
     const [searchInput, setSearchInput] = useState(''); // complains about switching from uncontrolled to controlled input without an empty string to start
 
-    const maps = useRef(mapdb.preloaded); // take the array from the imported Module and put it into the maps reference variable, to start
+    // const maps = useRef(mapdb.preloaded); // take the array from the imported Module and put it into the maps reference variable, to start
+    const maps = useRef(MapsJSON); // take the array from the imported Module and put it into the maps reference variable, to start
 
     useEffect(() => {
         document.title = 'UrT Map Finder Repo';
-        mapdb.connect().then(() => {
-            mapdb.getAll().then((dbresult) => {
-                maps.current = dbresult;
-                setClickedTags_Set(new Set()); // initialize this Set and trigger Visibles updates
-            });
-        }); // eslint-disable-next-line react-hooks/exhaustive-deps
+        // mapdb.connect().then(() => {
+        //     mapdb.getAll().then((dbresult) => {
+        //         maps.current = dbresult;
+        //         setClickedTags_Set(new Set()); // initialize this Set and trigger Visibles updates
+        //     });
+        // }); // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []); // the empty array at the end means this hook only runs once, after the web page is done with the initial render
 
     // this hook updates visibleMaps & visibleTags when clickedTags_Set changes
@@ -98,13 +100,14 @@ export default function MainPage() {
                 <h1>
                     <Badge
                         badgeContent={
-                            'db ' +
-                            (mapdb.connected ? 'connected' : 'not connected') +
-                            ' | ' +
+                            // 'db ' +
+                            // (mapdb.connected ? 'connected' : 'not connected') +
+                            // ' | ' +
                             (visibleMaps ? visibleMaps.length : '0') +
                             (visibleMaps && visibleMaps.length === 1 ? ' map visible' : ' maps visible')
                         }
-                        color={mapdb.connected ? 'secondary' : 'error'}
+                        // color={mapdb.connected ? 'secondary' : 'error'}
+                        color={'secondary'}
                     >
                         URT MAP FINDER
                     </Badge>

@@ -3,7 +3,8 @@ import { Link, useParams, useSearchParams } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Thumbs } from 'swiper';
 import Grid from '@mui/material/Grid';
-import mapdb from './mapData';
+// import mapdb from './mapData';
+import MapsJSON from './maps-db-2023-01-18.json'; // gets imported as a Module
 import 'swiper/css';
 import 'swiper/css/navigation';
 import './MapDetailPage.css';
@@ -21,19 +22,28 @@ function MapDetailPage() {
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
     useEffect(() => {
-        mapdb.connect().then(() => {
-            mapdb.get(mapId).then(
-                (dbresult) => {
-                    setMap(dbresult);
-                    setQueryState(queryStates.SUCCESS);
-                    document.title = 'UrT Map Finder Repo | ' + dbresult._id;
-                },
-                (err) => {
-                    setQueryState(queryStates.FAILED);
-                    document.title = 'UrT Map Finder Repo | Unable to find map';
-                }
-            );
-        });
+        // mapdb.connect().then(() => {
+        //     mapdb.get(mapId).then(
+        //         (dbresult) => {
+        //             setMap(dbresult);
+        //             setQueryState(queryStates.SUCCESS);
+        //             document.title = 'UrT Map Finder Repo | ' + dbresult._id;
+        //         },
+        //         (err) => {
+        //             setQueryState(queryStates.FAILED);
+        //             document.title = 'UrT Map Finder Repo | Unable to find map';
+        //         }
+        //     );
+        // });
+        const _map = MapsJSON.find((item) => item._id === mapId);
+        if (_map) {
+            setMap(_map);
+            setQueryState(queryStates.SUCCESS);
+            document.title = 'UrT Map Finder Repo | ' + _map._id;
+        } else {
+            setQueryState(queryStates.FAILED);
+            document.title = 'UrT Map Finder Repo | Unable to find map';
+        }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [mapId]);
 
@@ -102,7 +112,7 @@ function MapDetailPage() {
                                 </Grid>
                                 <Grid item md={4}>
                                     <span className='detail'>
-                                        <strong>{map._id}</strong>
+                                        <strong>{map._id.replace(/_/g, ' ')}</strong>
                                     </span>
                                 </Grid>
                                 <Grid item md={2}>

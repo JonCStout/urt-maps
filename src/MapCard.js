@@ -12,14 +12,14 @@ export default function MapCard({ map }) {
     return (
         <>
             <div className='card'>
-                <Link className='ss-links main-ss-link' to={'/urt-maps/map/' + displayName + '?ss=0'}>
+                <Link className='ss-links main-ss-link' to={'/urt-maps/map/' + map._id + '?ss=0'}>
                     <img className='main-ss-img' src={prefix + ss[0]} alt='main screenshot' />
                 </Link>
                 <span>
-                    <Link className='ss-links sub-ss-link-left' to={'/urt-maps/map/' + displayName + '?ss=1'}>
+                    <Link className='ss-links sub-ss-link-left' to={'/urt-maps/map/' + map._id + '?ss=1'}>
                         <img className='sub-ss-img' src={prefix + ss[1]} alt='screenshot 2' />
                     </Link>
-                    <Link className='ss-links sub-ss-link-right' to={'/urt-maps/map/' + displayName + '?ss=2'}>
+                    <Link className='ss-links sub-ss-link-right' to={'/urt-maps/map/' + map._id + '?ss=2'}>
                         <img className='sub-ss-img' src={prefix + ss[2]} alt='screenshot 3' />
                     </Link>
                 </span>
@@ -32,7 +32,7 @@ export default function MapCard({ map }) {
                     </Grid>
                     <Grid item xs={2}>
                         {ss.length > 3 ? (
-                            <Link className='more-button' to={'/urt-maps/map/' + displayName + '?ss=3'}>
+                            <Link className='more-button' to={'/urt-maps/map/' + map._id + '?ss=3'}>
                                 +more screenshots
                             </Link>
                         ) : null}
